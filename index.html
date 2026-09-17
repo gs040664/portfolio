@@ -139,6 +139,10 @@ body{
 @media (max-width:640px){
   #hub{padding:0 18px 64px}
   .navbar .in{padding:9px 18px;gap:10px}
+  /* 窄螢幕：返回鈕不斷行，「下一件」只留箭頭，把寬度讓給目前作品名 */
+  .back{white-space:nowrap;padding:6px 10px 6px 8px}
+  .navnext span{display:none}
+  .navnext::after{content:"À092"}
   .cover{padding-block:52px 34px}
   .entry{grid-template-columns:1fr;gap:0}
   .enum{padding-top:0;margin-bottom:8px}
