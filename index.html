@@ -101,6 +101,10 @@ body{
   margin:20px 0 0;font-size:15.5px;line-height:1.95;color:var(--u-ink2);
 }
 .cover .lede b{color:var(--u-ink);font-weight:500}
+.cover .ebullets{margin:16px 0 0;max-width:none}
+.cover .ebullets li{font-size:14.5px;padding:5px 0 5px 18px}
+.cover .ebullets li::before{top:5px}
+.cover .note{margin:18px 0 0;font-size:13px;line-height:1.8;color:var(--u-ink3)}
 
 .toc{margin:0;padding:0;list-style:none}
 .toc li{border-bottom:1px solid var(--u-rule)}
@@ -782,7 +786,13 @@ body{
   <header class="cover">
     <p class="kicker">Portfolio &middot; 2026</p>
     <h1>把設計決策<br>變成可以驗證的東西</h1>
-    <p class="lede">數值／系統企劃。三件作品分別是同一件事的三個層次：<b>先把難度調得對</b>、<b>再做出能證明它對的工具</b>、<b>最後把整條產線固定下來讓它每次都對</b>。每一頁的數字都取自實際的產出檔案與工作日誌，沒有重繪、沒有估算。</p>
+    <p class="lede">數值／系統企劃。三件作品分別是同一件事的三個層次：</p>
+    <ul class="ebullets">
+      <li><b>把難度調得對：</b>Project&nbsp;S，主線戰力的跨版本收斂與通關率回測</li>
+      <li><b>做出能證明它對的工具：</b>Project&nbsp;B，AI 內容生成工具鏈與戰鬥模擬器</li>
+      <li><b>把整條產線固定下來，讓它每次都對：</b>Project&nbsp;I，AI 工作流與 QA 修正流程</li>
+    </ul>
+    <p class="note">每一頁的數字都取自實際的產出檔案與工作日誌，沒有重繪、沒有估算。</p>
   </header>
 
   <ul class="toc">
