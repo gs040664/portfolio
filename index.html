@@ -123,12 +123,13 @@ body{
   font-size:clamp(19px,2.6vw,23px);line-height:1.4;letter-spacing:0;
 }
 .edesc{margin:9px 0 0;font-size:14px;line-height:1.85;color:var(--u-ink2);max-width:56ch}
-.echips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
-.echips li{
-  font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;
-  color:var(--u-ink2);background:var(--u-sunk);border-radius:2px;
-  padding:3px 9px;font-variant-numeric:tabular-nums;letter-spacing:.02em;
+.ebullets{margin:13px 0 0;padding:0;list-style:none;max-width:56ch}
+.ebullets li{
+  position:relative;padding:3px 0 3px 16px;font-size:13.5px;line-height:1.75;
+  color:var(--u-ink2);
 }
+.ebullets li::before{content:"•";position:absolute;left:0;color:var(--u-acc)}
+.ebullets b{color:var(--u-ink);font-weight:500}
 .earrow{
   font-size:17px;color:var(--u-ink3);padding-top:4px;text-align:right;
   transition:transform .16s ease,color .16s ease;
@@ -791,8 +792,11 @@ body{
         <div>
           <p class="ekind">數值設計</p>
           <h2>主線難度收斂分析</h2>
-          <p class="edesc">580 關的敵方戰力經過五個版本迭代。把多維屬性壓成單一基準之後，每一版動了哪一段、玩家端拿回多少通關率，都能直接對照。</p>
-          <ul class="echips"><li>五版迭代</li><li>580 關</li><li>末端戰力降至 19.5%</li><li>第 300 關通關率 1.3% &rarr; 4.8%</li></ul>
+          <p class="edesc">580 關的敵方戰力經過五個版本迭代，把多維屬性壓成單一基準，讓每一版動了哪一段都能直接對照。</p>
+          <ul class="ebullets">
+            <li><b>難度曲線：</b>敵方戰力經五版迭代收斂，末端戰力需求降至初版 19.5%</li>
+            <li><b>通關率回測：</b>第 300 關通關率由 1.3% 提升至 4.8%</li>
+          </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
       </a>
@@ -803,8 +807,12 @@ body{
         <div>
           <p class="ekind">AI 內容生成工具與模擬器</p>
           <h2>從一句話到可上線關卡</h2>
-          <p class="edesc">我設計的關卡 AI 內容生成工具鏈：分層產出規格與驗收條件由我定義，AI 依規格產內容。丟一段口語需求進去，產出可直接貼回遊戲的敵方行動表與技能表；配套的模擬器直接接遊戲本身的戰鬥程式碼跑驗證。</p>
-          <ul class="echips"><li>L0 &rarr; L4 分層產出</li><li>重播對帳 10/10</li><li>逐筆零差</li><li>難度預測帶命中實機</li></ul>
+          <p class="edesc">我設計的關卡 AI 內容生成工具鏈：分層產出規格與驗收條件由我定義，AI 依規格產內容。</p>
+          <ul class="ebullets">
+            <li><b>內容生成工具鏈：</b>丟一段口語需求進去，產出可直接貼回遊戲的行動邏輯表與技能表</li>
+            <li><b>戰鬥模擬器：</b>直接引用遊戲本身的戰鬥程式碼，十場實機重播對帳回合數與勝負全數命中、逐筆零差</li>
+            <li><b>難度預測：</b>模擬器的預測帶命中實機結果</li>
+          </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
       </a>
@@ -815,8 +823,12 @@ body{
         <div>
           <p class="ekind">AI 工作流建置</p>
           <h2>角色產線與 QA 修正流</h2>
-          <p class="edesc">我設計的 AI 工作流：五支 slash command 各管一段，段與段之間傳固定格式的交棒檔案。所有會影響線上的寫入收斂到同一道人工確認，流程本身也有測試。</p>
-          <ul class="echips"><li>5 支 skill</li><li>23 張 QA 卡 / 7 個工作天</li><li>26 次資料異動上線</li><li>40 次沙箱演練</li></ul>
+          <p class="edesc">我設計的 AI 工作流：五支 slash command 各管一段，所有會影響線上的寫入收斂到同一道人工確認。</p>
+          <ul class="ebullets">
+            <li><b>工作流設計：</b>段與段之間傳固定格式的交棒檔案，寫入前四道守門機制</li>
+            <li><b>QA 修正：</b>七個工作天內結案 23 張 QA 卡</li>
+            <li><b>資料異動：</b>26 次上線，皆經沙箱演練與逐格閉環比對</li>
+          </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
       </a>
