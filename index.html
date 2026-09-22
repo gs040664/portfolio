@@ -390,6 +390,7 @@ body{
   --d:#1baf7a;      
   --a-bg:#e4eefa; --s-bg:#fbe8de; --d-bg:#ddf3ea;
   --flag:#b42318; --flag-bg:#fdeceb; --flag-rule:#f3c9c5;
+  --user:#3f55b8; --user-soft:#e8ebf9;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #pf2{
     color-scheme:dark;
@@ -406,6 +407,7 @@ body{
     --a:#3987e5; --s:#d95926; --d:#199e70;
     --a-bg:#16283d; --s-bg:#33201a; --d-bg:#13291f;
     --flag:#f07268; --flag-bg:#2b1614; --flag-rule:#4a2723;
+    --user:#9aa9ef; --user-soft:#1c2242;
   }
 
 }
@@ -424,6 +426,7 @@ body{
   --a:#3987e5; --s:#d95926; --d:#199e70;
   --a-bg:#16283d; --s-bg:#33201a; --d-bg:#13291f;
   --flag:#f07268; --flag-bg:#2b1614; --flag-rule:#4a2723;
+  --user:#9aa9ef; --user-soft:#1c2242;
 }
 #pf2 *{box-sizing:border-box}
 #pf2{
@@ -484,6 +487,14 @@ body{
 #pf2 .pipe .st .nm{font-size:13px;font-weight:700;margin-top:3px}
 #pf2 .pipe .st .ds{font-size:11.5px;color:var(--ink3);margin-top:6px;line-height:1.6}
 #pf2 .pipe .st .sz{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink3);margin-top:9px;padding-top:8px;border-top:1px solid var(--rule)}
+#pf2 .urow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+#pf2 .urow .u{background:var(--user-soft);border:1px solid var(--user);border-top-width:3px;padding:10px 14px 12px;font-size:12px;line-height:1.65;color:var(--ink2)}
+#pf2 .urow .u b{color:var(--user)}
+#pf2 .urow .u1{grid-column:span 1}
+#pf2 .urow .u2{grid-column:span 2}
+#pf2 .unote{font-size:12.5px;color:var(--ink3);margin-top:10px;line-height:1.7}
+#pf2 .unote b{color:var(--user)}
+@media(max-width:760px){#pf2 .urow{grid-template-columns:1fr}#pf2 .urow .u1,#pf2 .urow .u2{grid-column:auto}}
 @media(max-width:760px){.pipe{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:420px){.pipe{grid-template-columns:1fr}}
 #pf2 .tw{overflow-x:auto;margin-top:22px}
@@ -624,6 +635,7 @@ body{
   --rule:#d5dde4; --rule2:#b7c3ce;
   --acc:#0f6e6a; --acc-soft:#dff0ee;
   --gate:#a8341f; --gate-soft:#fbe6e1;
+  --user:#3f55b8; --user-soft:#e8ebf9;
   --ok:#1b7a4b; --ok-soft:#dff0e5;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #pf3{
@@ -633,6 +645,7 @@ body{
     --rule:#26313a; --rule2:#3c4c58;
     --acc:#4fbfb4; --acc-soft:#10312f;
     --gate:#e08878; --gate-soft:#2c1a16;
+    --user:#9aa9ef; --user-soft:#1c2242;
     --ok:#5cc189; --ok-soft:#12291d;
   }
 
@@ -645,6 +658,7 @@ body{
   --acc:#4fbfb4; --acc-soft:#10312f;
   --gate:#e08878; --gate-soft:#2c1a16;
   --ok:#5cc189; --ok-soft:#12291d;
+  --user:#9aa9ef; --user-soft:#1c2242;
 }
 #pf3 *{box-sizing:border-box}
 #pf3{
@@ -686,6 +700,12 @@ body{
 #pf3 svg .ln{stroke:var(--rule2);stroke-width:1.4;fill:none}
 #pf3 svg .ln-g{stroke:var(--gate);stroke-width:1.4;fill:none;stroke-dasharray:5 4}
 #pf3 svg .band{fill:var(--ink3);font-size:10px;letter-spacing:.14em}
+#pf3 svg .lb-u{fill:var(--user);font-size:10.5px;font-weight:700}
+#pf3 svg .bx-u{fill:var(--user-soft);stroke:var(--user);stroke-width:1.2}
+#pf3 svg .ln-u{stroke:var(--user);stroke-width:1.2;fill:none;stroke-dasharray:2 3}
+#pf3 .lgd{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:11.5px;color:var(--ink3);margin-bottom:8px}
+#pf3 .lgd .u{color:var(--user);font-weight:700}
+#pf3 .lgd .g{color:var(--gate);font-weight:700}
 #pf3 figcaption{font-size:12px;color:var(--ink3);margin-top:9px}
 #pf3 .tw{overflow-x:auto;margin-top:18px}
 #pf3 table{border-collapse:collapse;width:100%;font-size:13px}
@@ -1407,6 +1427,12 @@ body{
     <div class="st"><p class="lv">L3</p><p class="nm">行動邏輯結構</p><p class="ds">條件判斷、行動序列、優先度 → 遊戲的行動邏輯表</p><p class="sz m">41 KB</p></div>
     <div class="st"><p class="lv">L4</p><p class="nm">SKILL 元件</p><p class="ds">effect ID、參數、冷卻、複合技子技 → 遊戲的技能資料表</p><p class="sz m">48 KB</p></div>
   </div>
+  <div class="urow" aria-label="使用者在各層做的事">
+    <div class="u u1"><b>👤 使用者</b><br>丟一段口語需求，並指定先談哪幾層（例：「先討論 L0、L1」）</div>
+    <div class="u u2"><b>👤 使用者</b><br>逐層看 AI 的產出，回饋修正或整個推翻；AI 標「⚠️ 推薦值」的數值，由使用者看過才定案</div>
+    <div class="u u2"><b>👤 使用者</b><br>確認回填檔；過 49 項自動驗證後，才貼回遊戲</div>
+  </div>
+  <p class="unote">AI 負責展開規格、查歷史關卡、產表與跑驗證；<b>方向由使用者決定</b>。143 個版次每一版都由一次使用者回饋觸發，52 條決策中有 9 條被推翻重做，實際往返見下方第 04 節。</p>
 
   <div class="tw">
     <table>
@@ -2367,8 +2393,9 @@ renderAll();renderDetail();renderSweeps();
   <p class="note">段與段之間傳的是固定格式的交棒檔案，不是對話內容；所有會影響線上的寫入，全部收斂到同一道人工確認。</p>
 
   <figure>
+    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
     <div class="dg">
-    <svg viewBox="0 0 900 300" role="img" aria-label="五支 skill 的交棒架構圖">
+    <svg viewBox="0 -38 900 338" role="img" aria-label="五支 skill 的交棒架構圖，標出使用者介入點">
       <defs>
         <marker id="ah" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7" orient="auto">
           <path d="M0,0 L10,4 L0,8 z" fill="var(--rule2)"></path>
@@ -2423,6 +2450,20 @@ renderAll();renderDetail();renderSweeps();
       <path class="ln" d="M400,221 H474" marker-end="url(#ah)"></path>
       <text class="lb" x="437" y="213" text-anchor="middle">文字編號檢查</text>
 
+      <rect class="bx-u" x="40" y="-30" width="360" height="24" rx="12"></rect>
+      <text class="lb-u" x="220" y="-14" text-anchor="middle">👤 下指令叫用 · AI 一次帶一步，使用者逐步回答</text>
+      <path class="ln-u" d="M110,-6 V38"></path>
+      <path class="ln-u" d="M330,-6 V38"></path>
+
+      <text class="lb-u" x="780" y="124" text-anchor="middle">👤 看過結果才點頭</text>
+      <text class="lb" x="780" y="140" text-anchor="middle">上次同意不算，每次重問</text>
+
+      <text class="lb-u" x="582" y="164">👤 人看過才放行</text>
+
+      <text class="lb-u" x="640" y="214">👤 改表／多語／實測</text>
+      <text class="lb" x="640" y="230">預設只試跑，使用者另下</text>
+      <text class="lb" x="640" y="245">寫入指令才真的寫</text>
+
       <text class="band" x="40" y="285">交棒檔案固定格式 · 變更清單用「改之前的值」核對現況 · 會動到資料的 skill 一律預設只試跑不寫入</text>
     </svg>
     </div>
@@ -2452,8 +2493,14 @@ renderAll();renderDetail();renderSweeps();
   <div class="sh"><span class="n">03</span><h2>流程一：角色資料生產流程 — 一個白話概念 → 可上線的角色</h2></div>
 
   <figure>
+    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
     <div class="dg">
-    <svg viewBox="0 0 900 350" role="img" aria-label="角色生產流程圖：設計段、資料段、驗證與上傳前確認">
+    <svg viewBox="0 -38 900 388" role="img" aria-label="角色生產流程圖：設計段、資料段、驗證與上傳前確認，標出使用者介入點">
+      <rect class="bx-u" x="70" y="-30" width="510" height="24" rx="12"></rect>
+      <text class="lb-u" x="325" y="-14" text-anchor="middle">👤 使用者給一個白話概念＋屬性隊缺口與參照設計表 · AI 一次帶一步，使用者逐步確認</text>
+      <path class="ln-u" d="M145,-6 V12"></path>
+      <path class="ln-u" d="M325,-6 V12"></path>
+      <path class="ln-u" d="M505,-6 V12"></path>
       <text class="band" x="40" y="28">設計段 · 只產文字，不碰任何資料表</text>
       <rect class="bx" x="70" y="40" width="150" height="50" rx="3"></rect>
       <text class="t1" x="145" y="70" text-anchor="middle">① 決定打法風格</text>
@@ -2498,7 +2545,7 @@ renderAll();renderDetail();renderSweeps();
 
       <rect class="bx-g" x="490" y="252" width="200" height="52" rx="3"></rect>
       <text class="t1" x="590" y="274" text-anchor="middle" fill="var(--gate)">🔒 上傳前確認</text>
-      <text class="t2" x="590" y="292" text-anchor="middle">六項全過＋人工再點頭一次</text>
+      <text class="lb-u" x="590" y="293" text-anchor="middle">👤 六項全過，使用者再點頭一次</text>
       <path class="ln-g" d="M420,278 H484" marker-end="url(#ahg)"></path>
 
       <text class="lb" x="710" y="274">持續傷害與計時重置</text>
@@ -2514,8 +2561,15 @@ renderAll();renderDetail();renderSweeps();
   <div class="sh"><span class="n">04</span><h2>流程二：QA 卡從進來到交回</h2></div>
 
   <figure>
+    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
     <div class="dg">
-    <svg viewBox="0 0 900 250" role="img" aria-label="QA 卡八階段流程圖，含上傳前確認與退回迴路">
+    <svg viewBox="0 0 900 250" role="img" aria-label="QA 卡八階段流程圖，含上傳前確認與退回迴路，標出使用者介入點">
+      <text class="lb-u" x="31" y="34">👤 丟 QA 卡、叫用 skill</text>
+      <path class="ln-u" d="M74,40 V56"></path>
+      <text class="lb-u" x="826" y="34" text-anchor="middle">👤 關卡權限留在使用者手上</text>
+      <path class="ln-u" d="M826,40 V56"></path>
+      <text class="lb-u" x="544" y="142" text-anchor="middle">👤 看過副本演練</text>
+      <text class="lb-u" x="544" y="156" text-anchor="middle">結果才同意寫入</text>
       <rect class="bx" x="31" y="60" width="86" height="64" rx="3"></rect>
       <text class="t2 mono" x="74" y="80" text-anchor="middle">0</text>
       <text class="t1" x="74" y="100" text-anchor="middle">快照</text>
@@ -2563,10 +2617,9 @@ renderAll();renderDetail();renderSweeps();
 
       <text class="lb" x="640" y="196">先拿副本演練 → 覆述一次</text>
       <text class="lb" x="640" y="212">逐格對得上才提交</text>
-      <text class="lb" x="640" y="228">不自動關卡，權限留在人手上</text>
     </svg>
     </div>
-    <figcaption>分析分兩段：先逐欄比對規格找出可疑處，關鍵結論才進遊戲實測定案。驗證前伺服器與客戶端兩邊的快取都要清掉，否則會得到「改了沒效」的假結論。</figcaption>
+    <figcaption>分析分兩段：先逐欄比對規格找出可疑處，關鍵結論才進遊戲實測定案。驗證前伺服器與客戶端兩邊的快取都要清掉，否則會得到「改了沒效」的假結論。使用者在過程中下的裁示不只用在當張卡：7 個工作天裡有 18 條回流成規則。</figcaption>
   </figure>
 </section>
 
@@ -2618,9 +2671,9 @@ renderAll();renderDetail();renderSweeps();
       var n=WORKS[(WORKS.indexOf(w)+1)%WORKS.length];
       nxt.href='#'+n.hash;
       nxt.innerHTML='下一件<span>　'+n.c+'　'+n.t+'　&rarr;</span>';
-      document.title=w.t+'｜可驗證的數值設計';
+      document.title=w.t+'｜工作成果';
     }else{
-      document.title='可驗證的數值設計';
+      document.title='工作成果｜數值／系統企劃';
     }
     window.scrollTo(0,0);
   }
