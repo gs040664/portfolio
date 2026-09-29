@@ -989,6 +989,8 @@ body{
   font:inherit;font-size:13.5px;font-weight:700;color:var(--jc);
 }
 #pf2 .jlink:hover,#pf3 .jlink:hover{text-decoration:underline}
+#pf3 .job,#pf3 .xbtns button{transition:box-shadow .3s ease}
+#pf3 .job.hl,#pf3 .xbtns button.hl{box-shadow:0 0 0 3px var(--acc)}
 #pf2 .jlink:focus-visible,#pf3 .jlink:focus-visible{outline:2px solid var(--jc);outline-offset:2px}
 #pf2 .jobs-h{font-size:clamp(19px,2.6vw,23px)}
 #pf2 .jobsec{padding-block:36px 30px}
@@ -3540,7 +3542,6 @@ renderAll();renderDetail();renderSweeps();
     if(stack.length>1) back.querySelector('span').textContent=name(stack[stack.length-2]);
     dlg.setAttribute('aria-label','詳細流程：'+name(cur));
     bd.scrollTop=0;
-    history.replaceState(null,'','#pipeline/'+cur);
   }
   function go(v,nested){
     if(!page(v)) return;
@@ -3568,7 +3569,14 @@ renderAll();renderDetail();renderSweeps();
     if(t){e.preventDefault();go(t.getAttribute('data-view'),dlg.contains(t));}
   });
   document.addEventListener('subview',function(e){
-    if(e.detail.id==='pf3'&&e.detail.sub) go(e.detail.sub);
+    if(e.detail.id!=='pf3'||!e.detail.sub) return;
+    var t=pf.querySelector('.job .jlink[data-view="'+e.detail.sub+'"]');
+    t=t?t.closest('.job'):pf.querySelector('.xbtns button[data-view="'+e.detail.sub+'"]');
+    history.replaceState(null,'','#pipeline');
+    if(!t) return;
+    t.scrollIntoView({block:'center'});
+    t.classList.add('hl');
+    setTimeout(function(){t.classList.remove('hl');},1800);
   });
 })();
 </script>
