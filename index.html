@@ -25,7 +25,7 @@ img{max-width:100%}
 
 :root{
   --u-ground:#eceeef; --u-surface:#fbfcfc; --u-sunk:#e3e6e8;
-  --u-ink:#15191c; --u-ink2:#4b555d; --u-ink3:#7a848b;
+  --u-ink:#15191c; --u-ink2:#4b555d; --u-ink3:#5c666e;
   --u-rule:#d8dde0; --u-rule2:#bac2c7; --u-grid:#e4e7e9;
   --u-acc:#0f6e6a; --u-acc-soft:#dcedeb;
   --u-shell:1080px;
@@ -75,7 +75,7 @@ body{
 }
 .navtitle b{color:var(--u-ink);font-weight:500;letter-spacing:0}
 .navtitle i{
-  font-style:normal;font-family:'IBM Plex Mono',ui-monospace,monospace;
+  font-style:normal;font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;
   font-size:11.5px;color:var(--u-ink3);letter-spacing:.06em;margin-right:12px;
 }
 .navnext{
@@ -89,7 +89,7 @@ body{
 #hub{max-width:var(--u-shell);margin:0 auto;padding:0 24px 88px}
 .cover{padding-block:84px 44px;border-bottom:2px solid var(--u-ink);max-width:62ch}
 .cover .kicker{
-  margin:0 0 20px;font-family:'IBM Plex Mono',ui-monospace,monospace;
+  margin:0 0 20px;font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;
   font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--u-acc);
 }
 .cover h1{
@@ -119,7 +119,7 @@ body{
 .entry:hover,.entry:focus-visible{background:var(--u-surface);outline:none}
 .entry:focus-visible{box-shadow:inset 3px 0 0 var(--u-acc)}
 .enum{
-  font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;
+  font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;font-size:11.5px;
   color:var(--u-ink3);letter-spacing:.06em;padding-top:8px;white-space:nowrap;
 }
 .ekind{
@@ -234,9 +234,9 @@ body{
 }
 #pf1 .shell{max-width:var(--shell);margin:0 auto}
 #pf1 h1, #pf1 h2, #pf1 h3{font-family:"Noto Serif TC",Georgia,serif;text-wrap:balance;margin:0;line-height:1.35}
-#pf1 .mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+#pf1 .mono{font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
 #pf1 .eyebrow{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;
   font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--ink-3);
 }
@@ -252,7 +252,7 @@ body{
 #pf1 .stamp{
   border:1px solid var(--rule-strong);
   padding:7px 13px;
-  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:11px;letter-spacing:.1em;
   color:var(--ink-2);white-space:nowrap;
 }
 #pf1 .meta-row{
@@ -265,10 +265,10 @@ body{
   font-size:13px;color:var(--ink-2);
 }
 #pf1 .meta-row div:last-child{border-right:0}
-#pf1 .meta-row b{display:block;font-weight:500;color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:14px}
+#pf1 .meta-row b{display:block;font-weight:500;color:var(--ink);font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:14px}
 #pf1 section{padding-block:52px;border-bottom:1px solid var(--rule)}
 #pf1 .sec-head{display:flex;gap:16px;align-items:baseline;margin-bottom:6px}
-#pf1 .sec-num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-3);flex:none}
+#pf1 .sec-num{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:clamp(17px,2.2vw,20px);font-weight:600;color:var(--accent);flex:none}
 #pf1 .sec-head h2{font-size:clamp(20px,3vw,26px);font-weight:600}
 #pf1 .sec-note{color:var(--ink-2);font-size:14px;margin:14px 0 0;max-width:64ch}
 #pf1 .timeline{margin-top:30px;display:flex;flex-direction:column}
@@ -280,18 +280,18 @@ body{
   border-top:1px solid var(--rule);
 }
 #pf1 .timeline .tl:last-child{border-bottom:1px solid var(--rule)}
-#pf1 .tl-v{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:500;letter-spacing:.02em}
+#pf1 .tl-v{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:14px;font-weight:500;letter-spacing:.02em}
 #pf1 .tl-swatch{display:inline-block;width:22px;height:3px;vertical-align:middle;margin-right:8px}
 #pf1 .tl-name{display:block;font-size:12.5px;color:var(--ink-3);margin-top:3px;font-family:"Noto Sans TC",sans-serif;letter-spacing:0}
 #pf1 .tl-body{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:6px 26px}
 #pf1 .tl-body div{font-size:13.5px;line-height:1.7}
 #pf1 .tl-body .lbl{
-  display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  display:block;font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10px;
   letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px;
 }
 #pf1 .tl-body .txt{color:var(--ink-2)}
 #pf1 .verdict{
-  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.1em;
   border:1px solid var(--rule-strong);padding:2px 7px;display:inline-block;margin-top:8px;color:var(--ink-2);
 }
 #pf1 .verdict.ok{border-color:var(--accent);color:var(--accent)}
@@ -306,12 +306,12 @@ body{
 #pf1 .chart-top h3{font-size:16px;font-weight:600}
 #pf1 .chart-top .q{font-size:12.5px;color:var(--ink-3);margin-top:3px}
 #pf1 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
-#pf1 .legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-2);font-family:"IBM Plex Mono",monospace}
+#pf1 .legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-2);font-family:"IBM Plex Mono","Noto Sans TC",monospace}
 #pf1 .legend i{width:16px;height:3px;display:inline-block;border-radius:1px}
 #pf1 .legend i.dot{width:9px;height:9px;border-radius:50%}
 #pf1 .svg-scroll{overflow-x:auto}
 #pf1 svg{display:block;width:100%;height:auto;min-width:620px}
-#pf1 svg text{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+#pf1 svg text{font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-variant-numeric:tabular-nums}
 #pf1 .tick{font-size:11px;fill:var(--ink-3)}
 #pf1 .axis-title{font-size:11px;fill:var(--ink-3);letter-spacing:.1em}
 #pf1 .dlabel{font-size:12px;font-weight:500}
@@ -322,20 +322,20 @@ body{
   position:absolute;pointer-events:none;opacity:0;transition:opacity .12s;
   background:var(--ink);color:var(--ground);
   padding:8px 11px;font-size:12px;line-height:1.6;
-  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-variant-numeric:tabular-nums;
   white-space:nowrap;z-index:5;transform:translate(-50%,-115%);
 }
 #pf1 .tip b{font-weight:500}
 #pf1 figcaption{font-size:12.5px;color:var(--ink-3);margin-top:12px;line-height:1.7;max-width:72ch}
 #pf1 details.tbl{margin-top:14px;border-top:1px solid var(--rule);padding-top:12px}
 #pf1 details.tbl summary{
-  cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  cursor:pointer;font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:11.5px;
   letter-spacing:.08em;color:var(--ink-3);
 }
 #pf1 details.tbl summary:hover{color:var(--ink)}
 #pf1 details.tbl summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 #pf1 .tscroll{overflow-x:auto;margin-top:12px}
-#pf1 table{border-collapse:collapse;font-size:12.5px;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;width:100%}
+#pf1 table{border-collapse:collapse;font-size:12.5px;font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-variant-numeric:tabular-nums;width:100%}
 #pf1 th, #pf1 td{padding:6px 12px;text-align:right;border-bottom:1px solid var(--rule);white-space:nowrap}
 #pf1 th:first-child, #pf1 td:first-child{text-align:left}
 #pf1 thead th{color:var(--ink-3);font-weight:500;font-size:11px;letter-spacing:.06em;border-bottom:1px solid var(--rule-strong)}
@@ -344,10 +344,10 @@ body{
 #pf1 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:0;margin-top:28px;border-top:1px solid var(--rule-strong)}
 #pf1 .kpi{padding:24px 24px 24px 0;border-right:1px solid var(--rule)}
 #pf1 .kpi:last-child{border-right:0}
-#pf1 .kpi .k-lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
-#pf1 .kpi .k-val{font-family:"IBM Plex Mono",monospace;font-size:clamp(30px,4.6vw,40px);font-weight:500;letter-spacing:-.02em;margin-top:10px;line-height:1;font-variant-numeric:tabular-nums}
+#pf1 .kpi .k-lbl{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+#pf1 .kpi .k-val{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:clamp(30px,4.6vw,40px);font-weight:500;letter-spacing:-.02em;margin-top:10px;line-height:1;font-variant-numeric:tabular-nums}
 #pf1 .kpi .k-src{font-size:12px;color:var(--ink-2);margin-top:10px;line-height:1.6}
-#pf1 .kpi .k-chk{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);margin-top:7px}
+#pf1 .kpi .k-chk{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10.5px;color:var(--ink-3);margin-top:7px}
 #pf1 .callout{
   margin-top:30px;border:1px solid var(--warn-rule);background:var(--warn-bg);
   padding:20px 22px;
@@ -387,7 +387,7 @@ body{
   --rust-soft:#f0e3d6;
   --a:#2a78d6;      
   --s:#eb6834;      
-  --d:#1baf7a;      
+  --d:#0f7a54;      
   --a-bg:#e4eefa; --s-bg:#fbe8de; --d-bg:#ddf3ea;
   --flag:#b42318; --flag-bg:#fdeceb; --flag-rule:#f3c9c5;
   --user:#3f55b8; --user-soft:#e8ebf9;
@@ -436,10 +436,10 @@ body{
   padding-block:0 80px;padding-left:20px;padding-right:20px;
 }
 #pf2 .shell{max-width:1080px;margin:0 auto}
-#pf2 .m{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+#pf2 .m{font-family:"JetBrains Mono","Noto Sans TC",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
 #pf2 h1, #pf2 h2, #pf2 h3, #pf2 h4{margin:0;line-height:1.3;text-wrap:balance;font-weight:700}
 #pf2 p{margin:0}
-#pf2 .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+#pf2 .eyebrow{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
 #pf2 header.top{padding-block:44px 0}
 #pf2 header.top h1{font-size:clamp(26px,4.4vw,40px);font-weight:900;letter-spacing:-.02em}
 #pf2 header.top .sub{color:var(--ink2);font-size:15.5px;margin-top:10px;max-width:62ch}
@@ -449,11 +449,11 @@ body{
 }
 #pf2 .idbar div{padding:11px 20px 11px 0;margin-right:20px;border-right:1px solid var(--rule);font-size:12px;color:var(--ink3)}
 #pf2 .idbar div:last-child{border-right:0;margin-right:0}
-#pf2 .idbar b{display:block;color:var(--ink);font-weight:500;font-size:13.5px;font-family:"JetBrains Mono",monospace;margin-top:1px}
+#pf2 .idbar b{display:block;color:var(--ink);font-weight:500;font-size:13.5px;font-family:"JetBrains Mono","Noto Sans TC",monospace;margin-top:1px}
 #pf2 .tabs{display:flex;gap:0;margin-top:30px;border-bottom:2px solid var(--ink)}
 #pf2 .tabs button{
   appearance:none;background:none;border:0;cursor:pointer;
-  font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:500;
+  font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:13px;font-weight:500;
   color:var(--ink3);padding:13px 22px;position:relative;top:2px;
   border:2px solid transparent;border-bottom:0;letter-spacing:.02em;
 }
@@ -467,7 +467,7 @@ body{
 #pf2 section{padding-block:44px;border-bottom:1px solid var(--rule)}
 #pf2 section:last-child{border-bottom:0}
 #pf2 .sh{display:flex;gap:14px;align-items:baseline}
-#pf2 .sh .n{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--rust);flex:none;font-weight:700}
+#pf2 .sh .n{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:clamp(17px,2.2vw,20px);color:var(--rust);flex:none;font-weight:700}
 #pf2 .sh h2{font-size:clamp(19px,2.6vw,23px)}
 #pf2 .note{color:var(--ink2);font-size:14px;margin-top:12px;max-width:66ch}
 #pf2 .note+.note{margin-top:10px}
@@ -475,18 +475,18 @@ body{
   margin-top:22px;background:var(--card);border:1px solid var(--rule);
   border-left:3px solid var(--rust);padding:20px 22px;
 }
-#pf2 .quote .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.14em;color:var(--rust);text-transform:uppercase}
+#pf2 .quote .lbl{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.14em;color:var(--rust);text-transform:uppercase}
 #pf2 .quote pre{
-  margin:12px 0 0;font-family:"JetBrains Mono",monospace;font-size:13px;line-height:1.85;
+  margin:12px 0 0;font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:13px;line-height:1.85;
   white-space:pre-wrap;color:var(--ink);
 }
 #pf2 .quote .after{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule2);font-size:12.5px;color:var(--ink3)}
 #pf2 .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:24px}
 #pf2 .pipe .st{background:var(--card);border:1px solid var(--rule);padding:14px 14px 16px;position:relative}
-#pf2 .pipe .st .lv{font-family:"JetBrains Mono",monospace;font-size:17px;font-weight:700;color:var(--rust)}
+#pf2 .pipe .st .lv{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:17px;font-weight:700;color:var(--rust)}
 #pf2 .pipe .st .nm{font-size:13px;font-weight:700;margin-top:3px}
 #pf2 .pipe .st .ds{font-size:11.5px;color:var(--ink3);margin-top:6px;line-height:1.6}
-#pf2 .pipe .st .sz{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink3);margin-top:9px;padding-top:8px;border-top:1px solid var(--rule)}
+#pf2 .pipe .st .sz{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;color:var(--ink3);margin-top:9px;padding-top:8px;border-top:1px solid var(--rule)}
 #pf2 .urow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
 #pf2 .urow .u{background:var(--user-soft);border:1px solid var(--user);border-top-width:3px;padding:10px 14px 12px;font-size:12px;line-height:1.65;color:var(--ink2)}
 #pf2 .urow .u b{color:var(--user)}
@@ -500,19 +500,19 @@ body{
 #pf2 .tw{overflow-x:auto;margin-top:22px}
 #pf2 table{border-collapse:collapse;width:100%;font-size:13px}
 #pf2 th, #pf2 td{padding:9px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
-#pf2 thead th{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--rule2);white-space:nowrap}
+#pf2 thead th{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--rule2);white-space:nowrap}
 #pf2 tbody tr:last-child td{border-bottom:0}
-#pf2 td.m, #pf2 th.m{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
-#pf2 td.num{text-align:right;font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+#pf2 td.m, #pf2 th.m{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-variant-numeric:tabular-nums}
+#pf2 td.num{text-align:right;font-family:"JetBrains Mono","Noto Sans TC",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
 #pf2 .phase{margin-top:24px;display:flex;flex-direction:column}
 #pf2 .ph{display:grid;grid-template-columns:96px 1fr;gap:6px 22px;padding:18px 0;border-top:1px solid var(--rule)}
 #pf2 .phase .ph:last-child{border-bottom:1px solid var(--rule)}
-#pf2 .ph .tag{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink3)}
+#pf2 .ph .tag{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:12px;color:var(--ink3)}
 #pf2 .ph .tag b{display:block;color:var(--ink);font-size:13px;font-weight:700}
 #pf2 .ph h4{font-size:14.5px}
 #pf2 .ph .bd{font-size:13.5px;color:var(--ink2);margin-top:5px;line-height:1.75}
 #pf2 .ph .cnt{
-  display:inline-block;font-family:"JetBrains Mono",monospace;font-size:10.5px;
+  display:inline-block;font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;
   border:1px solid var(--rule2);padding:1px 7px;color:var(--ink3);margin-top:8px;margin-right:6px;
 }
 #pf2 .ph .cnt.hot{border-color:var(--flag);color:var(--flag)}
@@ -520,32 +520,32 @@ body{
   margin-top:8px;font-size:13px;color:var(--ink);background:var(--sunk);
   padding:8px 12px;border-left:2px solid var(--rule2);
 }
-#pf2 .usr::before{content:"企劃　";font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
+#pf2 .usr::before{content:"企劃　";font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
 #pf2 .log{margin-top:20px;display:flex;flex-direction:column;gap:0}
 #pf2 .turn{display:grid;grid-template-columns:84px 1fr;gap:0 18px;padding:16px 0;border-top:1px solid var(--rule)}
 #pf2 .log .turn:last-child{border-bottom:1px solid var(--rule)}
-#pf2 .turn .ver{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink3);padding-top:2px;line-height:1.5}
+#pf2 .turn .ver{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:11px;color:var(--ink3);padding-top:2px;line-height:1.5}
 #pf2 .turn .ver b{display:block;color:var(--rust);font-weight:700;font-size:11.5px}
 #pf2 .said{
   font-size:14px;color:var(--ink);background:var(--sunk);
   padding:11px 14px;border-left:3px solid var(--rust);line-height:1.75;
 }
 #pf2 .said::before{
-  content:"企劃";display:block;font-family:"JetBrains Mono",monospace;
+  content:"企劃";display:block;font-family:"JetBrains Mono","Noto Sans TC",monospace;
   font-size:9.5px;letter-spacing:.16em;color:var(--ink3);margin-bottom:5px;
 }
 #pf2 .said.team::before{content:"團隊 REVIEW"}
 #pf2 .said.sys::before{content:"排程查證"}
 #pf2 .did{margin-top:10px;font-size:13.5px;color:var(--ink2);line-height:1.75;padding-left:14px;border-left:1px solid var(--rule2)}
 #pf2 .did::before{
-  content:"工具";display:block;font-family:"JetBrains Mono",monospace;
+  content:"工具";display:block;font-family:"JetBrains Mono","Noto Sans TC",monospace;
   font-size:9.5px;letter-spacing:.16em;color:var(--ink3);margin-bottom:4px;
 }
 #pf2 .did b{color:var(--ink);font-weight:600}
-#pf2 .did .adr{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink3);border:1px solid var(--rule2);padding:1px 6px;margin-left:6px;white-space:nowrap}
+#pf2 .did .adr{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;color:var(--ink3);border:1px solid var(--rule2);padding:1px 6px;margin-left:6px;white-space:nowrap}
 #pf2 .phase-head{
   margin-top:30px;display:flex;align-items:baseline;gap:12px;
-  font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.1em;color:var(--rust);
+  font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:11.5px;letter-spacing:.1em;color:var(--rust);
 }
 #pf2 .phase-head span{font-size:13px;font-family:"Noto Sans TC",sans-serif;letter-spacing:0;color:var(--ink);font-weight:700}
 #pf2 .phase-head::after{content:"";flex:1;height:1px;background:var(--rule2)}
@@ -553,7 +553,7 @@ body{
 #pf2 .tl-chain{margin-top:24px;display:flex;flex-direction:column;gap:0}
 #pf2 .step{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule)}
 #pf2 .tl-chain .step:last-child{border-bottom:1px solid var(--rule)}
-#pf2 .step .sn{font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:700;color:var(--ink3);
+#pf2 .step .sn{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:12.5px;font-weight:700;color:var(--ink3);
   border:1px solid var(--rule2);width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%}
 #pf2 .step.ok .sn{border-color:var(--d);color:var(--d)}
 #pf2 .step b{font-size:14.5px;display:block}
@@ -561,23 +561,23 @@ body{
 #pf2 .use{display:flex;flex-direction:column;gap:0;margin-top:24px}
 #pf2 .ucard{padding:24px 0;border-top:1px solid var(--rule)}
 #pf2 .use .ucard:last-child{border-bottom:1px solid var(--rule)}
-#pf2 .ut{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+#pf2 .ut{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
 #pf2 .ucard h4{font-size:16px;margin-top:6px}
 #pf2 .ub{font-size:13.5px;color:var(--ink2);margin-top:10px;line-height:1.8;max-width:70ch}
 #pf2 .metric{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:14px;padding:14px 16px;background:var(--sunk)}
 #pf2 .metric>div{display:flex;flex-direction:column;gap:3px}
-#pf2 .mk{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
-#pf2 .mv{font-family:"JetBrains Mono",monospace;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+#pf2 .mk{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
+#pf2 .mv{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
 #pf2 .grid-wrap{margin-top:22px;overflow-x:auto}
 #pf2 table.grid{border-collapse:separate;border-spacing:3px;width:auto;min-width:560px}
-#pf2 table.grid th{border:0;padding:6px 8px;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink3);text-align:center;letter-spacing:0;text-transform:none}
+#pf2 table.grid th{border:0;padding:6px 8px;font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:11px;color:var(--ink3);text-align:center;letter-spacing:0;text-transform:none}
 #pf2 table.grid th.pos{text-align:right;white-space:nowrap;color:var(--ink2);font-family:"Noto Sans TC",sans-serif;font-size:12.5px;padding-right:12px}
 #pf2 table.grid td{
   border:0;padding:0;width:74px;height:44px;text-align:center;vertical-align:middle;
 }
 #pf2 .cell{
   width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  font-family:"JetBrains Mono",monospace;font-size:15px;font-weight:700;line-height:1;gap:2px;
+  font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:15px;font-weight:700;line-height:1;gap:2px;
 }
 #pf2 .cell small{font-size:9.5px;font-weight:400;letter-spacing:.04em}
 #pf2 .cell.a{background:var(--a-bg);color:var(--a)}
@@ -585,13 +585,13 @@ body{
 #pf2 .cell.d{background:var(--d-bg);color:var(--d)}
 #pf2 .cell.key{box-shadow:inset 0 0 0 2px currentColor}
 #pf2 .gkey{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;align-items:center}
-#pf2 .gkey span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--ink2);font-family:"JetBrains Mono",monospace}
+#pf2 .gkey span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--ink2);font-family:"JetBrains Mono","Noto Sans TC",monospace}
 #pf2 .gkey i{width:20px;height:14px;display:inline-block}
 #pf2 .rounds{margin-top:22px;display:flex;flex-direction:column;gap:3px}
 #pf2 .rd{display:grid;grid-template-columns:44px 92px 1fr;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}
 #pf2 .rd:last-child{border-bottom:0}
-#pf2 .rd .t{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--ink3);font-weight:500}
-#pf2 .rd .kind{font-family:"JetBrains Mono",monospace;font-size:10.5px;padding:2px 8px;text-align:center;color:var(--ink2);background:var(--sunk)}
+#pf2 .rd .t{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:12.5px;color:var(--ink3);font-weight:500}
+#pf2 .rd .kind{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;padding:2px 8px;text-align:center;color:var(--ink2);background:var(--sunk)}
 #pf2 .rd .kind.mech{background:var(--rust-soft);color:var(--rust);font-weight:500}
 #pf2 .rd .kind.peak{background:var(--flag-bg);color:var(--flag);font-weight:500}
 #pf2 .rd .ev{font-size:12.5px;color:var(--ink2);line-height:1.6}
@@ -599,15 +599,15 @@ body{
 #pf2 .rd.win .ev{color:var(--ink);font-weight:500}
 #pf2 .grip{display:flex;gap:6px;margin-top:20px;flex-wrap:wrap;align-items:flex-end}
 #pf2 .gstep{flex:1;min-width:88px;background:var(--card);border:1px solid var(--rule);padding:11px 12px 12px}
-#pf2 .gstep .lay{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink3)}
-#pf2 .gstep .red{font-family:"JetBrains Mono",monospace;font-size:17px;font-weight:700;margin-top:3px}
+#pf2 .gstep .lay{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:11px;color:var(--ink3)}
+#pf2 .gstep .red{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:17px;font-weight:700;margin-top:3px}
 #pf2 .gstep .bar{height:5px;background:var(--rust);margin-top:9px}
 #pf2 .gstep .wh{font-size:11px;color:var(--ink3);margin-top:7px;line-height:1.5}
 #pf2 .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;margin-top:24px;border-top:1px solid var(--rule2)}
 #pf2 .res div{padding:20px 20px 20px 0;border-right:1px solid var(--rule)}
 #pf2 .res div:last-child{border-right:0}
-#pf2 .res .l{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3)}
-#pf2 .res .v{font-family:"JetBrains Mono",monospace;font-size:clamp(24px,3.4vw,31px);font-weight:700;margin-top:8px;line-height:1}
+#pf2 .res .l{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3)}
+#pf2 .res .v{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:clamp(24px,3.4vw,31px);font-weight:700;margin-top:8px;line-height:1}
 #pf2 .res .c{font-size:12px;color:var(--ink2);margin-top:8px;line-height:1.6}
 @media(max-width:640px){.res div{border-right:0;border-bottom:1px solid var(--rule);padding-right:0}.res div:last-child{border-bottom:0}}
 #pf2 .box{margin-top:24px;border:1px solid var(--rule);background:var(--card);padding:20px 22px}
@@ -618,7 +618,7 @@ body{
 #pf2 .box li{margin-bottom:6px}
 #pf2 .box li:last-child{margin-bottom:0}
 #pf2 .box b{color:var(--ink);font-weight:500}
-#pf2 code{font-family:"JetBrains Mono",monospace;font-size:.9em;background:var(--sunk);padding:1px 5px}
+#pf2 code{font-family:"JetBrains Mono","Noto Sans TC",monospace;font-size:.9em;background:var(--sunk);padding:1px 5px}
 #pf2 .foot{padding-top:32px;font-size:12.5px;color:var(--ink3);line-height:1.8;max-width:70ch}
 @media(max-width:720px){
   .idbar div{border-right:0;padding-right:0;margin-right:0}
@@ -670,26 +670,26 @@ body{
 #pf3 .shell{max-width:1020px;margin:0 auto}
 #pf3 h1, #pf3 h2, #pf3 h4{margin:0;line-height:1.3;text-wrap:balance;font-weight:700}
 #pf3 p{margin:0}
-#pf3 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+#pf3 .eyebrow{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
 #pf3 header.top{padding-block:48px 0}
 #pf3 header.top h1{font-size:clamp(27px,4.6vw,42px);font-weight:900;letter-spacing:-.02em;margin-top:8px}
 #pf3 header.top .sub{color:var(--ink2);font-size:15.5px;margin-top:11px;max-width:58ch}
 #pf3 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin-top:28px;border-block:1px solid var(--rule)}
 #pf3 .stats div{padding:15px 20px 15px 0;border-right:1px solid var(--rule)}
 #pf3 .stats div:last-child{border-right:0}
-#pf3 .stats .v{font-family:"IBM Plex Mono",monospace;font-size:25px;font-weight:600;line-height:1}
+#pf3 .stats .v{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:25px;font-weight:600;line-height:1}
 #pf3 .stats .k{font-size:11.5px;color:var(--ink3);margin-top:6px}
 #pf3 section{padding-block:42px;border-bottom:1px solid var(--rule)}
 #pf3 section:last-of-type{border-bottom:0}
 #pf3 .sh{display:flex;gap:13px;align-items:baseline}
-#pf3 .sh .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--acc);font-weight:600;flex:none}
+#pf3 .sh .n{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:clamp(17px,2.2vw,20px);color:var(--acc);font-weight:600;flex:none}
 #pf3 .sh h2{font-size:clamp(19px,2.7vw,23px)}
 #pf3 .note{color:var(--ink2);font-size:13.5px;margin-top:10px;max-width:64ch}
 #pf3 figure{margin:20px 0 0}
 #pf3 .dg{overflow-x:auto}
 #pf3 svg{display:block;width:100%;height:auto;min-width:660px}
 #pf3 svg text{font-family:"Noto Sans TC",sans-serif}
-#pf3 svg .mono{font-family:"IBM Plex Mono",monospace}
+#pf3 svg .mono{font-family:"IBM Plex Mono","Noto Sans TC",monospace}
 #pf3 svg .bx{fill:var(--surface);stroke:var(--rule2);stroke-width:1.2}
 #pf3 svg .bx-a{fill:var(--acc-soft);stroke:var(--acc);stroke-width:1.4}
 #pf3 svg .bx-g{fill:var(--gate-soft);stroke:var(--gate);stroke-width:1.6}
@@ -710,17 +710,17 @@ body{
 #pf3 .tw{overflow-x:auto;margin-top:18px}
 #pf3 table{border-collapse:collapse;width:100%;font-size:13px}
 #pf3 th, #pf3 td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
-#pf3 thead th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--rule2);white-space:nowrap}
+#pf3 thead th{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--rule2);white-space:nowrap}
 #pf3 tbody tr:last-child td{border-bottom:0}
-#pf3 td.m{font-family:"IBM Plex Mono",monospace}
-#pf3 td.ev{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);white-space:nowrap}
+#pf3 td.m{font-family:"IBM Plex Mono","Noto Sans TC",monospace}
+#pf3 td.ev{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:11.5px;color:var(--acc);white-space:nowrap}
 #pf3 .case{margin-top:20px;border:1px solid var(--rule);background:var(--surface)}
 #pf3 .case .hd{padding:13px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline}
-#pf3 .case .hd .id{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);font-weight:600}
+#pf3 .case .hd .id{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:11.5px;color:var(--acc);font-weight:600}
 #pf3 .case .hd .ti{font-size:13.5px;font-weight:700}
 #pf3 .case .bd{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 #pf3 .case .bd>div{padding:14px 18px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-#pf3 .case .cl{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+#pf3 .case .cl{font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
 #pf3 .case .cv{font-size:12.5px;color:var(--ink2);margin-top:5px;line-height:1.7}
 #pf3 .case .cv b{color:var(--ink);font-weight:600}
 #pf3 .case .ft{padding:12px 18px;font-size:12px;color:var(--ink3)}
@@ -766,7 +766,7 @@ body{
 #pf1 details.tbl{border-top:1px solid var(--rule);padding-top:14px;margin-top:16px}
 #pf1 details.tbl>summary{
   display:inline-flex;align-items:center;gap:9px;list-style:none;cursor:pointer;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;
   font-size:11.5px;letter-spacing:.06em;line-height:1;
   color:var(--accent);background:var(--sunken);
   border:1px solid var(--rule-strong);border-radius:3px;
@@ -810,9 +810,11 @@ body{
   border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--surface);
 }
 #pf2 .why3 dt,#pf3 .why3 dt{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;
-  color:var(--ink3);padding:13px 16px 13px 16px;border-bottom:1px solid var(--rule);white-space:nowrap;
+  font-family:"Noto Sans TC",sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;
+  color:var(--ink);padding:12px 18px 12px 16px;border-bottom:1px solid var(--rule);white-space:nowrap;
 }
+#pf2 .why3 dt:last-of-type{color:var(--rust)}
+#pf3 .why3 dt:last-of-type{color:var(--acc)}
 #pf2 .why3 dd,#pf3 .why3 dd{
   margin:0;padding:12px 18px 12px 0;border-bottom:1px solid var(--rule);
   font-size:14.5px;line-height:1.7;color:var(--ink);
@@ -831,7 +833,7 @@ body{
 
 #pf2 .flow4w,#pf3 .flow4w{margin-top:20px}
 #pf2 .flow4w .cap,#pf3 .flow4w .cap{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;
+  font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;
   color:var(--ink3);margin-bottom:8px;
 }
 #pf2 table.flow4,#pf3 table.flow4{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
@@ -878,7 +880,7 @@ body{
 #pf2 .loop b,#pf3 .loop b{color:var(--r)}
 #pf2 .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;margin-top:22px}
 #pf2 .ba>div{border:1px solid var(--rule);background:var(--surface);padding:14px 16px;font-size:14px;line-height:1.7}
-#pf2 .ba .lb{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:6px}
+#pf2 .ba .lb{font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:6px}
 #pf2 .ba .to{align-self:center;border:0;background:none;padding:0;color:var(--ink3);font-size:18px}
 #pf2 .ba .now{border-color:var(--v);background:var(--v-soft)}
 @media (max-width:640px){#pf2 .ba{grid-template-columns:1fr}#pf2 .ba .to{justify-self:center;transform:rotate(90deg)}}
@@ -914,22 +916,22 @@ body{
 
 /* ── skill 一眼認得出來：圖上是帶 SKILL 標籤的圓角卡、內文是等寬字小標 ── */
 #pf3 code.sk{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.86em;font-weight:600;
+  font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-size:.86em;font-weight:600;
   color:var(--acc);background:var(--acc-soft);border-radius:4px;padding:1px 7px;white-space:nowrap;
 }
 #pf3 details.more>summary code.sk{font-size:12px}
 #pf3 .lgd .s{color:var(--acc);font-weight:700}
 #pf3 .lgd .s i{
-  font-style:normal;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;
+  font-style:normal;font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;
   color:var(--surface);background:var(--acc);border-radius:8px;padding:1px 7px;margin-right:6px;
 }
 #pf3 svg .bx-s{fill:var(--surface);stroke:var(--acc);stroke-width:1.4;transition:stroke-width .12s ease}
 #pf3 svg .bx-s.hot{fill:var(--acc-soft)}
 #pf3 svg .sk-pill{fill:var(--acc)}
-#pf3 svg .sk-tag{fill:var(--surface);font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:700;letter-spacing:.12em}
+#pf3 svg .sk-tag{fill:var(--surface);font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:9px;font-weight:700;letter-spacing:.12em}
 #pf3 svg .sk-go{fill:var(--acc);font-size:10px;font-weight:700}
 #pf3 svg .sk-hint{fill:var(--acc);font-size:11px;font-weight:700}
-#pf3 svg .skn{font-family:"IBM Plex Mono",monospace;fill:var(--acc);font-weight:700;letter-spacing:0}
+#pf3 svg .skn{font-family:"IBM Plex Mono","Noto Sans TC",monospace;fill:var(--acc);font-weight:700;letter-spacing:0}
 #pf3 svg .skl{cursor:pointer}
 #pf3 svg .skl:focus{outline:none}
 #pf3 svg .skl:hover .bx-s{stroke-width:2.6}
@@ -948,7 +950,7 @@ body{
 
 /* ── 總覽圖下的「詳細流程」按鈕列 ── */
 #pf3 .xbtns{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px}
-#pf3 .xbtns-l{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:var(--ink3);margin-right:4px}
+#pf3 .xbtns-l{font-family:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:var(--ink3);margin-right:4px}
 #pf3 .xbtns button{
   appearance:none;font:inherit;cursor:pointer;display:inline-flex;align-items:baseline;gap:7px;
   font-size:13px;color:var(--ink2);background:var(--surface);
@@ -971,15 +973,37 @@ body{
 #pf3 svg .stp:hover .bx-s{stroke-width:2.6}
 #pf3 svg .stp:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
 
+/* ── 工作卡：你給它／它交回／以前要人手／成效 ── */
+#pf2 .job{--jc:var(--rust)}
+#pf3 .job{--jc:var(--acc)}
+#pf2 .jobs,#pf3 .jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+#pf2 .job,#pf3 .job{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--jc);padding:16px 18px 14px}
+#pf2 .job h3,#pf3 .job h3{margin:0;font-size:17px;font-weight:700;line-height:1.4;color:var(--ink)}
+#pf2 .job dl,#pf3 .job dl{margin:4px 0 0;flex:1}
+#pf2 .job dt,#pf3 .job dt{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink3);margin-top:12px}
+#pf2 .job dt.r,#pf3 .job dt.r{color:var(--jc)}
+#pf2 .job dd,#pf3 .job dd{margin:2px 0 0;font-size:14px;line-height:1.65;color:var(--ink2);text-wrap:pretty}
+#pf2 .job dd.r,#pf3 .job dd.r{color:var(--ink);font-weight:500}
+#pf2 .jlink,#pf3 .jlink{
+  appearance:none;align-self:flex-end;margin-top:14px;background:none;border:0;padding:2px 0;cursor:pointer;
+  font:inherit;font-size:13.5px;font-weight:700;color:var(--jc);
+}
+#pf2 .jlink:hover,#pf3 .jlink:hover{text-decoration:underline}
+#pf2 .jlink:focus-visible,#pf3 .jlink:focus-visible{outline:2px solid var(--jc);outline-offset:2px}
+#pf2 .jobs-h{font-size:clamp(19px,2.6vw,23px)}
+#pf2 .jobsec{padding-block:36px 30px}
+#pf2 .tabs{scroll-margin-top:64px}
+@media (max-width:820px){#pf2 .jobs,#pf3 .jobs{grid-template-columns:1fr}}
+
 /* ── 案例卡：以前／現在／結果三行 ── */
 #pf3 .cases{display:grid;gap:14px;margin-top:20px}
 #pf3 .c3{border:1px solid var(--rule);background:var(--surface)}
 #pf3 .c3 .hd{padding:12px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
-#pf3 .c3 .id{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);font-weight:600}
+#pf3 .c3 .id{font-family:"Noto Sans TC",sans-serif;font-size:13px;color:var(--acc);font-weight:700}
 #pf3 .c3 .ti{font-size:15px;font-weight:700}
 #pf3 .c3 .hd .xlink{margin-left:auto;font-size:13px}
 #pf3 .c3 dl{display:grid;grid-template-columns:auto 1fr;margin:0}
-#pf3 .c3 dt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--ink3);padding:11px 16px 11px 18px;border-bottom:1px solid var(--rule);white-space:nowrap}
+#pf3 .c3 dt{font-family:"Noto Sans TC",sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--ink);padding:10px 18px 10px 18px;border-bottom:1px solid var(--rule);white-space:nowrap}
 #pf3 .c3 dd{margin:0;padding:10px 18px 10px 0;border-bottom:1px solid var(--rule);font-size:14px;line-height:1.7;color:var(--ink2);text-wrap:pretty}
 #pf3 .c3 dt:last-of-type,#pf3 .c3 dd:last-of-type{border-bottom:0}
 #pf3 .c3 dt.r{color:var(--acc);font-weight:700}
@@ -1027,7 +1051,7 @@ html:has(dialog.xd[open]){overflow:hidden}
 #hub .cover{border-bottom:0;padding-bottom:30px}
 #hub .sec-h{
   margin:0;padding-bottom:10px;border-bottom:2px solid var(--u-ink);
-  font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.2em;color:var(--u-acc);
+  font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;font-size:11.5px;letter-spacing:.2em;color:var(--u-acc);
 }
 #hub .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 56px}
 #hub .cap{background:var(--u-surface);border:1px solid var(--u-rule);border-top:3px solid var(--u-acc);padding:18px 18px 8px;display:flex;flex-direction:column}
@@ -1042,7 +1066,7 @@ html:has(dialog.xd[open]){overflow:hidden}
   color:var(--u-ink);font-size:13.5px;line-height:1.65;
 }
 #hub .cap-ev a i{
-  display:block;font-style:normal;font-family:'IBM Plex Mono',ui-monospace,monospace;
+  display:block;font-style:normal;font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;
   font-size:10.5px;letter-spacing:.08em;color:var(--u-ink3);margin-bottom:2px;
 }
 #hub .cap-ev a::after{
@@ -1056,6 +1080,121 @@ html:has(dialog.xd[open]){overflow:hidden}
 #hub .capchip{font-size:11.5px;font-weight:700;color:var(--u-acc);background:var(--u-acc-soft);border-radius:3px;padding:2px 9px;letter-spacing:.02em}
 #hub .capchip.plain{color:var(--u-ink2);background:var(--u-sunk)}
 @media (max-width:820px){#hub .caps{grid-template-columns:1fr}}
+
+/* ══ 可讀性：字級下限（中文 13px、英數標籤 12px）、SVG 字級、手機圖表不再縮到 8px ══ */
+.cover .kicker{font-size:12.5px}
+#hub .sec-h{font-size:13px;font-weight:700;letter-spacing:.12em}
+#hub .cap-ev a i{font-size:12px}
+.enum{font-size:12.5px}
+#hub .capchip{font-size:12.5px}
+
+#pf1 .eyebrow,#pf1 .stamp{font-size:12.5px}
+#pf1 .tl-name{font-size:13.5px}
+#pf1 .tl-body .lbl{font-size:12px}
+#pf1 .verdict{font-size:12px}
+#pf1 .chart-top .q{font-size:13.5px}
+#pf1 .legend span{font-size:13px}
+#pf1 .tick,#pf1 .axis-title{font-size:12px}
+#pf1 .dlabel{font-size:13px;font-weight:600}
+#pf1 figcaption{font-size:13.5px}
+#pf1 thead th{font-size:12px}
+#pf1 details.tbl>summary{font-size:13px}
+#pf1 .kpi .k-lbl{font-size:12.5px;letter-spacing:.08em}
+#pf1 .kpi .k-src{font-size:13px}
+#pf1 .kpi .k-chk{font-size:11.5px}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--v2)"]{fill:#3d6a96}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--v3)"]{fill:#2f6aa6}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--t1)"]{fill:#1f63b5}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--t2)"]{fill:#b8481a}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--t3)"]{fill:#0f7a54}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--t4)"]{fill:#8a5d00}:root:not([data-theme="dark"]) #pf1 .dlabel[fill="var(--t5)"]{fill:#b03a6a}}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--v2)"]{fill:#3d6a96}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--v3)"]{fill:#2f6aa6}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--t1)"]{fill:#1f63b5}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--t2)"]{fill:#b8481a}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--t3)"]{fill:#0f7a54}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--t4)"]{fill:#8a5d00}
+:root[data-theme="light"] #pf1 .dlabel[fill="var(--t5)"]{fill:#b03a6a}
+
+#pf2 .eyebrow,#pf3 .eyebrow{font-size:12.5px;letter-spacing:.1em}
+#pf2 .tabs button{font-family:"Noto Sans TC",sans-serif;font-size:14px}
+#pf2 .quote .lbl{font-size:12px}
+#pf2 thead th,#pf3 thead th{font-size:12px;letter-spacing:.06em}
+#pf2 .flow4 th,#pf3 .flow4 th{font-size:12.5px}
+#pf2 .flow4w .cap,#pf3 .flow4w .cap{font-size:12.5px;font-weight:700;letter-spacing:.08em}
+#pf2 .flow4w .fn,#pf3 .flow4w .fn{font-size:12.5px}
+#pf2 .lgd,#pf3 .lgd{font-size:12.5px}
+#pf2 .pipe .st .ds{font-size:12.5px}
+#pf2 .pipe .st .sz{font-size:11.5px}
+#pf2 .pipe .bdg{font-size:12px}
+#pf2 .urow .u{font-size:13px}
+#pf2 .loop,#pf3 .loop{font-size:13.5px}
+#pf2 .unote{font-size:13.5px}
+#pf2 .turn .ver{font-size:12px}
+#pf2 .turn .ver b{font-size:12.5px}
+#pf2 .said::before,#pf2 .did::before{font-size:11.5px;font-weight:700}
+#pf2 .gstep .lay,#pf2 .gstep .wh{font-size:12.5px}
+#pf2 .ba .lb{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
+#pf2 .res .l{font-size:12.5px;letter-spacing:.06em}
+#pf2 .res .c{font-size:13px}
+#pf2 details.more>summary .hint,#pf3 details.more>summary .hint{font-size:13px}
+
+#pf3 .stats .k{font-size:13px}
+#pf3 .lgd .s i{font-size:10.5px}
+#pf3 .xbtns-l{font-size:13px;font-weight:700;letter-spacing:.08em}
+#pf3 .case .hd .id{font-size:12.5px}
+#pf3 .case .cl{font-size:12px;font-weight:700;letter-spacing:.08em}
+#pf3 .case .cv{font-size:13.5px}
+#pf3 .case .ft{font-size:13px}
+#pf3 td.ev{font-size:12.5px}
+#pf3 figcaption{font-size:13px}
+#pf3 .xlink{font-size:12.5px}
+#pf3 svg .t2{font-size:11.5px}
+#pf3 svg .lb,#pf3 svg .lb-g,#pf3 svg .lb-v{font-size:11px}
+#pf3 svg .lb-u,#pf3 svg .lb-r{font-size:11.5px}
+#pf3 svg .band{font-size:11px}
+#pf3 svg .sk-go{font-size:11px}
+#pf3 svg .sk-tag{font-size:9.5px}
+#pf3 svg .sk-hint{font-size:12px}
+
+@media (max-width:640px){
+  #pf2 .tabs button{font-size:13px}
+  /* 手機：圖表以接近原尺寸顯示、左右滑動，不再整張縮小到字只剩 8px */
+  #pf1 svg{min-width:860px}
+  #pf3 svg{min-width:880px}
+  #pf3 svg.arch-m,#pf3 svg.defs{min-width:0}
+}
+
+/* 第二輪：中文標籤一律 ≥13px，SVG 字再大一級 */
+#hub .capchip{font-size:13px}
+#pf1 .eyebrow,#pf1 .stamp,#pf2 .eyebrow,#pf3 .eyebrow{font-size:13px}
+#pf2 .quote .lbl{font-size:13px}
+#pf1 thead th,#pf2 thead th,#pf3 thead th{font-size:13px}
+#pf1 table{font-size:13px}
+#pf2 .flow4 th,#pf3 .flow4 th{font-size:13px}
+#pf2 .flow4w .cap,#pf3 .flow4w .cap,#pf2 .flow4w .fn,#pf3 .flow4w .fn{font-size:13px}
+#pf2 .lgd,#pf3 .lgd{font-size:13px}
+#pf2 .gstep .lay,#pf2 .gstep .wh{font-size:13px}
+#pf2 .pipe .st .ds,#pf2 .pipe .bdg{font-size:13px}
+#pf2 .pipe .st .sz{font-size:12px}
+#pf2 .turn .ver b{font-size:13px}
+#pf2 .res .l{font-size:13px}
+#pf1 .tl-body .lbl,#pf1 .verdict{font-size:13px}
+#pf1 .kpi .k-lbl{font-size:13px}
+#pf1 .kpi .k-chk{font-size:12px}
+#pf3 .case .cl,#pf3 .case .hd .id,#pf3 .xlink{font-size:13px}
+#pf3 td.ev{font-size:13px}
+#pf3 .lgd .s i{font-size:11px}
+#pf3 svg .t2,#pf3 svg .lb,#pf3 svg .lb-g,#pf3 svg .lb-v,#pf3 svg .lb-u,#pf3 svg .lb-r,#pf3 svg .band,#pf3 svg .sk-go{font-size:12px}
+#pf3 svg .sk-tag{font-size:10px}
+#pf3 svg .sk-hint{font-size:12.5px}
+#pf3 svg.arch-m .t2,#pf3 svg.arch-m .lb,#pf3 svg.arch-m .lb-g,#pf3 svg.arch-m .lb-u,#pf3 svg.arch-m .sk-go{font-size:12.5px}
+#pf3 svg.arch-m .sk-tag{font-size:10.5px}
+@media (max-width:640px){
+  #pf1 svg{min-width:900px}
+  #pf3 svg{min-width:920px}
+}
+#pf3 svg .t2{fill:var(--ink2)}
+#pf1 .sub,#pf2 header.top .sub,#pf3 header.top .sub,#pf1 .sec-note,#pf2 .note,#pf3 .note,#pf2 .why3 dd,#pf3 .why3 dd,#pf3 ul.pts li span{text-wrap:pretty}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #pf1 .dlabel[fill="var(--v2)"]{fill:#86b0da}:root:not([data-theme="light"]) #pf1 .dlabel[fill="var(--t2)"]{fill:#ec7a47}:root:not([data-theme="light"]) #pf1 .dlabel[fill="var(--t5)"]{fill:#e67fa6}}
+:root[data-theme="dark"] #pf1 .dlabel[fill="var(--v2)"]{fill:#86b0da}
+:root[data-theme="dark"] #pf1 .dlabel[fill="var(--t2)"]{fill:#ec7a47}
+:root[data-theme="dark"] #pf1 .dlabel[fill="var(--t5)"]{fill:#e67fa6}
 </style>
 
 <div class="navbar" id="navbar" hidden>
@@ -1124,9 +1263,9 @@ html:has(dialog.xd[open]){overflow:hidden}
         <span class="enum">Project&nbsp;I</span>
         <div>
           <p class="capchips"><span class="capchip">AI 工作流</span><span class="capchip">AI 驗證工具</span></p>
-          <h2>角色產線與 QA 修正流</h2>
+          <h2>角色資料的 AI 工作流</h2>
           <ul class="ebullets">
-            <li><b>固定步驟交給 skill：</b>五支 skill 各管一段，QA 卡平均每個工作天結案 <span class="k">3.6 張</span></li>
+            <li><b>三件事交給同一套 skill：</b>做新角色、修 QA 卡、<span class="k">一次改幾十名角色</span></li>
             <li><b>大規模改版：</b>33 名角色的技能改版，<span class="k">2 天改完並實測</span></li>
           </ul>
         </div>
@@ -1625,13 +1764,45 @@ html:has(dialog.xd[open]){overflow:hidden}
 <header class="top">
   <p class="eyebrow">個人作品 · AI 生產工具 × AI 驗證工具（自行設計）</p>
   <h1>從一句話到可上線關卡</h1>
-  <dl class="why3">
-    <dt>以前</dt><dd>每改一版關卡，都要<span class="k">貼表、開遊戲、手打一場</span>才知道對不對。</dd>
-    <dt>現在</dt><dd>口語需求進去，AI 產出可直接貼回遊戲的表；改完<span class="k">一行指令</span>跑遍各隊伍。</dd>
-    <dt>結果</dt><dd>設計在模擬器裡改到收斂，最後才進 Unity 定案；貼回前自動檢查，數值抄錯關卡就不跑。</dd>
-  </dl>
-  <p class="sub">這是我為回合制 BOSS 關卡設計的一套 AI 內容生成工具鏈。以下用一個實際上線的關卡走完全程。</p>
+  <p class="sub">回合制 BOSS 關卡的 AI 工具鏈：口語需求進去，產出可貼回遊戲的資料；改完直接模擬，實機之前就知道難度。企劃審閱每一層、做定案。</p>
 </header>
+
+<section class="jobsec">
+  <h2 class="jobs-h">它能做什麼</h2>
+  <div class="jobs">
+    <div class="job">
+      <h3>把一句話需求變成關卡資料</h3>
+      <dl>
+        <dt>你給它</dt><dd>一段口語需求（情境、敵人、勝負條件）</dd>
+        <dt>它交回</dt><dd>分層規格，以及可直接貼回遊戲的行動邏輯表與技能表</dd>
+        <dt>以前要人手</dt><dd>自己展開機制、查歷史關卡、一格一格填表</dd>
+        <dt class="r">成效</dt><dd class="r">貼回前自動檢查，寫錯的欄位<span class="k">在進遊戲前就擋下</span></dd>
+      </dl>
+      <button type="button" class="jlink" data-tab="tab1">詳細 ›</button>
+    </div>
+    <div class="job">
+      <h3>改完直接模擬</h3>
+      <dl>
+        <dt>你給它</dt><dd>改好的回填表</dd>
+        <dt>它交回</dt><dd>跑遍各隊伍的模擬報告（勝負、回合、每回合戰況）</dd>
+        <dt>以前要人手</dt><dd>貼表進 Unity、開遊戲、手打一場</dd>
+        <dt class="r">成效</dt><dd class="r">設計在模擬器裡改到收斂，<span class="k">最後才進 Unity 定案</span></dd>
+      </dl>
+      <button type="button" class="jlink" data-tab="tab2">詳細 ›</button>
+    </div>
+    <div class="job">
+      <h3>實機之前算出難度</h3>
+      <dl>
+        <dt>你給它</dt><dd>目標通關回合</dd>
+        <dt>它交回</dt><dd>反推的 BOSS 血量與攻擊，以及預測的通關回合區間</dd>
+        <dt>以前要人手</dt><dd>手調數值，每調一次打一場</dd>
+        <dt class="r">成效</dt><dd class="r">方案<span class="k">在動到正式檔之前就能否決</span>（兩個加壓方案都在模擬器裡算出後果後退回）</dd>
+      </dl>
+      <button type="button" class="jlink" data-tab="tab2">詳細 ›</button>
+    </div>
+  </div>
+  <p class="note">以下用一個實際上線的關卡走完全程。</p>
+</section>
 
 <div class="tabs" role="tablist">
   <button role="tab" id="tab1" aria-controls="p1" aria-selected="true">01　AI 生產：一句話 → 資料表</button>
@@ -2023,6 +2194,14 @@ html:has(dialog.xd[open]){overflow:hidden}
   }
   document.addEventListener('subview',function(e){
     if(e.detail.id==='pf2') go(e.detail.sub==='sim'?'tab2':'tab1');
+  });
+  /* 開頭工作卡的「詳細」：切到對應分頁並捲到分頁列 */
+  [].forEach.call(document.querySelectorAll('#pf2 [data-tab]'),function(b){
+    b.addEventListener('click',function(){
+      go(b.getAttribute('data-tab'));
+      var t=document.querySelector('#pf2 .tabs');
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
   });
   tabs.forEach(function(t){
     t.addEventListener('click',function(){go(t.id);});
@@ -2717,53 +2896,49 @@ renderAll();renderDetail();renderSweeps();
 
 <header class="top">
   <p class="eyebrow">個人作品 · AI 工作流 × AI 驗證工具（自行設計）</p>
-  <h1>角色產線與 QA 修正流</h1>
-  <dl class="why3">
-    <dt>以前</dt><dd>一次改動要動好幾張表、同步多國語系、進遊戲確認，步驟一多<span class="k">就靠人記得</span>。</dd>
-    <dt>現在</dt><dd>五支 skill 各管一段，企劃下指令、看結果做決定；進遊戲實測交給另一個代理。</dd>
-    <dt>結果</dt><dd>QA 卡平均每個工作天結案 3.6 張；33 名角色的技能改版 <span class="k">2 天改完並實測</span>。</dd>
-  </dl>
-  <p class="sub">這是我為一款回合制 RPG 設計的 AI 工作流：固定步驟交給 skill，企劃把心力放在判斷。</p>
+  <h1>角色資料的 AI 工作流</h1>
+  <p class="sub">一款回合制 RPG 的角色資料工作：做新角色、修 QA 卡、一次改幾十名角色。企劃下指令、做判斷，其餘交給 AI。</p>
 </header>
 
-<div class="stats">
-  <div><p class="v">3.6 張</p><p class="k">QA 卡／工作天</p></div>
-  <div><p class="v">2 天</p><p class="k">33 名角色的技能改完並實測</p></div>
-  <div><p class="v">1 天</p><p class="k">需求改了，整批重做完</p></div>
-</div>
-
 <section>
-  <div class="sh"><span class="n">01</span><h2>兩個案例</h2></div>
-  <div class="cases">
-    <div class="c3">
-      <div class="hd">
-        <span class="id">案例一 · QA 卡</span>
-        <span class="ti">一張 QA 卡從進來到交回</span>
-        <button type="button" class="xlink" data-view="qa">詳細 ›</button>
-      </div>
+  <div class="sh"><span class="n">01</span><h2>它能做什麼</h2></div>
+  <div class="jobs">
+    <div class="job">
+      <h3>做一名新角色</h3>
       <dl>
-        <dt>以前</dt><dd>查規格、改好幾張表、同步多國語系、進遊戲確認、寫回後再核一次，每一步靠人記得</dd>
-        <dt>現在</dt><dd>企劃判斷要不要修、怎麼修；其餘照 skill 走，做完回報</dd>
-        <dt class="r">結果</dt><dd class="r">平均每個工作天結案 <span class="k">3.6 張</span>。另一張卡寫著「已修好」，實機一跑才發現修正早被退掉；之後流程改成先實測再回報</dd>
+        <dt>你給它</dt><dd>一個白話概念、隊伍缺口</dd>
+        <dt>它交回</dt><dd>技能設計、角色／技能／道具資料、多國語系文字，並在遊戲裡實測</dd>
+        <dt>以前要人手</dt><dd>照順序建好幾張表，漏一步遊戲裡就查不到角色</dd>
+        <dt class="r">成效</dt><dd class="r">照依賴順序產出、不漏建；<span class="k">六項實測全過才上傳</span></dd>
       </dl>
+      <button type="button" class="jlink" data-view="flow1">詳細 ›</button>
     </div>
-    <div class="c3">
-      <div class="hd">
-        <span class="id">案例二 · 技能質變</span>
-        <span class="ti">33 名角色的技能改版，從發想到實作</span>
-        <button type="button" class="xlink" data-view="mutation">詳細 ›</button>
-      </div>
+    <div class="job">
+      <h3>修一張 QA 卡</h3>
       <dl>
-        <dt>以前</dt><dd>33 名角色、每個技能 5 階，都要人手改表、進遊戲切等級打一場、再確認沒改到別的</dd>
-        <dt>現在</dt><dd>企劃定規則（滿級強度不變、前段給弱化版），AI 展開改法、改表、在遊戲裡實測；企劃看結果做決定</dd>
-        <dt class="r">結果</dt><dd class="r"><span class="k">2 天</span>改完並實測；需求改了（換目標版本），1 天重做完。沒改到規劃以外的地方，還順手抓到既有的配表錯誤</dd>
+        <dt>你給它</dt><dd>一張 QA 卡</dd>
+        <dt>它交回</dt><dd>修好的資料與語系、實測結果、卡片留言；企劃放行後寫回</dd>
+        <dt>以前要人手</dt><dd>查規格、改表、同步語系、進遊戲確認、寫回再核一次</dd>
+        <dt class="r">成效</dt><dd class="r">平均每個工作天結案 <span class="k">3.6 張</span></dd>
       </dl>
+      <button type="button" class="jlink" data-view="qa">詳細 ›</button>
+    </div>
+    <div class="job">
+      <h3>一次改幾十名角色</h3>
+      <dl>
+        <dt>你給它</dt><dd>改版規則</dd>
+        <dt>它交回</dt><dd>33 名角色的技能全改好，每一階都在遊戲裡實測過</dd>
+        <dt>以前要人手</dt><dd>每名角色、每一階都要改表、進遊戲打一場</dd>
+        <dt class="r">成效</dt><dd class="r"><span class="k">2 天</span>完成；需求改了，1 天重做完</dd>
+      </dl>
+      <button type="button" class="jlink" data-view="mutation">詳細 ›</button>
     </div>
   </div>
 </section>
 
+
 <section>
-  <div class="sh"><span class="n">02</span><h2>工具怎麼分工：五支 skill</h2></div>
+  <div class="sh"><span class="n">02</span><h2>怎麼做到的：五支 skill</h2></div>
   <p class="note">每一段工作交給一支 skill：寫好步驟、檢查與停止條件的固定流程。</p>
 
   <figure>
@@ -2843,7 +3018,7 @@ renderAll();renderDetail();renderSweeps();
 
       <rect class="bx-g" x="700" y="50" width="160" height="76" rx="3"></rect>
       <text class="t1" x="780" y="78" text-anchor="middle" fill="var(--gate)">🔒 企劃放行</text>
-      <text class="t2" x="780" y="97" text-anchor="middle">所有寫入線上的動作都經過這裡</text>
+      <text class="t2" x="780" y="97" text-anchor="middle">所有線上寫入都經過這裡</text>
       <text class="t2" x="780" y="113" text-anchor="middle">正式檔・版控・卡片</text>
       <text class="lb-u" x="780" y="146" text-anchor="middle">👤 看過演練結果才點頭</text>
 
@@ -2923,10 +3098,11 @@ renderAll();renderDetail();renderSweeps();
 
   <div class="xbtns" aria-label="詳細流程">
     <p class="xbtns-l">詳細流程</p>
-    <button type="button" data-view="flow1"><b>流程一</b>角色生產</button>
-    <button type="button" data-view="flow2"><b>流程二</b>QA 修正</button>
-    <button type="button" data-view="verify"><b>驗證</b>另一個代理實跑</button>
-    <button type="button" data-view="stable"><b>穩定度機制</b>七項</button>
+    <button type="button" data-view="flow1"><b>做新角色</b></button>
+    <button type="button" data-view="flow2"><b>修 QA 卡</b>八個階段</button>
+    <button type="button" data-view="mutation"><b>一次改多名角色</b></button>
+    <button type="button" data-view="verify"><b>進遊戲實測</b>另一個代理實跑</button>
+    <button type="button" data-view="stable"><b>穩定度機制</b></button>
   </div>
 
   <ul class="pts">
@@ -2943,12 +3119,12 @@ renderAll();renderDetail();renderSweeps();
 <dialog class="xd" id="xd" aria-label="詳細流程">
   <div class="xd-hd">
     <button type="button" class="xd-back" hidden>← <span></span></button>
-    <p class="xd-crumb"><span class="xd-root">角色產線</span><span class="xd-path"></span></p>
+    <p class="xd-crumb"><span class="xd-root">角色資料工作流</span><span class="xd-path"></span></p>
     <button type="button" class="xd-x" aria-label="關閉詳細流程">✕</button>
   </div>
   <div class="xd-bd" tabindex="-1" autofocus>
-    <div class="xd-pg" data-pg="qa" data-name="案例一：QA 卡" hidden>
-      <div class="xd-ti"><h3>案例一：一張 QA 卡從進來到交回</h3><code class="sk">/data-update</code></div>
+    <div class="xd-pg" data-pg="qa" data-name="案例：一張 QA 卡" hidden>
+      <div class="xd-ti"><h3>案例：一張 QA 卡從進來到交回</h3><code class="sk">/data-update</code></div>
       <p class="xd-lead">技能觸發時機與描述用詞都跟設計不符的一張卡。企劃判斷要不要修、怎麼修，其餘照 skill 走。<button type="button" class="xlink" data-view="flow2">完整八個階段 ›</button></p>
       <div class="case">
         <div class="hd"><span class="id">QA 卡 · 角色 A</span><span class="ti">技能觸發時機與描述用詞都跟設計不符</span></div>
@@ -2963,8 +3139,8 @@ renderAll();renderDetail();renderSweeps();
         <div class="ft">同一批另一張卡發現程式端的修正曾經上線又被退掉、卡片留言與實際狀態對不上——流程因此改為<b>先實機驗證再回報</b>。每一張卡都走同一條八階段流程，平均每個工作天結案 3.6 張、單日最多 9 張；企劃的裁示不只用在當張卡，會回流成規則，下一次 AI 就照這個判斷做。</div>
       </div>
     </div>
-    <div class="xd-pg" data-pg="mutation" data-name="案例二：技能質變" hidden>
-      <div class="xd-ti"><h3>案例二：技能質變，從發想到實作</h3></div>
+    <div class="xd-pg" data-pg="mutation" data-name="案例：一次改 33 名角色" hidden>
+      <div class="xd-ti"><h3>案例：一次改 33 名角色的技能（技能質變）</h3></div>
       <p class="xd-lead">33 名角色的技能改版。規則、改法與優先序由企劃決定；展開改法、改表、在遊戲裡實測交給 AI。</p>
       <figure>
         <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="g">🔒 放行</span><span class="v">✅ 擋下的錯</span></div>
@@ -3013,8 +3189,8 @@ renderAll();renderDetail();renderSweeps();
         <li><b>企劃的判斷</b><span>規則、改法與優先序由企劃決定；寫回線上的時機由負責人決定</span></li>
       </ul>
     </div>
-    <div class="xd-pg" data-pg="verify" data-name="驗證" hidden>
-      <div class="xd-ti"><h3>驗證：另一個代理在 Unity 實際跑過才算數</h3><code class="sk">/battle-test</code></div>
+    <div class="xd-pg" data-pg="verify" data-name="進遊戲實測" hidden>
+      <div class="xd-ti"><h3>進遊戲實測：另一個代理在 Unity 實際跑過才算數</h3><code class="sk">/battle-test</code></div>
       <p class="xd-lead">改資料和驗證分給兩個代理：製作代理規定不跑測試；驗證代理執行 <code class="sk">/battle-test</code>，透過橋接在 Unity 實際跑戰鬥、逐回合記錄，回報固定三行：判定、證據位置（log 檔與行號）、下一步。</p>
 
       <figure>
@@ -3023,9 +3199,9 @@ renderAll();renderDetail();renderSweeps();
         <svg viewBox="0 0 900 300" role="img" aria-label="驗證流程：製作代理改本機資料後交接給另一個驗證代理，驗證代理透過橋接在 Unity 重新登入、跑戰鬥、逐回合記錄，讀 log 判定，不通過退回製作代理">
           <text class="lb" x="16" y="76">製作代理</text>
           <text class="lb" x="16" y="150">驗證代理</text>
-          <text class="lb" x="16" y="164">（另一個代理）</text>
+          <text class="lb" x="16" y="167">（另一個代理）</text>
           <text class="lb" x="16" y="237">Unity</text>
-          <text class="lb" x="16" y="251">（透過橋接）</text>
+          <text class="lb" x="16" y="254">（透過橋接）</text>
 
           <rect class="bx" x="140" y="45" width="200" height="54" rx="3"></rect>
           <text class="t1" x="240" y="68" text-anchor="middle">① 本機改資料</text>
@@ -3095,8 +3271,8 @@ renderAll();renderDetail();renderSweeps();
         </table>
       </div>
     </div>
-    <div class="xd-pg" data-pg="flow1" data-name="流程一：角色生產" hidden>
-      <div class="xd-ti"><h3>流程一：一個白話概念 → 可上線的角色</h3><code class="sk">/skill-design</code><code class="sk">/char-maker</code><code class="sk">/i2-update</code></div>
+    <div class="xd-pg" data-pg="flow1" data-name="做新角色" hidden>
+      <div class="xd-ti"><h3>做新角色：一個白話概念 → 可上線的角色</h3><code class="sk">/skill-design</code><code class="sk">/char-maker</code><code class="sk">/i2-update</code></div>
       <p class="xd-lead">企劃給一個白話概念，AI 一次帶一步：設計段只產文字，資料段照依賴順序產表，上線前六項實測全過、企劃再點頭才上傳。</p>
 
 
@@ -3181,8 +3357,8 @@ renderAll();renderDetail();renderSweeps();
         </table>
       </div>
     </div>
-    <div class="xd-pg" data-pg="flow2" data-name="流程二：QA 修正" hidden>
-      <div class="xd-ti"><h3>流程二：QA 卡從進來到交回</h3><code class="sk">/data-update</code></div>
+    <div class="xd-pg" data-pg="flow2" data-name="修 QA 卡" hidden>
+      <div class="xd-ti"><h3>修 QA 卡：從進來到交回的八個階段</h3><code class="sk">/data-update</code></div>
       <p class="xd-lead">每張 QA 卡走同一條八階段流程：階段 0～4 都在本機跑，寫回線上前由企劃看過副本演練結果再放行。圖裡第 3 步「驗證」可以點進去看。</p>
 
 
@@ -3196,7 +3372,7 @@ renderAll();renderDetail();renderSweeps();
           <text class="lb-u" x="826" y="34" text-anchor="middle">👤 關閉卡片由企劃決定</text>
           <path class="ln-u" d="M826,40 V56"></path>
           <text class="lb-u" x="544" y="142" text-anchor="middle">👤 看過副本演練</text>
-          <text class="lb-u" x="544" y="156" text-anchor="middle">結果才同意寫入</text>
+          <text class="lb-u" x="544" y="159" text-anchor="middle">結果才同意寫入</text>
           <rect class="bx" x="31" y="60" width="86" height="64" rx="3"></rect>
           <text class="t2 mono" x="74" y="80" text-anchor="middle">0</text>
           <text class="t1" x="74" y="100" text-anchor="middle">快照</text>
@@ -3305,7 +3481,7 @@ renderAll();renderDetail();renderSweeps();
 (function(){
   var WORKS=[
     {hash:'tooling',    id:'pf2', c:'Project B', t:'從一句話到可上線關卡'},
-    {hash:'pipeline',   id:'pf3', c:'Project I', t:'角色產線與 QA 修正流'},
+    {hash:'pipeline',   id:'pf3', c:'Project I', t:'角色資料的 AI 工作流'},
     {hash:'difficulty', id:'pf1', c:'Project S', t:'主線難度收斂分析'}
   ];
   var bar=document.getElementById('navbar'),
