@@ -971,6 +971,21 @@ body{
 #pf3 svg .stp:hover .bx-s{stroke-width:2.6}
 #pf3 svg .stp:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
 
+/* ── 案例卡：以前／現在／結果三行 ── */
+#pf3 .cases{display:grid;gap:14px;margin-top:20px}
+#pf3 .c3{border:1px solid var(--rule);background:var(--surface)}
+#pf3 .c3 .hd{padding:12px 18px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+#pf3 .c3 .id{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);font-weight:600}
+#pf3 .c3 .ti{font-size:15px;font-weight:700}
+#pf3 .c3 .hd .xlink{margin-left:auto;font-size:13px}
+#pf3 .c3 dl{display:grid;grid-template-columns:auto 1fr;margin:0}
+#pf3 .c3 dt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--ink3);padding:11px 16px 11px 18px;border-bottom:1px solid var(--rule);white-space:nowrap}
+#pf3 .c3 dd{margin:0;padding:10px 18px 10px 0;border-bottom:1px solid var(--rule);font-size:14px;line-height:1.7;color:var(--ink2);text-wrap:pretty}
+#pf3 .c3 dt:last-of-type,#pf3 .c3 dd:last-of-type{border-bottom:0}
+#pf3 .c3 dt.r{color:var(--acc);font-weight:700}
+#pf3 .c3 dd.r{color:var(--ink)}
+#pf3 .xd-lead .xlink{margin-left:6px;font-size:13px}
+
 /* ── 「詳細」視窗 ── */
 html:has(dialog.xd[open]){overflow:hidden}
 #pf3 dialog.xd{
@@ -1056,7 +1071,7 @@ html:has(dialog.xd[open]){overflow:hidden}
   <header class="cover">
     <p class="kicker">Portfolio &middot; 2026</p>
     <h1>實作案例</h1>
-    <p class="kicker2">數值／系統企劃 · 為專案建立 AI 生產工具、AI 驗證工具與 AI 工作流</p>
+    <p class="kicker2">數值／系統企劃 · 為專案建立 AI 生產工具、驗證工具與工作流<br>提升效率、省下重複作業、降低人為失誤</p>
     <p class="note">數字皆取自實際產出檔案與工作日誌，未經重繪或估算。</p>
   </header>
 
@@ -1064,26 +1079,26 @@ html:has(dialog.xd[open]){overflow:hidden}
   <div class="caps">
     <div class="cap">
       <p class="cap-k">AI 生產工具</p>
-      <p class="cap-d">口語需求進去，產出<span class="k">可直接貼回遊戲</span>的資料</p>
+      <p class="cap-d">口語需求進去，<span class="k">可直接貼回遊戲</span>的資料出來，不用人手一格格填</p>
       <ul class="cap-ev">
-        <li><a href="#tooling"><i>Project B</i>一句話需求 → 行動邏輯表與技能表，寫完自動跑 49 項檢查</a></li>
-        <li><a href="#pipeline/flow1"><i>Project I</i>從角色概念到可上線的角色資料，照依賴順序產出</a></li>
+        <li><a href="#tooling"><i>Project B</i>一句話需求 → 可直接貼回遊戲的行動邏輯表與技能表</a></li>
+        <li><a href="#pipeline/mutation"><i>Project I</i>企劃定規則，33 名角色的技能改動由 AI 寫進表</a></li>
       </ul>
     </div>
     <div class="cap">
       <p class="cap-k">AI 驗證工具</p>
-      <p class="cap-d">改完就驗，<span class="k">用實際跑出來的結果</span>說話</p>
+      <p class="cap-d">改完不用自己進遊戲測，<span class="k">改錯的地方工具先擋</span></p>
       <ul class="cap-ev">
-        <li><a href="#tooling/sim"><i>Project B</i>模擬器跑遊戲本身的戰鬥程式碼：1,407 筆逐欄比對，公式欄位 100%</a></li>
-        <li><a href="#pipeline/verify"><i>Project I</i>另一個代理在 Unity 實際跑戰鬥，逐回合 log 當證據</a></li>
+        <li><a href="#tooling/sim"><i>Project B</i>改完不用貼表進 Unity 手打一場，一行指令跑遍各隊伍</a></li>
+        <li><a href="#pipeline/mutation"><i>Project I</i>33 名角色的技能改版，2 天改完並在遊戲裡實測</a></li>
       </ul>
     </div>
     <div class="cap">
       <p class="cap-k">AI 工作流</p>
-      <p class="cap-d">固定步驟交給 skill，<span class="k">決定前把依據擺好</span></p>
+      <p class="cap-d">固定步驟交給 skill，<span class="k">不靠人記得</span></p>
       <ul class="cap-ev">
-        <li><a href="#pipeline"><i>Project I</i>五支 skill 各管一段，QA 卡走同一條八階段流程</a></li>
-        <li><a href="#tooling"><i>Project B</i>寫表前後自動檢查，犯過的錯回流成規則</a></li>
+        <li><a href="#pipeline/qa"><i>Project I</i>QA 卡照 skill 走，平均每個工作天結案 3.6 張</a></li>
+        <li><a href="#tooling"><i>Project B</i>犯過的錯寫成自動檢查，下一關直接擋</a></li>
       </ul>
     </div>
   </div>
@@ -1098,7 +1113,7 @@ html:has(dialog.xd[open]){overflow:hidden}
           <h2>從一句話到可上線關卡</h2>
           <ul class="ebullets">
             <li><b>一行指令驗證：</b>改完關卡不必貼表進 Unity 手打一場，<span class="k">一行指令跑遍各隊伍</span></li>
-            <li><b>實機之前預測難度：</b>兩個關卡 <span class="k">9 場實機中 8 場</span>落在事前算出的區間內</li>
+            <li><b>收斂後才進 Unity：</b>設計在模擬器裡反覆改到收斂，<span class="k">最後才進 Unity 定案</span></li>
           </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
@@ -1112,7 +1127,7 @@ html:has(dialog.xd[open]){overflow:hidden}
           <h2>角色產線與 QA 修正流</h2>
           <ul class="ebullets">
             <li><b>固定步驟交給 skill：</b>五支 skill 各管一段，QA 卡平均每個工作天結案 <span class="k">3.6 張</span></li>
-            <li><b>上線前都經確認：</b>會影響線上的決定，都是<span class="k">企劃看過副本演練結果再放行</span></li>
+            <li><b>大規模改版：</b>33 名角色的技能改版，<span class="k">2 天改完並實測</span></li>
           </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
@@ -1611,26 +1626,11 @@ html:has(dialog.xd[open]){overflow:hidden}
   <p class="eyebrow">個人作品 · AI 生產工具 × AI 驗證工具（自行設計）</p>
   <h1>從一句話到可上線關卡</h1>
   <dl class="why3">
-    <dt>問題</dt><dd>每改一版關卡，都要<span class="k">貼表、開遊戲、手打一場</span>才知道對不對；難度好不好，要到實機才知道。</dd>
-    <dt>做法</dt><dd>我定義分層規格，讓 AI 依規格產出資料表；另外做了一個模擬器，<span class="k">直接跑遊戲本身的戰鬥程式碼</span>。</dd>
-    <dt>改變</dt><dd>驗證一版設計，從「貼表＋開遊戲＋手打一場」變成<span class="k">一行指令</span>；難度區間在實機之前就算出來。</dd>
+    <dt>以前</dt><dd>每改一版關卡，都要<span class="k">貼表、開遊戲、手打一場</span>才知道對不對。</dd>
+    <dt>現在</dt><dd>口語需求進去，AI 產出可直接貼回遊戲的表；改完<span class="k">一行指令</span>跑遍各隊伍。</dd>
+    <dt>結果</dt><dd>設計在模擬器裡改到收斂，最後才進 Unity 定案；貼回前自動檢查，數值抄錯關卡就不跑。</dd>
   </dl>
-  <p class="sub">這是我為回合制 BOSS 關卡設計的一套 AI 內容生成工具鏈。分工如下，以下用一個實際上線的關卡走完全程。</p>
-  <dl class="why3 soft">
-    <dt>企劃</dt><dd>方向與定案：提出需求、逐層審閱與推翻、確認回填</dd>
-    <dt>工具</dt><dd>繁瑣的部分：展開規格、查歷史關卡、產出可貼回遊戲的表、跑模擬，同時寫好決策記錄與修訂歷程</dd>
-    <dt>決定前</dt><dd>工具先把依據擺好：推薦值附依據、每一版附驗證方式、模擬報告可逐回合展開</dd>
-  </dl>
-  <div class="idbar">
-    <div>關卡類型<b>特挑02</b></div>
-    <div>怪物 ID<b>怪物ID#1 / 怪物ID#2</b></div>
-    <div>分層產出<b>L0 → L4</b></div>
-    <div>版次<b>143</b></div>
-    <div>決策記錄<b>52 條</b></div>
-    <div>實機重播<b>10/10 場全中</b></div>
-    <div>逐欄比對<b>公式 100%・傷害值 98.8%</b></div>
-  </div>
-  <p class="note">模擬器的準確度：1,407 筆逐欄比對中，技能倍率等公式欄位 100% 一致；最終傷害值 98.8%，其餘差異追查後是實機戰報取自較舊的資料版本，不是引擎算錯（見分頁 02）。</p>
+  <p class="sub">這是我為回合制 BOSS 關卡設計的一套 AI 內容生成工具鏈。以下用一個實際上線的關卡走完全程。</p>
 </header>
 
 <div class="tabs" role="tablist">
@@ -1703,7 +1703,7 @@ html:has(dialog.xd[open]){overflow:hidden}
 
 <section>
   <div class="sh"><span class="n">03</span><h2>交付：五層規格與可直接貼回遊戲的資料</h2></div>
-  <p class="note">L3／L4 的產出對應遊戲的兩張 bytes 表，回填檔過 49 項自動驗證後可直接貼回專案。</p>
+  <p class="note">L3／L4 的產出對應遊戲的兩張 bytes 表，回填檔過自動檢查後可直接貼回專案，寫錯的欄位在進遊戲前就擋下。</p>
 
   <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="v">✅ 自動驗證</span><span class="a">⚙️ 自動處理</span><span class="r">🔁 錯誤吸收</span></div>
   <div class="pipe">
@@ -1716,7 +1716,7 @@ html:has(dialog.xd[open]){overflow:hidden}
   <div class="urow" aria-label="企劃在各層做的判斷">
     <div class="u u1"><b>👤 企劃</b><br>提出口語需求，並決定先談哪幾層（例：「先討論 L0、L1」）</div>
     <div class="u u2"><b>👤 企劃</b><br>逐層審閱 AI 的產出，修正或整個推翻；AI 標「⚠️ 推薦值」的數值，由企劃看過依據才定案</div>
-    <div class="u u2"><b>👤 企劃</b><br>確認回填檔；過 49 項自動驗證後，才貼回遊戲</div>
+    <div class="u u2"><b>👤 企劃</b><br>確認回填檔；過自動檢查後，才貼回遊戲</div>
   </div>
   <div class="loop"><b>🔁 錯誤吸收</b>　企劃糾正過的做法，AI 當場提議存成規則，企劃同意才寫入；同一類錯第二次發生，就寫成新的自動檢查，之後每一關都會自動擋。</div>
   <p class="unote">AI 負責展開規格、查歷史關卡、產表與跑驗證；<b>方向與定案由企劃決定</b>。每一版都由一次企劃回饋觸發，近兩成的決策（52 條中的 9 條）被企劃推翻重做，工具照樣收斂；實際往返見下方第 04 節。</p>
@@ -1728,7 +1728,7 @@ html:has(dialog.xd[open]){overflow:hidden}
       <tbody>
         <tr><td class="st">提出需求</td><td class="u" data-k="👤 企劃的判斷">定情境、敵人、勝負條件，決定先談哪幾層</td><td class="none">—</td><td class="a" data-k="⚙️ 自動處理">逐字存證、展開原始規格；查歷史關卡取素材與數值基準</td><td class="none">—</td></tr>
         <tr><td class="st">逐層設計</td><td class="u" data-k="👤 企劃的判斷">審閱每一層，修改或推翻；「推薦值」看過依據再定案</td><td class="v" data-k="✅ 自動驗證">沿用舊關卡骨架時，自動查上線前後八週會不會撞上復刻</td><td class="a" data-k="⚙️ 自動處理">長出機制與數值，未確認的附依據；每一版自動記下改了什麼、誰觸發、怎麼驗</td><td class="r" data-k="🔁 錯誤吸收">企劃糾正的做法，AI 當場提議存成規則，企劃同意才寫入</td></tr>
-        <tr><td class="st">產出資料表</td><td class="none">—</td><td class="v" data-k="✅ 自動驗證">第一次寫表前自動跳出檢查清單，讀完才放行；寫完自動跑 49 項檢查（欄位、編碼、子技齊全、屬性對特效、ID 撞號…）</td><td class="a" data-k="⚙️ 自動處理">產出行動邏輯表與技能表</td><td class="r" data-k="🔁 錯誤吸收">同一類錯第二次發生，就寫成新的自動檢查或清單條目</td></tr>
+        <tr><td class="st">產出資料表</td><td class="none">—</td><td class="v" data-k="✅ 自動驗證">第一次寫表前自動跳出檢查清單，讀完才放行；寫完自動檢查（欄位、編碼、子技齊全、屬性對特效、ID 撞號…）</td><td class="a" data-k="⚙️ 自動處理">產出行動邏輯表與技能表</td><td class="r" data-k="🔁 錯誤吸收">同一類錯第二次發生，就寫成新的自動檢查或清單條目</td></tr>
         <tr><td class="st">模擬驗證</td><td class="u" data-k="👤 企劃的判斷">看報告判斷手感與壓力節奏，決定要不要調</td><td class="v" data-k="✅ 自動驗證">模擬前自動比對數值有沒有抄錯關卡，對不上就拒跑</td><td class="a" data-k="⚙️ 自動處理">一行指令跑遍各隊伍，產出可逐回合展開的互動報告</td><td class="none">—</td></tr>
         <tr><td class="st">貼回遊戲</td><td class="u" data-k="👤 企劃的判斷">確認回填檔，決定上線</td><td class="none">—</td><td class="none">—</td><td class="r" data-k="🔁 錯誤吸收">定期整批掃一次當下沒接住的經驗，由企劃決定要不要收成規則</td></tr>
       </tbody>
@@ -1760,21 +1760,7 @@ html:has(dialog.xd[open]){overflow:hidden}
 
 <section>
   <div class="sh"><span class="n">04</span><h2>收斂：企劃的一個判斷，工具落實到每一處</h2></div>
-  <p class="note">從第一版到定版共 <b>143 個版次</b>，每一版由一次企劃回饋觸發，工具同時記下觸發來源與驗證方式，不用另外寫文件。先看幾個決定換來多少工作：</p>
-
-  <div class="tw">
-    <table>
-      <thead><tr><th style="width:38%">企劃的決定</th><th>工具照這個決定做完的</th></tr></thead>
-      <tbody>
-        <tr><td>附上編劇定稿，機制一律不動</td><td>技能名、文字效果名、機制名 <b>612 處</b>改名，台詞 17 句換成定稿，機制與 ID 一律未動；另外找出編劇版內部 4 處自相矛盾的舊名</td></tr>
-        <tr><td>技能與台詞 ID 重構，接續上一關的號段</td><td>全量重編，<b>403 處</b>過期 ID 清零，同時修掉模擬器三處保真度問題</td></tr>
-        <tr><td>缺解防角色的隊伍，換成同 CD、帶解防技能的角色</td><td>掃過 <b>138 名</b>可玩角色找出 9 名帶解防，換角後重跑，五隊全部正確化解、懲罰技零發動</td></tr>
-        <tr><td>附上實機 8 場原始紀錄，血量改以整數% 回推</td><td>8 檔戰鬥紀錄全部解碼，依實機校準血量，只動一欄、其餘由公式輸出</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="note">以下是實際往返的節錄，只列改變方向的節點；引用內容經文字整理，語意未變。</p>
+  <p class="note">每一版由一次企劃回饋觸發，工具同時記下觸發來源與驗證方式，不用另外寫文件。以下是實際往返的節錄，只列改變方向的節點；引用內容經文字整理，語意未變。</p>
 
   <div class="log">
     <div class="turn">
@@ -1883,6 +1869,22 @@ html:has(dialog.xd[open]){overflow:hidden}
     </div>
     </div>
   </details>
+  <details class="more">
+    <summary><span>企劃的決定 → 工具做完的事</span><span class="hint">幾個決定的落地範圍</span></summary>
+    <div class="more-bd">
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:38%">企劃的決定</th><th>工具照這個決定做完的</th></tr></thead>
+          <tbody>
+            <tr><td>附上編劇定稿，機制一律不動</td><td>技能名、文字效果名、機制名 612 處改名，台詞 17 句換成定稿，機制與 ID 一律未動；另外找出編劇版內部 4 處自相矛盾的舊名</td></tr>
+            <tr><td>技能與台詞 ID 重構，接續上一關的號段</td><td>全量重編，403 處過期 ID 清零，同時修掉模擬器三處保真度問題</td></tr>
+            <tr><td>缺解防角色的隊伍，換成同 CD、帶解防技能的角色</td><td>掃過 138 名可玩角色找出 9 名帶解防，換角後重跑，五隊全部正確化解、懲罰技零發動</td></tr>
+            <tr><td>附上實機 8 場原始紀錄，血量改以整數% 回推</td><td>8 檔戰鬥紀錄全部解碼，依實機校準血量，只動一欄、其餘由公式輸出</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 </section>
 
 </div>
@@ -1900,10 +1902,8 @@ html:has(dialog.xd[open]){overflow:hidden}
 </section>
 
 <section>
-  <div class="sh"><span class="n">01</span><h2>它不是近似模型，它就是遊戲的戰鬥引擎</h2></div>
-  <p class="note">大多數關卡模擬器是另寫一套近似公式，誤差從第一行程式碼就開始累積。本模擬器走另一條路：把來源專案的<b>戰鬥 C# 原碼引用式鏈入</b>，編成獨立 console app。觸發技鏈與子觸發技的計算沒有鏡像失真，因為根本沒有鏡像——跑的就是遊戲本身那份程式。</p>
-
-  <p class="note">因為跑的是遊戲本身的程式，<b>改完回填表就能模擬，不必先貼表進 Unity</b>；本頁開頭的前後對照就是靠這一點。</p>
+  <div class="sh"><span class="n">01</span><h2>為什麼可以不用手打：跑的是遊戲本身的戰鬥程式碼</h2></div>
+  <p class="note">模擬器沒有另寫一套近似公式，直接跑遊戲本身的戰鬥程式碼，所以<b>改完回填表就能模擬，不必先貼表進 Unity</b>。準確是基本，想看怎麼驗的再展開。</p>
   <details class="more">
     <summary><span>模擬器由哪些部分組成</span><span class="hint">真引擎・快照・替身・可控亂數</span></summary>
     <div class="more-bd">
@@ -1920,22 +1920,16 @@ html:has(dialog.xd[open]){overflow:hidden}
       </div>
     </div>
   </details>
-
-</section>
-
-<section>
-  <div class="sh"><span class="n">02</span><h2>精準度：逐次命中、逐欄位對帳</h2></div>
-  <p class="note">「準不準」不是宣稱出來的。驗證方法是把<b>實機戰報</b>與<b>同一場的模擬器重播</b>（同隊伍、同每一手操作）拿來逐次命中逐欄位比對——實機每次命中都記錄 <span class="m">damage／baseValue／effValue／skillEffectValue</span> 加上施放者與目標的完整狀態，兩邊資料同源，可以一筆一筆對。</p>
-
-  <div class="res">
-    <div><p class="l">實機重播場次</p><p class="v" style="color:var(--d)">10 / 10</p><p class="c">回合數與勝負<b>全數命中</b><br>兩個關卡各五場</p></div>
-    <div><p class="l">逐欄位比對</p><p class="v" style="color:var(--d)">≥ 98.8%</p><p class="c">1,407 筆命中逐欄比對<br>核心公式欄位 <b>100%</b>，最終傷害值 98.8%</p></div>
-    <div><p class="l">難度預測帶</p><p class="v" style="color:var(--d)">8 / 9</p><p class="c">實機回合落在<b>事前算出的區間內</b><br>高難02 四場全中・關卡A 五場中四場</p></div>
-  </div>
-
   <details class="more">
-    <summary><span>逐欄位對帳（1,407 筆命中）</span><span class="hint">哪些欄位 100%、差異從哪來</span></summary>
+    <summary><span>準確度：實機與模擬器逐筆比對</span><span class="hint">重播結果・逐欄對帳・難度預測</span></summary>
     <div class="more-bd">
+      <p class="note">把實機戰報與同一場的模擬器重播（同隊伍、同每一手操作）拿來逐次命中、逐欄位比對。</p>
+      <div class="res">
+        <div><p class="l">實機重播場次</p><p class="v" style="color:var(--d)">10 / 10</p><p class="c">回合數與勝負<b>全數命中</b><br>兩個關卡各五場</p></div>
+        <div><p class="l">逐欄位比對</p><p class="v" style="color:var(--d)">≥ 98.8%</p><p class="c">1,407 筆命中逐欄比對<br>核心公式欄位 <b>100%</b>，最終傷害值 98.8%</p></div>
+        <div><p class="l">難度預測帶</p><p class="v" style="color:var(--d)">8 / 9</p><p class="c">實機回合落在<b>事前算出的區間內</b><br>高難02 四場全中・關卡A 五場中四場</p></div>
+      </div>
+      <h3 style="margin-top:28px">逐欄位對帳（1,407 筆命中）</h3>
       <div class="tw">
         <table>
           <thead><tr><th>欄位</th><th class="num">比對數</th><th class="num">不符</th><th class="num">正確率</th></tr></thead>
@@ -1952,12 +1946,7 @@ html:has(dialog.xd[open]){overflow:hidden}
         </table>
       </div>
       <p class="note"><b>核心公式欄位全部 100%。</b>下方兩列的差異追查後確認為實機戰報取自改版前的資料版本，與引擎計算無關；用對應版本重播後<b>十場逐筆零差</b>。</p>
-    </div>
-  </details>
-
-  <details class="more">
-    <summary><span>十場重播的逐場結果</span><span class="hint">回合數・逐筆對帳零差</span></summary>
-    <div class="more-bd">
+      <h3 style="margin-top:28px">十場重播的逐場結果</h3>
       <div class="tw">
         <table>
           <thead><tr><th>場次</th><th>資料版本</th><th>重播結果</th><th class="num">逐筆對帳</th></tr></thead>
@@ -1972,26 +1961,25 @@ html:has(dialog.xd[open]){overflow:hidden}
         </table>
       </div>
       <p class="note">五場帳目<b>一位不差閉環</b>：鎖血地板 851,515／510,909／17,030，自療 85,151（Lv82 組）；894,089／536,453／17,881，自療 89,408（Lv83 組）。</p>
+      <h3 style="margin-top:28px">難度預測帶 vs 實機</h3>
+      <div class="tw">
+        <table>
+          <thead><tr><th>關卡</th><th>模擬器預測區間</th><th>實機實際回合</th><th class="num">落在區間內</th></tr></thead>
+          <tbody>
+            <tr><td>本案例（高難02）</td><td class="m">13.1 – 19.2（中位 14.0）</td><td class="m">13 / 14 / 14 / 14</td><td class="num" style="color:var(--d);font-weight:700">4 / 4</td></tr>
+            <tr><td>關卡A</td><td class="m">11.9 – 14.8（中位 12.9）</td><td class="m">12 / 13 / 13 / 14 / <b style="color:var(--flag)">15</b></td><td class="num" style="font-weight:700">4 / 5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">預測帶不是事後對答案——它在實機跑之前就算出來了。高難02 實機四場全落在區間內，<b>中位數 14.0 精確落在 13／14／14／14 上</b>；關卡A 五場中四場落在區間內，15 回合那一場超出上限 0.2 回合。</p>
     </div>
   </details>
-
-  <h3 style="margin-top:30px">難度預測帶 vs 實機</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>關卡</th><th>模擬器預測區間</th><th>實機實際回合</th><th class="num">落在區間內</th></tr></thead>
-      <tbody>
-        <tr><td>本案例（高難02）</td><td class="m">13.1 – 19.2（中位 14.0）</td><td class="m">13 / 14 / 14 / 14</td><td class="num" style="color:var(--d);font-weight:700">4 / 4</td></tr>
-        <tr><td>關卡A</td><td class="m">11.9 – 14.8（中位 12.9）</td><td class="m">12 / 13 / 13 / 14 / <b style="color:var(--flag)">15</b></td><td class="num" style="font-weight:700">4 / 5</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="note">預測帶不是事後對答案——它在實機跑之前就算出來了。高難02 實機四場全落在區間內，<b>中位數 14.0 精確落在 13／14／14／14 上</b>；關卡A 五場中四場落在區間內，15 回合那一場超出上限 0.2 回合。</p>
 </section>
 
 
 
 <section style="border-bottom:0">
-  <div class="sh"><span class="n">03</span><h2>工具的原生輸出</h2></div>
+  <div class="sh"><span class="n">02</span><h2>工具的原生輸出</h2></div>
   <p class="note">以下是模擬器自己產生的互動報告，<b>版面、互動與配色一律未經修改</b>——只做了去識別化（移除角色頭像與名稱、關卡名與 BOSS 名代稱化、玩家技能名編號化），並且每種隊型只留一筆有效 run。點隊伍可切換詳情、逐回合戰報可展開、BOSS HP 軌跡可疊圖比較。</p>
 </section>
 <div id="simreport">
@@ -2731,23 +2719,51 @@ renderAll();renderDetail();renderSweeps();
   <p class="eyebrow">個人作品 · AI 工作流 × AI 驗證工具（自行設計）</p>
   <h1>角色產線與 QA 修正流</h1>
   <dl class="why3">
-    <dt>問題</dt><dd>一次改動要動好幾張表、多國語系要同步、改了卻常常沒生效，線上的共用表又怕被蓋掉；步驟一多，<span class="k">就靠人記得</span>。</dd>
-    <dt>做法</dt><dd>我寫了五支 skill 各管一段，段與段之間傳固定格式的交棒檔；改資料和驗證分給兩個代理，驗證的那一個<span class="k">透過橋接在 Unity 裡實際跑戰鬥</span>。</dd>
-    <dt>改變</dt><dd>步驟不再靠人記得；每一次寫入線上前都先演練、<span class="k">由企劃看過再放行</span>，寫完逐格比對。</dd>
+    <dt>以前</dt><dd>一次改動要動好幾張表、同步多國語系、進遊戲確認，步驟一多<span class="k">就靠人記得</span>。</dd>
+    <dt>現在</dt><dd>五支 skill 各管一段，企劃下指令、看結果做決定；進遊戲實測交給另一個代理。</dd>
+    <dt>結果</dt><dd>QA 卡平均每個工作天結案 3.6 張；33 名角色的技能改版 <span class="k">2 天改完並實測</span>。</dd>
   </dl>
-  <p class="sub">這是我為一款回合制 RPG 設計的 AI 工作流。每一段該做什麼、交棒什麼、什麼時候停，都寫進 skill，AI 每次照著走；企劃把心力放在判斷，<span class="k">每個會影響線上的決定，都由企劃看過結果再放行</span>。</p>
+  <p class="sub">這是我為一款回合制 RPG 設計的 AI 工作流：固定步驟交給 skill，企劃把心力放在判斷。</p>
 </header>
 
 <div class="stats">
-  <div><p class="v">5</p><p class="k">支 skill，各管一段</p></div>
-  <div><p class="v">100%</p><p class="k">QA 卡走同一條八階段流程</p></div>
-  <div><p class="v">3 / 3</p><p class="k">會動到資料的 skill 預設只試跑</p></div>
-  <div><p class="v">8 / 8</p><p class="k">階段都定義了中止條件</p></div>
-  <div><p class="v">3.6</p><p class="k">張 QA 卡／工作天 · 單日最多 9 張</p></div>
+  <div><p class="v">3.6 張</p><p class="k">QA 卡／工作天</p></div>
+  <div><p class="v">2 天</p><p class="k">33 名角色的技能改完並實測</p></div>
+  <div><p class="v">1 天</p><p class="k">需求改了，整批重做完</p></div>
 </div>
 
 <section>
-  <div class="sh"><span class="n">01</span><h2>AI 工作流：五支 skill 怎麼分工</h2></div>
+  <div class="sh"><span class="n">01</span><h2>兩個案例</h2></div>
+  <div class="cases">
+    <div class="c3">
+      <div class="hd">
+        <span class="id">案例一 · QA 卡</span>
+        <span class="ti">一張 QA 卡從進來到交回</span>
+        <button type="button" class="xlink" data-view="qa">詳細 ›</button>
+      </div>
+      <dl>
+        <dt>以前</dt><dd>查規格、改好幾張表、同步多國語系、進遊戲確認、寫回後再核一次，每一步靠人記得</dd>
+        <dt>現在</dt><dd>企劃判斷要不要修、怎麼修；其餘照 skill 走，做完回報</dd>
+        <dt class="r">結果</dt><dd class="r">平均每個工作天結案 <span class="k">3.6 張</span>。另一張卡寫著「已修好」，實機一跑才發現修正早被退掉；之後流程改成先實測再回報</dd>
+      </dl>
+    </div>
+    <div class="c3">
+      <div class="hd">
+        <span class="id">案例二 · 技能質變</span>
+        <span class="ti">33 名角色的技能改版，從發想到實作</span>
+        <button type="button" class="xlink" data-view="mutation">詳細 ›</button>
+      </div>
+      <dl>
+        <dt>以前</dt><dd>33 名角色、每個技能 5 階，都要人手改表、進遊戲切等級打一場、再確認沒改到別的</dd>
+        <dt>現在</dt><dd>企劃定規則（滿級強度不變、前段給弱化版），AI 展開改法、改表、在遊戲裡實測；企劃看結果做決定</dd>
+        <dt class="r">結果</dt><dd class="r"><span class="k">2 天</span>改完並實測；需求改了（換目標版本），1 天重做完。沒改到規劃以外的地方，還順手抓到既有的配表錯誤</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="n">02</span><h2>工具怎麼分工：五支 skill</h2></div>
   <p class="note">每一段工作交給一支 skill：寫好步驟、檢查與停止條件的固定流程。</p>
 
   <figure>
@@ -2914,32 +2930,15 @@ renderAll();renderDetail();renderSweeps();
   </div>
 
   <ul class="pts">
-    <li><b>交棒檔固定格式</b><span>段與段之間傳檔案，不靠對話記憶；每筆變更帶「改之前的值」，寫入前先核對現況</span></li>
-    <li><b>預設只試跑</b><span>會動到資料的三支 skill 先列出將要做什麼，企劃另外下指令才寫入</span></li>
-    <li><b>改的人不驗自己的東西</b><span>另一個代理在 Unity 實際跑戰鬥，逐回合 log 當證據</span></li>
-    <li><b>錯誤吸收</b><span>企劃的裁示回流成 skill 的規則，下一次照做；skill 改完先拿歷史案例全跑一遍</span></li>
+    <li><b>步驟不用記</b><span>每一段該做什麼寫進 skill，下指令就照走</span></li>
+    <li><b>不用自己進遊戲測</b><span>另一個代理在 Unity 實際跑，回報結果</span></li>
+    <li><b>不用重複交代</b><span>企劃的裁示存成 skill 的規則，下一次照做</span></li>
+    <li><b>不用人工再核一次</b><span>寫回線上後自動逐格比對</span></li>
   </ul>
 
 </section>
 
-<section>
-  <div class="sh"><span class="n">02</span><h2>跑起來的樣子：一張 QA 卡</h2></div>
-  <div class="case">
-    <div class="hd">
-      <span class="id">QA 卡 · 角色 A</span>
-      <span class="ti">技能觸發時機與描述用詞都跟設計不符</span>
-    </div>
-    <div class="bd">
-      <div><p class="cl">資料修正</p><p class="cv">觸發時機改成<b>每次放奧義</b>（10 格）；描述裡的技能名改回既有的官方譯名（5 格）</p></div>
-      <div><p class="cl">多國語系同步</p><p class="cv">翻譯主檔五種語言退回原文，語系檔<b>以線上版本為基底重跑匯入</b>、單檔提交</p></div>
-      <div><p class="cl">文件同步</p><p class="cv">設計表與描述規格三處一併改，避免下一輪又被改回去</p></div>
-      <div><p class="cl">進遊戲實測<button type="button" class="xlink" data-view="verify">詳細 ›</button></p><p class="cv">第 4、8 回合放奧義後三項效果都如預期；<b>另外三名角色沒有被波及</b></p></div>
-      <div><p class="cl">逐格再比對</p><p class="cv">主檔兩個區段共 15 格<b>完全相同</b>；語系檔的差異只增不減</p></div>
-      <div><p class="cl">交回 QA</p><p class="cv">留言說明＋改成待驗狀態，<b>卡片維持開啟</b>，不由我自己關掉</p></div>
-    </div>
-    <div class="ft">同一批另一張卡發現程式端的修正曾經上線又被退掉、卡片留言與實際狀態對不上——流程因此改為<b>先實機驗證再回報</b>。每一張卡都走同一條八階段流程，平均每個工作天結案 3.6 張、單日最多 9 張；企劃的裁示不只用在當張卡，會回流成規則，下一次 AI 就照這個判斷做。</div>
-  </div>
-</section>
+
 
 <dialog class="xd" id="xd" aria-label="詳細流程">
   <div class="xd-hd">
@@ -2948,6 +2947,72 @@ renderAll();renderDetail();renderSweeps();
     <button type="button" class="xd-x" aria-label="關閉詳細流程">✕</button>
   </div>
   <div class="xd-bd" tabindex="-1" autofocus>
+    <div class="xd-pg" data-pg="qa" data-name="案例一：QA 卡" hidden>
+      <div class="xd-ti"><h3>案例一：一張 QA 卡從進來到交回</h3><code class="sk">/data-update</code></div>
+      <p class="xd-lead">技能觸發時機與描述用詞都跟設計不符的一張卡。企劃判斷要不要修、怎麼修，其餘照 skill 走。<button type="button" class="xlink" data-view="flow2">完整八個階段 ›</button></p>
+      <div class="case">
+        <div class="hd"><span class="id">QA 卡 · 角色 A</span><span class="ti">技能觸發時機與描述用詞都跟設計不符</span></div>
+        <div class="bd">
+          <div><p class="cl">資料修正</p><p class="cv">觸發時機改成<b>每次放奧義</b>（10 格）；描述裡的技能名改回既有的官方譯名（5 格）</p></div>
+          <div><p class="cl">多國語系同步</p><p class="cv">翻譯主檔五種語言退回原文，語系檔<b>以線上版本為基底重跑匯入</b>、單檔提交</p></div>
+          <div><p class="cl">文件同步</p><p class="cv">設計表與描述規格三處一併改，避免下一輪又被改回去</p></div>
+          <div><p class="cl">進遊戲實測<button type="button" class="xlink" data-view="verify">詳細 ›</button></p><p class="cv">第 4、8 回合放奧義後三項效果都如預期；<b>另外三名角色沒有被波及</b></p></div>
+          <div><p class="cl">逐格再比對</p><p class="cv">主檔兩個區段共 15 格<b>完全相同</b>；語系檔的差異只增不減</p></div>
+          <div><p class="cl">交回 QA</p><p class="cv">留言說明＋改成待驗狀態，<b>卡片維持開啟</b>，不由我自己關掉</p></div>
+        </div>
+        <div class="ft">同一批另一張卡發現程式端的修正曾經上線又被退掉、卡片留言與實際狀態對不上——流程因此改為<b>先實機驗證再回報</b>。每一張卡都走同一條八階段流程，平均每個工作天結案 3.6 張、單日最多 9 張；企劃的裁示不只用在當張卡，會回流成規則，下一次 AI 就照這個判斷做。</div>
+      </div>
+    </div>
+    <div class="xd-pg" data-pg="mutation" data-name="案例二：技能質變" hidden>
+      <div class="xd-ti"><h3>案例二：技能質變，從發想到實作</h3></div>
+      <p class="xd-lead">33 名角色的技能改版。規則、改法與優先序由企劃決定；展開改法、改表、在遊戲裡實測交給 AI。</p>
+      <figure>
+        <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="g">🔒 放行</span><span class="v">✅ 擋下的錯</span></div>
+        <div class="dg">
+        <svg viewBox="0 0 900 236" role="img" aria-label="技能質變流程：發想段由企劃定規則、AI 展開改法、企劃裁示；實作段整批改表、在遊戲裡實測、逐隻提交，寫回線上的時機由負責人決定">
+          <text class="band" x="20" y="20">發想</text>
+          <rect class="bx-u" x="20" y="32" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="120" y="58" text-anchor="middle" fill="var(--user)">👤 企劃定規則</text>
+          <text class="t2" x="120" y="78" text-anchor="middle">滿級強度不變・前段給弱化版</text>
+          <path class="ln" d="M220,63 H254" marker-end="url(#ah)"></path>
+          <rect class="bx" x="260" y="32" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="360" y="58" text-anchor="middle">展開改法</text>
+          <text class="t2" x="360" y="78" text-anchor="middle">每個技能怎麼改、從哪一階起完整</text>
+          <path class="ln" d="M460,63 H494" marker-end="url(#ah)"></path>
+          <rect class="bx-u" x="500" y="32" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="600" y="58" text-anchor="middle" fill="var(--user)">👤 企劃裁示</text>
+          <text class="t2" x="600" y="78" text-anchor="middle">選改法、排優先序</text>
+          <text class="lb-v" x="716" y="58">✅ 順手抓到既有的配表錯誤</text>
+          <text class="lb" x="716" y="74">例：練滿反而變弱</text>
+
+          <path class="ln" d="M600,94 V116 H120 V136" marker-end="url(#ah)"></path>
+
+          <text class="band" x="20" y="134">實作</text>
+          <rect class="bx" x="20" y="142" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="120" y="168" text-anchor="middle">整批改表</text>
+          <text class="t2" x="120" y="188" text-anchor="middle">只動本機</text>
+          <path class="ln" d="M220,173 H254" marker-end="url(#ah)"></path>
+          <rect class="bx-a" x="260" y="142" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="360" y="168" text-anchor="middle">在遊戲裡實測</text>
+          <text class="t2" x="360" y="188" text-anchor="middle">一場戰鬥同時驗多名角色</text>
+          <path class="ln" d="M460,173 H494" marker-end="url(#ah)"></path>
+          <rect class="bx" x="500" y="142" width="200" height="62" rx="3"></rect>
+          <text class="t1" x="600" y="168" text-anchor="middle">逐隻提交</text>
+          <text class="t2" x="600" y="188" text-anchor="middle">提交內容＝測過的內容</text>
+          <path class="ln-g" d="M700,173 H734" marker-end="url(#ahg)"></path>
+          <rect class="bx-g" x="740" y="142" width="140" height="62" rx="3"></rect>
+          <text class="t1" x="810" y="168" text-anchor="middle" fill="var(--gate)">🔒 寫回線上</text>
+          <text class="t2" x="810" y="188" text-anchor="middle">時機由負責人決定</text>
+          <text class="lb-v" x="360" y="226" text-anchor="middle">✅ 沒改到規劃以外的地方</text>
+        </svg>
+        </div>
+      </figure>
+      <ul class="pts">
+        <li><b>省時間</b><span>2 天改完並實測 33 名角色；需求改了（換目標版本），1 天整批重做完</span></li>
+        <li><b>少出錯</b><span>整張表比對，確認沒改到規劃以外的地方；改版後說明文字跟實際效果對不上的地方，寫回前就抓出來；還順手抓到既有的配表錯誤（練滿反而變弱、護盾一上就消失）</span></li>
+        <li><b>企劃的判斷</b><span>規則、改法與優先序由企劃決定；寫回線上的時機由負責人決定</span></li>
+      </ul>
+    </div>
     <div class="xd-pg" data-pg="verify" data-name="驗證" hidden>
       <div class="xd-ti"><h3>驗證：另一個代理在 Unity 實際跑過才算數</h3><code class="sk">/battle-test</code></div>
       <p class="xd-lead">改資料和驗證分給兩個代理：製作代理規定不跑測試；驗證代理執行 <code class="sk">/battle-test</code>，透過橋接在 Unity 實際跑戰鬥、逐回合記錄，回報固定三行：判定、證據位置（log 檔與行號）、下一步。</p>
