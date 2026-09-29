@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
-<title>工作成果｜數值／系統企劃</title>
+<title>實作案例｜數值／系統企劃</title>
 <style>
   html{color-scheme:light dark}
   body{margin:0}
@@ -520,7 +520,7 @@ body{
   margin-top:8px;font-size:13px;color:var(--ink);background:var(--sunk);
   padding:8px 12px;border-left:2px solid var(--rule2);
 }
-#pf2 .usr::before{content:"使用者　";font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
+#pf2 .usr::before{content:"企劃　";font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--ink3)}
 #pf2 .log{margin-top:20px;display:flex;flex-direction:column;gap:0}
 #pf2 .turn{display:grid;grid-template-columns:84px 1fr;gap:0 18px;padding:16px 0;border-top:1px solid var(--rule)}
 #pf2 .log .turn:last-child{border-bottom:1px solid var(--rule)}
@@ -531,7 +531,7 @@ body{
   padding:11px 14px;border-left:3px solid var(--rust);line-height:1.75;
 }
 #pf2 .said::before{
-  content:"使用者";display:block;font-family:"JetBrains Mono",monospace;
+  content:"企劃";display:block;font-family:"JetBrains Mono",monospace;
   font-size:9.5px;letter-spacing:.16em;color:var(--ink3);margin-bottom:5px;
 }
 #pf2 .said.team::before{content:"團隊 REVIEW"}
@@ -795,6 +795,253 @@ body{
   padding:14px;margin-top:-1px;background:var(--surface);
 }
 </style>
+<style>
+/* ── 重點標註：只在首頁條列與三行看懂上色，每行一處；內文維持原樣 ── */
+#hub .ebullets span.k{color:var(--u-acc);font-weight:700}
+#pf1 span.k{color:var(--accent);font-weight:700}
+#pf2 span.k{color:var(--rust);font-weight:700}
+#pf3 span.k{color:var(--acc);font-weight:700}
+/* ── B、I 兩頁共用：三行看懂、四種標記圖例、一張表看懂、以前／現在 ── */
+#pf2{--v:var(--d);--v-soft:var(--d-bg);--r:var(--rust);--r-soft:var(--rust-soft);--gate:var(--flag)}
+#pf3{--v:var(--ok);--v-soft:var(--ok-soft);--r:var(--acc);--r-soft:var(--acc-soft)}
+
+#pf2 .why3,#pf3 .why3{
+  display:grid;grid-template-columns:auto 1fr;margin:22px 0 0;
+  border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--surface);
+}
+#pf2 .why3 dt,#pf3 .why3 dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;
+  color:var(--ink3);padding:13px 16px 13px 16px;border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+#pf2 .why3 dd,#pf3 .why3 dd{
+  margin:0;padding:12px 18px 12px 0;border-bottom:1px solid var(--rule);
+  font-size:14.5px;line-height:1.7;color:var(--ink);
+}
+#pf2 .why3.soft{border-left:1px solid var(--rule);background:none;margin-top:14px}
+#pf2 .why3.soft dd{font-size:14px;color:var(--ink2)}
+#pf2 .why3 dt:last-of-type,#pf2 .why3 dd:last-of-type,
+#pf3 .why3 dt:last-of-type,#pf3 .why3 dd:last-of-type{border-bottom:0}
+
+#pf2 .lgd{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:11.5px;color:var(--ink3);margin:24px 0 8px}
+#pf2 .lgd .u,#pf3 .lgd .u{color:var(--user);font-weight:700}
+#pf2 .lgd .g{color:var(--gate);font-weight:700}
+#pf2 .lgd .v,#pf3 .lgd .v{color:var(--v);font-weight:700}
+#pf2 .lgd .a,#pf3 .lgd .a{color:var(--ink2);font-weight:700}
+#pf2 .lgd .r,#pf3 .lgd .r{color:var(--r);font-weight:700}
+
+#pf2 .flow4w,#pf3 .flow4w{margin-top:20px}
+#pf2 .flow4w .cap,#pf3 .flow4w .cap{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;
+  color:var(--ink3);margin-bottom:8px;
+}
+#pf2 table.flow4,#pf3 table.flow4{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+#pf2 .flow4 th,#pf3 .flow4 th{
+  text-align:left;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:none;
+  padding:8px 10px;border-bottom:1px solid var(--rule2);white-space:normal;
+}
+#pf2 .flow4 th:first-child,#pf3 .flow4 th:first-child{width:13%}
+#pf2 .flow4 td,#pf3 .flow4 td{padding:10px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.65;color:var(--ink2)}
+#pf2 .flow4 td.st,#pf3 .flow4 td.st{color:var(--ink);font-weight:700}
+#pf2 .flow4 th.u,#pf3 .flow4 th.u{color:var(--user)}
+#pf2 .flow4 th.v,#pf3 .flow4 th.v{color:var(--v)}
+#pf2 .flow4 th.a,#pf3 .flow4 th.a{color:var(--ink2)}
+#pf2 .flow4 th.r,#pf3 .flow4 th.r{color:var(--r)}
+#pf2 .flow4 td.u,#pf3 .flow4 td.u{background:var(--user-soft);color:var(--ink)}
+#pf2 .flow4 td.v,#pf3 .flow4 td.v{background:var(--v-soft);color:var(--ink)}
+#pf2 .flow4 td.r,#pf3 .flow4 td.r{background:var(--r-soft);color:var(--ink)}
+#pf2 .flow4 td.none,#pf3 .flow4 td.none{color:var(--ink3);background:none}
+#pf2 .flow4w .fn,#pf3 .flow4w .fn{font-size:11.5px;color:var(--ink3);margin-top:8px;line-height:1.7}
+@media (max-width:760px){
+  #pf2 .flow4 thead,#pf3 .flow4 thead{display:none}
+  #pf2 .flow4,#pf3 .flow4,#pf2 .flow4 tbody,#pf3 .flow4 tbody{display:block}
+  #pf2 .flow4 tr,#pf3 .flow4 tr{display:block;border:1px solid var(--rule);margin-bottom:10px;background:var(--surface)}
+  #pf2 .flow4 td,#pf3 .flow4 td{display:block;border-bottom:0;padding:7px 12px}
+  #pf2 .flow4 td.st,#pf3 .flow4 td.st{border-bottom:1px solid var(--rule);padding:9px 12px}
+  #pf2 .flow4 td.none,#pf3 .flow4 td.none{display:none}
+  #pf2 .flow4 td[data-k]::before,#pf3 .flow4 td[data-k]::before{
+    content:attr(data-k);display:block;font-size:10.5px;font-weight:700;letter-spacing:.06em;margin-bottom:2px;
+  }
+  #pf2 .flow4 td.u::before,#pf3 .flow4 td.u::before{color:var(--user)}
+  #pf2 .flow4 td.v::before,#pf3 .flow4 td.v::before{color:var(--v)}
+  #pf2 .flow4 td.a::before,#pf3 .flow4 td.a::before{color:var(--ink2)}
+  #pf2 .flow4 td.r::before,#pf3 .flow4 td.r::before{color:var(--r)}
+}
+
+#pf3 svg .lb-v{fill:var(--v);font-size:10px;font-weight:700}
+#pf3 svg .lb-r{fill:var(--r);font-size:10.5px;font-weight:700}
+#pf3 svg .ln-r{stroke:var(--r);stroke-width:1.4;fill:none;stroke-dasharray:5 4}
+#pf2 .pipe .bdg{margin-top:8px;font-size:11px;line-height:1.5;font-weight:700;color:var(--v)}
+#pf2 .loop,#pf3 .loop{
+  margin-top:8px;padding:10px 14px;font-size:12.5px;line-height:1.7;color:var(--ink);
+  border:1px dashed var(--r);background:var(--r-soft);
+}
+#pf2 .loop b,#pf3 .loop b{color:var(--r)}
+#pf2 .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;margin-top:22px}
+#pf2 .ba>div{border:1px solid var(--rule);background:var(--surface);padding:14px 16px;font-size:14px;line-height:1.7}
+#pf2 .ba .lb{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:6px}
+#pf2 .ba .to{align-self:center;border:0;background:none;padding:0;color:var(--ink3);font-size:18px}
+#pf2 .ba .now{border-color:var(--v);background:var(--v-soft)}
+@media (max-width:640px){#pf2 .ba{grid-template-columns:1fr}#pf2 .ba .to{justify-self:center;transform:rotate(90deg)}}
+
+/* ── 細節收合：第一眼只放總覽與結論，佐證細節想看再展開 ── */
+#pf2 .mores,#pf3 .mores{margin-top:24px}
+#pf2 details.more,#pf3 details.more{margin-top:10px;scroll-margin-top:72px}
+#pf2 details.more>summary,#pf3 details.more>summary{
+  display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;list-style:none;cursor:pointer;
+  padding:11px 16px 11px 14px;border:1px solid var(--rule2);border-radius:3px;background:var(--sunk);
+  font-size:14px;font-weight:700;line-height:1.5;color:var(--ink);
+  transition:background .14s ease,border-color .14s ease;
+}
+#pf2 details.more>summary::-webkit-details-marker,#pf3 details.more>summary::-webkit-details-marker{display:none}
+#pf2 details.more>summary::marker,#pf3 details.more>summary::marker{content:""}
+#pf2 details.more>summary::before,#pf3 details.more>summary::before{
+  content:"";flex:none;width:0;height:0;border-style:solid;
+  border-width:5px 0 5px 8px;border-color:transparent transparent transparent var(--r);
+  transition:transform .16s ease;
+}
+#pf2 details.more[open]>summary::before,#pf3 details.more[open]>summary::before{transform:rotate(90deg)}
+#pf2 details.more>summary:hover,#pf3 details.more>summary:hover{border-color:var(--r);background:var(--surface)}
+#pf2 details.more>summary:focus-visible,#pf3 details.more>summary:focus-visible{outline:2px solid var(--r);outline-offset:2px}
+#pf2 details.more>summary .hint,#pf3 details.more>summary .hint{font-size:12px;font-weight:400;color:var(--ink3)}
+#pf2 details.more[open]>summary,#pf3 details.more[open]>summary{
+  border-color:var(--r);background:var(--surface);border-bottom-left-radius:0;border-bottom-right-radius:0;
+}
+#pf2 .more-bd,#pf3 .more-bd{border:1px solid var(--r);border-top:0;border-radius:0 0 3px 3px;padding:6px 20px 22px;background:var(--surface)}
+#pf2 .more-bd>.tw:first-child,#pf2 .more-bd>.log:first-child{margin-top:14px}
+#pf2 .more-bd>.box{border:0;background:none;padding:0;margin-top:14px}
+#pf2 .more-bd>.box ul{margin-top:0}
+@media (max-width:640px){#pf2 .more-bd,#pf3 .more-bd{padding:4px 12px 16px}}
+
+/* ── skill 一眼認得出來：圖上是帶 SKILL 標籤的圓角卡、內文是等寬字小標 ── */
+#pf3 code.sk{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.86em;font-weight:600;
+  color:var(--acc);background:var(--acc-soft);border-radius:4px;padding:1px 7px;white-space:nowrap;
+}
+#pf3 details.more>summary code.sk{font-size:12px}
+#pf3 .lgd .s{color:var(--acc);font-weight:700}
+#pf3 .lgd .s i{
+  font-style:normal;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;
+  color:var(--surface);background:var(--acc);border-radius:8px;padding:1px 7px;margin-right:6px;
+}
+#pf3 svg .bx-s{fill:var(--surface);stroke:var(--acc);stroke-width:1.4;transition:stroke-width .12s ease}
+#pf3 svg .bx-s.hot{fill:var(--acc-soft)}
+#pf3 svg .sk-pill{fill:var(--acc)}
+#pf3 svg .sk-tag{fill:var(--surface);font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:700;letter-spacing:.12em}
+#pf3 svg .sk-go{fill:var(--acc);font-size:10px;font-weight:700}
+#pf3 svg .sk-hint{fill:var(--acc);font-size:11px;font-weight:700}
+#pf3 svg .skn{font-family:"IBM Plex Mono",monospace;fill:var(--acc);font-weight:700;letter-spacing:0}
+#pf3 svg .skl{cursor:pointer}
+#pf3 svg .skl:focus{outline:none}
+#pf3 svg .skl:hover .bx-s{stroke-width:2.6}
+#pf3 svg .skl:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
+
+#pf3 svg.defs{position:absolute;width:0;height:0;min-width:0;overflow:hidden}
+#pf3 svg.arch-m{display:none;min-width:0;max-width:420px}
+@media (max-width:640px){#pf3 svg.arch-d{display:none}#pf3 svg.arch-m{display:block}}
+
+/* ── 總覽圖下的四行重點 ── */
+#pf3 ul.pts{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--rule)}
+#pf3 ul.pts li{display:grid;grid-template-columns:11em 1fr;gap:2px 16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:14px;line-height:1.7}
+#pf3 ul.pts li b{color:var(--ink);font-weight:700}
+#pf3 ul.pts li span{color:var(--ink2)}
+@media (max-width:640px){#pf3 ul.pts li{grid-template-columns:1fr}}
+
+/* ── 總覽圖下的「詳細流程」按鈕列 ── */
+#pf3 .xbtns{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px}
+#pf3 .xbtns-l{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;color:var(--ink3);margin-right:4px}
+#pf3 .xbtns button{
+  appearance:none;font:inherit;cursor:pointer;display:inline-flex;align-items:baseline;gap:7px;
+  font-size:13px;color:var(--ink2);background:var(--surface);
+  border:1px solid var(--rule2);border-radius:4px;padding:7px 13px;
+  transition:border-color .14s ease,color .14s ease;
+}
+#pf3 .xbtns button b{color:var(--acc);font-weight:700}
+#pf3 .xbtns button::after{content:"›";color:var(--ink3)}
+#pf3 .xbtns button:hover{border-color:var(--acc);color:var(--ink)}
+#pf3 .xbtns button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+#pf3 .xlink{
+  appearance:none;font:inherit;cursor:pointer;background:none;border:0;padding:0;margin-left:10px;
+  font-family:"Noto Sans TC",sans-serif;font-size:11.5px;letter-spacing:0;font-weight:700;color:var(--acc);text-transform:none;
+}
+#pf3 .xlink:hover{text-decoration:underline}
+#pf3 .xlink:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+/* 流程圖裡可以點進去的步驟 */
+#pf3 svg .stp{cursor:pointer}
+#pf3 svg .stp:focus{outline:none}
+#pf3 svg .stp:hover .bx-s{stroke-width:2.6}
+#pf3 svg .stp:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
+
+/* ── 「詳細」視窗 ── */
+html:has(dialog.xd[open]){overflow:hidden}
+#pf3 dialog.xd{
+  width:min(1040px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 48px);
+  padding:0;border:1px solid var(--rule2);border-radius:6px;
+  background:var(--bg);color:var(--ink);box-shadow:0 24px 64px rgba(0,0,0,.3);
+}
+#pf3 dialog.xd[open]{display:flex;flex-direction:column}
+#pf3 dialog.xd::backdrop{background:rgba(8,12,16,.55)}
+#pf3 .xd-hd{
+  flex:none;display:flex;align-items:center;gap:10px;
+  padding:10px 12px 10px 18px;border-bottom:1px solid var(--rule);background:var(--surface);
+}
+#pf3 .xd-crumb{flex:1;min-width:0;font-size:13px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pf3 .xd-crumb .sep{margin:0 7px}
+#pf3 .xd-crumb b{color:var(--ink);font-weight:700}
+#pf3 .xd-back,#pf3 .xd-x{
+  appearance:none;font:inherit;cursor:pointer;flex:none;white-space:nowrap;
+  font-size:13px;color:var(--ink2);background:none;border:1px solid var(--rule2);border-radius:4px;padding:5px 11px;
+}
+#pf3 .xd-back{color:var(--acc);border-color:var(--acc)}
+#pf3 .xd-back:hover,#pf3 .xd-x:hover{border-color:var(--acc);color:var(--acc)}
+#pf3 .xd-back:focus-visible,#pf3 .xd-x:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+#pf3 .xd-bd{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:22px 26px 32px}
+#pf3 .xd-bd:focus{outline:none}
+#pf3 .xd-ti{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+#pf3 .xd-ti h3{margin:0;font-size:clamp(17px,2.2vw,20px);line-height:1.35;font-weight:700}
+#pf3 .xd-ti code.sk{font-size:12px}
+#pf3 .xd-lead{color:var(--ink2);font-size:14px;line-height:1.75;margin-top:8px;max-width:72ch}
+#pf3 .xd-pg figure{margin-top:14px}
+@media (max-width:640px){
+  #pf3 dialog.xd{width:100vw;height:100dvh;max-height:100dvh;border:0;border-radius:0}
+  #pf3 .xd-hd{padding:8px 10px 8px 14px}
+  #pf3 .xd-bd{padding:16px 14px 26px}
+  #pf3 .xd-pg .lgd::after{content:"↔ 流程圖可左右滑動";flex-basis:100%;font-weight:700;color:var(--acc);margin-top:2px}
+}
+
+/* ── 首頁：三種能力卡＋作品的能力標籤 ── */
+#hub .cover{border-bottom:0;padding-bottom:30px}
+#hub .sec-h{
+  margin:0;padding-bottom:10px;border-bottom:2px solid var(--u-ink);
+  font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.2em;color:var(--u-acc);
+}
+#hub .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 56px}
+#hub .cap{background:var(--u-surface);border:1px solid var(--u-rule);border-top:3px solid var(--u-acc);padding:18px 18px 8px;display:flex;flex-direction:column}
+#hub .cap-k{margin:0;font-size:17px;font-weight:700;color:var(--u-ink)}
+#hub .cap-d{margin:6px 0 0;font-size:14px;line-height:1.75;color:var(--u-ink2)}
+#hub .cap-d span.k{color:var(--u-acc);font-weight:700}
+#hub .cap-d,#hub .cap-ev a,#hub .ebullets li,#pf3 .xd-lead{text-wrap:pretty}
+#hub .cap-ev{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--u-rule)}
+#hub .cap-ev li+li{border-top:1px solid var(--u-rule)}
+#hub .cap-ev a{
+  display:block;position:relative;padding:10px 22px 10px 0;text-decoration:none;
+  color:var(--u-ink);font-size:13.5px;line-height:1.65;
+}
+#hub .cap-ev a i{
+  display:block;font-style:normal;font-family:'IBM Plex Mono',ui-monospace,monospace;
+  font-size:10.5px;letter-spacing:.08em;color:var(--u-ink3);margin-bottom:2px;
+}
+#hub .cap-ev a::after{
+  content:"→";position:absolute;right:2px;top:50%;transform:translateY(-50%);
+  color:var(--u-ink3);transition:transform .16s ease,color .16s ease;
+}
+#hub .cap-ev a:hover{color:var(--u-acc)}
+#hub .cap-ev a:hover::after{color:var(--u-acc);transform:translate(3px,-50%)}
+#hub .cap-ev a:focus-visible{outline:2px solid var(--u-acc);outline-offset:2px}
+#hub .capchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 9px}
+#hub .capchip{font-size:11.5px;font-weight:700;color:var(--u-acc);background:var(--u-acc-soft);border-radius:3px;padding:2px 9px;letter-spacing:.02em}
+#hub .capchip.plain{color:var(--u-ink2);background:var(--u-sunk)}
+@media (max-width:820px){#hub .caps{grid-template-columns:1fr}}
+</style>
 
 <div class="navbar" id="navbar" hidden>
   <div class="in">
@@ -808,41 +1055,50 @@ body{
 <div class="view" id="hub">
   <header class="cover">
     <p class="kicker">Portfolio &middot; 2026</p>
-    <h1>工作成果</h1>
-    <p class="kicker2">數值／系統企劃</p>
-    <ul class="ebullets">
-      <li><b>Project S · 數值設計：</b>主線 580 關敵方戰力跨版本收斂，通關率回測驗證</li>
-      <li><b>Project B · AI 工具與模擬器：</b>內容生成工具鏈與戰鬥模擬器，重播對帳逐筆零差</li>
-      <li><b>Project I · AI 工作流：</b>產線固化，QA 修正流程標準化</li>
-    </ul>
+    <h1>實作案例</h1>
+    <p class="kicker2">數值／系統企劃 · 為專案建立 AI 生產工具、AI 驗證工具與 AI 工作流</p>
     <p class="note">數字皆取自實際產出檔案與工作日誌，未經重繪或估算。</p>
   </header>
 
+  <p class="sec-h">三種能力</p>
+  <div class="caps">
+    <div class="cap">
+      <p class="cap-k">AI 生產工具</p>
+      <p class="cap-d">口語需求進去，產出<span class="k">可直接貼回遊戲</span>的資料</p>
+      <ul class="cap-ev">
+        <li><a href="#tooling"><i>Project B</i>一句話需求 → 行動邏輯表與技能表，寫完自動跑 49 項檢查</a></li>
+        <li><a href="#pipeline/flow1"><i>Project I</i>從角色概念到可上線的角色資料，照依賴順序產出</a></li>
+      </ul>
+    </div>
+    <div class="cap">
+      <p class="cap-k">AI 驗證工具</p>
+      <p class="cap-d">改完就驗，<span class="k">用實際跑出來的結果</span>說話</p>
+      <ul class="cap-ev">
+        <li><a href="#tooling/sim"><i>Project B</i>模擬器跑遊戲本身的戰鬥程式碼：1,407 筆逐欄比對，公式欄位 100%</a></li>
+        <li><a href="#pipeline/verify"><i>Project I</i>另一個代理在 Unity 實際跑戰鬥，逐回合 log 當證據</a></li>
+      </ul>
+    </div>
+    <div class="cap">
+      <p class="cap-k">AI 工作流</p>
+      <p class="cap-d">固定步驟交給 skill，<span class="k">決定前把依據擺好</span></p>
+      <ul class="cap-ev">
+        <li><a href="#pipeline"><i>Project I</i>五支 skill 各管一段，QA 卡走同一條八階段流程</a></li>
+        <li><a href="#tooling"><i>Project B</i>寫表前後自動檢查，犯過的錯回流成規則</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="sec-h">三件作品</p>
   <ul class="toc">
-    <li>
-      <a class="entry" href="#difficulty">
-        <span class="enum">Project&nbsp;S</span>
-        <div>
-          <p class="ekind">數值設計</p>
-          <h2>主線難度收斂分析</h2>
-          <ul class="ebullets">
-            <li><b>難度曲線：</b>敵方戰力經五版迭代收斂，末端戰力需求降至初版 19.5%</li>
-            <li><b>通關率回測：</b>第 300 關通關率由 1.3% 提升至 4.8%</li>
-          </ul>
-        </div>
-        <span class="earrow" aria-hidden="true">&rarr;</span>
-      </a>
-    </li>
     <li>
       <a class="entry" href="#tooling">
         <span class="enum">Project&nbsp;B</span>
         <div>
-          <p class="ekind">AI 內容生成工具與模擬器</p>
+          <p class="capchips"><span class="capchip">AI 生產工具</span><span class="capchip">AI 驗證工具</span></p>
           <h2>從一句話到可上線關卡</h2>
           <ul class="ebullets">
-            <li><b>內容生成工具鏈：</b>丟一段口語需求進去，產出可直接貼回遊戲的行動邏輯表與技能表</li>
-            <li><b>戰鬥模擬器：</b>直接引用遊戲本身的戰鬥程式碼，十場實機重播對帳回合數與勝負全數命中、逐筆零差</li>
-            <li><b>難度預測：</b>模擬器的預測帶命中實機結果</li>
+            <li><b>一行指令驗證：</b>改完關卡不必貼表進 Unity 手打一場，<span class="k">一行指令跑遍各隊伍</span></li>
+            <li><b>實機之前預測難度：</b>兩個關卡 <span class="k">9 場實機中 8 場</span>落在事前算出的區間內</li>
           </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
@@ -852,12 +1108,25 @@ body{
       <a class="entry" href="#pipeline">
         <span class="enum">Project&nbsp;I</span>
         <div>
-          <p class="ekind">AI 工作流建置</p>
+          <p class="capchips"><span class="capchip">AI 工作流</span><span class="capchip">AI 驗證工具</span></p>
           <h2>角色產線與 QA 修正流</h2>
           <ul class="ebullets">
-            <li><b>工作流設計：</b>段與段之間傳固定格式的交棒檔案，寫入前四道守門機制</li>
-            <li><b>QA 修正：</b>七個工作天內結案 23 張 QA 卡</li>
-            <li><b>資料異動：</b>26 次上線，皆經沙箱演練與逐格閉環比對</li>
+            <li><b>固定步驟交給 skill：</b>五支 skill 各管一段，QA 卡平均每個工作天結案 <span class="k">3.6 張</span></li>
+            <li><b>上線前都經確認：</b>會影響線上的決定，都是<span class="k">企劃看過副本演練結果再放行</span></li>
+          </ul>
+        </div>
+        <span class="earrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </li>
+    <li>
+      <a class="entry" href="#difficulty">
+        <span class="enum">Project&nbsp;S</span>
+        <div>
+          <p class="capchips"><span class="capchip plain">數值設計（企劃本業）</span></p>
+          <h2>主線難度收斂分析</h2>
+          <ul class="ebullets">
+            <li><b>難度曲線：</b>敵方戰力經五版迭代收斂，末端戰力需求降至初版 <span class="k">19.5%</span></li>
+            <li><b>通關率回測：</b>第 300 關通關率由 <span class="k">1.3% 提升至 4.8%</span></li>
           </ul>
         </div>
         <span class="earrow" aria-hidden="true">&rarr;</span>
@@ -1339,22 +1608,34 @@ body{
 <div class="shell">
 
 <header class="top">
-  <p class="eyebrow">個人作品 · AI 內容生成工具（自行設計）</p>
+  <p class="eyebrow">個人作品 · AI 生產工具 × AI 驗證工具（自行設計）</p>
   <h1>從一句話到可上線關卡</h1>
-  <p class="sub">這是我為回合制 BOSS 關卡設計的一套<b>AI 內容生成工具鏈</b>：分層產出規格、每一層的驗收條件與收斂流程由我定義，AI 依規格產內容。企劃丟一段口語需求進去，它產出可直接貼回遊戲的行動邏輯表與技能表，並以遊戲本身的戰鬥引擎跑模擬驗證——重播對帳十場<b>回合數與勝負全數命中、逐筆零差</b>。以下用一個實際上線的關卡走完全程。</p>
+  <dl class="why3">
+    <dt>問題</dt><dd>每改一版關卡，都要<span class="k">貼表、開遊戲、手打一場</span>才知道對不對；難度好不好，要到實機才知道。</dd>
+    <dt>做法</dt><dd>我定義分層規格，讓 AI 依規格產出資料表；另外做了一個模擬器，<span class="k">直接跑遊戲本身的戰鬥程式碼</span>。</dd>
+    <dt>改變</dt><dd>驗證一版設計，從「貼表＋開遊戲＋手打一場」變成<span class="k">一行指令</span>；難度區間在實機之前就算出來。</dd>
+  </dl>
+  <p class="sub">這是我為回合制 BOSS 關卡設計的一套 AI 內容生成工具鏈。分工如下，以下用一個實際上線的關卡走完全程。</p>
+  <dl class="why3 soft">
+    <dt>企劃</dt><dd>方向與定案：提出需求、逐層審閱與推翻、確認回填</dd>
+    <dt>工具</dt><dd>繁瑣的部分：展開規格、查歷史關卡、產出可貼回遊戲的表、跑模擬，同時寫好決策記錄與修訂歷程</dd>
+    <dt>決定前</dt><dd>工具先把依據擺好：推薦值附依據、每一版附驗證方式、模擬報告可逐回合展開</dd>
+  </dl>
   <div class="idbar">
     <div>關卡類型<b>特挑02</b></div>
     <div>怪物 ID<b>怪物ID#1 / 怪物ID#2</b></div>
     <div>分層產出<b>L0 → L4</b></div>
     <div>版次<b>143</b></div>
     <div>決策記錄<b>52 條</b></div>
-    <div>實機重播對帳<b>10/10 零差</b></div>
+    <div>實機重播<b>10/10 場全中</b></div>
+    <div>逐欄比對<b>公式 100%・傷害值 98.8%</b></div>
   </div>
+  <p class="note">模擬器的準確度：1,407 筆逐欄比對中，技能倍率等公式欄位 100% 一致；最終傷害值 98.8%，其餘差異追查後是實機戰報取自較舊的資料版本，不是引擎算錯（見分頁 02）。</p>
 </header>
 
 <div class="tabs" role="tablist">
-  <button role="tab" id="tab1" aria-controls="p1" aria-selected="true">01　設計流程 L0 → L4</button>
-  <button role="tab" id="tab2" aria-controls="p2" aria-selected="false">02　模擬器：精準度與輸出</button>
+  <button role="tab" id="tab1" aria-controls="p1" aria-selected="true">01　AI 生產：一句話 → 資料表</button>
+  <button role="tab" id="tab2" aria-controls="p2" aria-selected="false">02　AI 驗證：模擬器</button>
 </div>
 
 <!-- ══════════ 分頁一 ══════════ -->
@@ -1365,7 +1646,7 @@ body{
   <p class="note">這是丟給工具的完整需求。沒有數值、沒有機制、沒有技能——只有情境、敵人數量與勝負條件。</p>
 
   <div class="quote">
-    <p class="lbl">使用者輸入 · 2026-07-23</p>
+    <p class="lbl">企劃輸入 · 2026-07-23</p>
     <pre>活動高難02（賽車主題）
 
 敵人：賽車隊車手 ×2，屬性沿用過去的雜兵素材
@@ -1396,64 +1677,104 @@ body{
     </table>
   </div>
 
-  <div class="box">
-    <h4>從一句「可以有一些碰撞」長出來的四個週期機制</h4>
-    <ul>
-      <li><b>機制一・拉近距離</b>（6n+1 宣告／6n+2 結算）——全員普攻才算通過；有人防禦或放必殺即失敗，全隊 ATK −90%。</li>
-      <li><b>機制二・激起水花</b>（6n+2 宣告／6n+3 結算）——全員防禦才算通過；有人貿然攻擊即失敗，全體吃 ATK×185%。</li>
-      <li><b>機制三・全力衝刺／保持警戒</b>（6n+4 設置／6n+5 結算）——兩個互不干擾的小關卡：一側需被<b>解除防禦</b>，另一側需被<b>兩次普攻</b>清掉戒心。</li>
-      <li><b>機制四・同時衝刺</b>（6n）——週期末無條件高峰，兩隻各 ATK×100% 打全體，約玩家均血的 49.9%。</li>
-    </ul>
-  </div>
+  <details class="more">
+    <summary><span>從一句「可以有一些碰撞」長出來的四個週期機制</span><span class="hint">機制內容・抓地力層數</span></summary>
+    <div class="more-bd">
+      <div class="box">
+        <ul>
+          <li><b>機制一・拉近距離</b>（6n+1 宣告／6n+2 結算）——全員普攻才算通過；有人防禦或放必殺即失敗，全隊 ATK −90%。</li>
+          <li><b>機制二・激起水花</b>（6n+2 宣告／6n+3 結算）——全員防禦才算通過；有人貿然攻擊即失敗，全體吃 ATK×185%。</li>
+          <li><b>機制三・全力衝刺／保持警戒</b>（6n+4 設置／6n+5 結算）——兩個互不干擾的小關卡：一側需被<b>解除防禦</b>，另一側需被<b>兩次普攻</b>清掉戒心。</li>
+          <li><b>機制四・同時衝刺</b>（6n）——週期末無條件高峰，兩隻各 ATK×100% 打全體，約玩家均血的 49.9%。</li>
+        </ul>
+      </div>
 
-  <div class="grip">
-    <div class="gstep"><p class="lay">開場 5 層</p><p class="red">−75%</p><div class="bar" style="width:100%"></div><p class="wh">很難被追上</p></div>
-    <div class="gstep"><p class="lay">4 層</p><p class="red">−60%</p><div class="bar" style="width:80%"></div><p class="wh">第 1 次測驗通過</p></div>
-    <div class="gstep"><p class="lay">3 層</p><p class="red">−45%</p><div class="bar" style="width:60%"></div><p class="wh">第 2 次</p></div>
-    <div class="gstep"><p class="lay">2 層</p><p class="red">−30%</p><div class="bar" style="width:40%"></div><p class="wh">第 3 次</p></div>
-    <div class="gstep"><p class="lay">1 層</p><p class="red">−15%</p><div class="bar" style="width:20%"></div><p class="wh">第 4 次</p></div>
-    <div class="gstep"><p class="lay">0 層</p><p class="red">正常</p><div class="bar" style="width:4%"></div><p class="wh">愈打愈容易追上</p></div>
-  </div>
+      <div class="grip">
+        <div class="gstep"><p class="lay">開場 5 層</p><p class="red">−75%</p><div class="bar" style="width:100%"></div><p class="wh">很難被追上</p></div>
+        <div class="gstep"><p class="lay">4 層</p><p class="red">−60%</p><div class="bar" style="width:80%"></div><p class="wh">第 1 次測驗通過</p></div>
+        <div class="gstep"><p class="lay">3 層</p><p class="red">−45%</p><div class="bar" style="width:60%"></div><p class="wh">第 2 次</p></div>
+        <div class="gstep"><p class="lay">2 層</p><p class="red">−30%</p><div class="bar" style="width:40%"></div><p class="wh">第 3 次</p></div>
+        <div class="gstep"><p class="lay">1 層</p><p class="red">−15%</p><div class="bar" style="width:20%"></div><p class="wh">第 4 次</p></div>
+        <div class="gstep"><p class="lay">0 層</p><p class="red">正常</p><div class="bar" style="width:4%"></div><p class="wh">愈打愈容易追上</p></div>
+      </div>
+    </div>
+  </details>
 </section>
 
 <section>
   <div class="sh"><span class="n">03</span><h2>交付：五層規格與可直接貼回遊戲的資料</h2></div>
   <p class="note">L3／L4 的產出對應遊戲的兩張 bytes 表，回填檔過 49 項自動驗證後可直接貼回專案。</p>
 
+  <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="v">✅ 自動驗證</span><span class="a">⚙️ 自動處理</span><span class="r">🔁 錯誤吸收</span></div>
   <div class="pipe">
-    <div class="st"><p class="lv">L0</p><p class="nm">原始規格</p><p class="ds">使用者原句逐字存證＋展開</p><p class="sz m">8.3 KB</p></div>
-    <div class="st"><p class="lv">L1</p><p class="nm">設計概念</p><p class="ds">設計意圖、敘事框架、可複用模式</p><p class="sz m">41 KB</p></div>
+    <div class="st"><p class="lv">L0</p><p class="nm">原始規格</p><p class="ds">企劃原句逐字存證＋展開</p><p class="sz m">8.3 KB</p></div>
+    <div class="st"><p class="lv">L1</p><p class="nm">設計概念</p><p class="ds">設計意圖、敘事框架、可複用模式</p><p class="bdg">✅ 沿用舊關卡骨架時，自動查復刻撞期</p><p class="sz m">41 KB</p></div>
     <div class="st"><p class="lv">L2</p><p class="nm">機制規格</p><p class="ds">機制參數、數值、觸發條件、週期關係</p><p class="sz m">48 KB</p></div>
-    <div class="st"><p class="lv">L3</p><p class="nm">行動邏輯結構</p><p class="ds">條件判斷、行動序列、優先度 → 遊戲的行動邏輯表</p><p class="sz m">41 KB</p></div>
-    <div class="st"><p class="lv">L4</p><p class="nm">SKILL 元件</p><p class="ds">effect ID、參數、冷卻、複合技子技 → 遊戲的技能資料表</p><p class="sz m">48 KB</p></div>
+    <div class="st"><p class="lv">L3</p><p class="nm">行動邏輯結構</p><p class="ds">條件判斷、行動序列、優先度 → 遊戲的行動邏輯表</p><p class="bdg">✅ 寫表前跳出檢查清單・寫完自動檢查</p><p class="sz m">41 KB</p></div>
+    <div class="st"><p class="lv">L4</p><p class="nm">SKILL 元件</p><p class="ds">effect ID、參數、冷卻、複合技子技 → 遊戲的技能資料表</p><p class="bdg">✅ 寫表前跳出檢查清單・寫完自動檢查</p><p class="sz m">48 KB</p></div>
   </div>
-  <div class="urow" aria-label="使用者在各層做的事">
-    <div class="u u1"><b>👤 使用者</b><br>丟一段口語需求，並指定先談哪幾層（例：「先討論 L0、L1」）</div>
-    <div class="u u2"><b>👤 使用者</b><br>逐層看 AI 的產出，回饋修正或整個推翻；AI 標「⚠️ 推薦值」的數值，由使用者看過才定案</div>
-    <div class="u u2"><b>👤 使用者</b><br>確認回填檔；過 49 項自動驗證後，才貼回遊戲</div>
+  <div class="urow" aria-label="企劃在各層做的判斷">
+    <div class="u u1"><b>👤 企劃</b><br>提出口語需求，並決定先談哪幾層（例：「先討論 L0、L1」）</div>
+    <div class="u u2"><b>👤 企劃</b><br>逐層審閱 AI 的產出，修正或整個推翻；AI 標「⚠️ 推薦值」的數值，由企劃看過依據才定案</div>
+    <div class="u u2"><b>👤 企劃</b><br>確認回填檔；過 49 項自動驗證後，才貼回遊戲</div>
   </div>
-  <p class="unote">AI 負責展開規格、查歷史關卡、產表與跑驗證；<b>方向由使用者決定</b>。143 個版次每一版都由一次使用者回饋觸發，52 條決策中有 9 條被推翻重做，實際往返見下方第 04 節。</p>
+  <div class="loop"><b>🔁 錯誤吸收</b>　企劃糾正過的做法，AI 當場提議存成規則，企劃同意才寫入；同一類錯第二次發生，就寫成新的自動檢查，之後每一關都會自動擋。</div>
+  <p class="unote">AI 負責展開規格、查歷史關卡、產表與跑驗證；<b>方向與定案由企劃決定</b>。每一版都由一次企劃回饋觸發，近兩成的決策（52 條中的 9 條）被企劃推翻重做，工具照樣收斂；實際往返見下方第 04 節。</p>
 
-  <div class="tw">
-    <table>
-      <thead><tr><th style="width:190px">交付物</th><th style="width:88px">大小</th><th>用途</th></tr></thead>
+  <div class="flow4w">
+    <p class="cap">一張表看懂：每個階段誰做什麼</p>
+    <table class="flow4">
+      <thead><tr><th>階段</th><th class="u">👤 企劃的判斷</th><th class="v">✅ 自動驗證</th><th class="a">⚙️ 自動處理</th><th class="r">🔁 錯誤吸收</th></tr></thead>
       <tbody>
-        <tr><td class="m">_L0_raw.md</td><td class="num">8.3 KB</td><td>原始輸入存證＋展開規格</td></tr>
-        <tr><td class="m">_L1 ~ _L4.md</td><td class="num">178 KB</td><td>四層分層設計文件</td></tr>
-        <tr><td class="m">_回填.tsv / .xlsx</td><td class="num">49 KB</td><td><b>直接貼回遊戲的行動邏輯表與技能表</b>（24／16 欄、UTF-8 BOM）</td></tr>
-        <tr><td class="m">_行動腳本.json</td><td class="num">3.2 KB</td><td>模擬用打法宣告＋機制判準</td></tr>
-        <tr><td class="m">_sim_config.json</td><td class="num">28 KB</td><td>模擬器輸入配置（自母表對帳後產生）</td></tr>
-        <tr><td class="m">_戰鬥時間軸.tsv</td><td class="num">3.2 KB</td><td>逐回合事件流，交付 QA</td></tr>
-        <tr><td class="m">_決策記錄.md</td><td class="num">167 KB</td><td>52 條決策記錄，含被推翻的 9 條</td></tr>
-        <tr><td class="m">_修訂歷程.md</td><td class="num">226 KB</td><td>143 個版次，每條記觸發來源與驗證方式</td></tr>
+        <tr><td class="st">提出需求</td><td class="u" data-k="👤 企劃的判斷">定情境、敵人、勝負條件，決定先談哪幾層</td><td class="none">—</td><td class="a" data-k="⚙️ 自動處理">逐字存證、展開原始規格；查歷史關卡取素材與數值基準</td><td class="none">—</td></tr>
+        <tr><td class="st">逐層設計</td><td class="u" data-k="👤 企劃的判斷">審閱每一層，修改或推翻；「推薦值」看過依據再定案</td><td class="v" data-k="✅ 自動驗證">沿用舊關卡骨架時，自動查上線前後八週會不會撞上復刻</td><td class="a" data-k="⚙️ 自動處理">長出機制與數值，未確認的附依據；每一版自動記下改了什麼、誰觸發、怎麼驗</td><td class="r" data-k="🔁 錯誤吸收">企劃糾正的做法，AI 當場提議存成規則，企劃同意才寫入</td></tr>
+        <tr><td class="st">產出資料表</td><td class="none">—</td><td class="v" data-k="✅ 自動驗證">第一次寫表前自動跳出檢查清單，讀完才放行；寫完自動跑 49 項檢查（欄位、編碼、子技齊全、屬性對特效、ID 撞號…）</td><td class="a" data-k="⚙️ 自動處理">產出行動邏輯表與技能表</td><td class="r" data-k="🔁 錯誤吸收">同一類錯第二次發生，就寫成新的自動檢查或清單條目</td></tr>
+        <tr><td class="st">模擬驗證</td><td class="u" data-k="👤 企劃的判斷">看報告判斷手感與壓力節奏，決定要不要調</td><td class="v" data-k="✅ 自動驗證">模擬前自動比對數值有沒有抄錯關卡，對不上就拒跑</td><td class="a" data-k="⚙️ 自動處理">一行指令跑遍各隊伍，產出可逐回合展開的互動報告</td><td class="none">—</td></tr>
+        <tr><td class="st">貼回遊戲</td><td class="u" data-k="👤 企劃的判斷">確認回填檔，決定上線</td><td class="none">—</td><td class="none">—</td><td class="r" data-k="🔁 錯誤吸收">定期整批掃一次當下沒接住的經驗，由企劃決定要不要收成規則</td></tr>
       </tbody>
     </table>
+    <p class="fn">自動驗證靠的是寫入前後自動觸發的檢查腳本與清單，不靠 AI 或人記得去跑；錯誤吸收的規則存進知識檔、檢查腳本與動筆前清單，下一關開始直接生效。</p>
   </div>
+
+  <details class="more">
+    <summary><span>交付物清單</span><span class="hint">8 項交付物・大小與用途</span></summary>
+    <div class="more-bd">
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:190px">交付物</th><th style="width:88px">大小</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="m">_L0_raw.md</td><td class="num">8.3 KB</td><td>原始輸入存證＋展開規格</td></tr>
+            <tr><td class="m">_L1 ~ _L4.md</td><td class="num">178 KB</td><td>四層分層設計文件</td></tr>
+            <tr><td class="m">_回填.tsv / .xlsx</td><td class="num">49 KB</td><td><b>直接貼回遊戲的行動邏輯表與技能表</b>（24／16 欄、UTF-8 BOM）</td></tr>
+            <tr><td class="m">_行動腳本.json</td><td class="num">3.2 KB</td><td>模擬用打法宣告＋機制判準</td></tr>
+            <tr><td class="m">_sim_config.json</td><td class="num">28 KB</td><td>模擬器輸入配置（自母表對帳後產生）</td></tr>
+            <tr><td class="m">_戰鬥時間軸.tsv</td><td class="num">3.2 KB</td><td>逐回合事件流，交付 QA</td></tr>
+            <tr><td class="m">_決策記錄.md</td><td class="num">167 KB</td><td>52 條決策記錄，含被推翻的 9 條</td></tr>
+            <tr><td class="m">_修訂歷程.md</td><td class="num">226 KB</td><td>143 個版次，每條記觸發來源與驗證方式</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 </section>
 
 <section>
-  <div class="sh"><span class="n">04</span><h2>收斂：它聽得懂指令，也接受被推翻重做</h2></div>
-  <p class="note">從第一版到定版共 <b>143 個版次</b>，每一版由一次使用者回饋觸發。以下是實際往返的節錄，只列改變方向的節點；引用內容經文字整理，語意未變。</p>
+  <div class="sh"><span class="n">04</span><h2>收斂：企劃的一個判斷，工具落實到每一處</h2></div>
+  <p class="note">從第一版到定版共 <b>143 個版次</b>，每一版由一次企劃回饋觸發，工具同時記下觸發來源與驗證方式，不用另外寫文件。先看幾個決定換來多少工作：</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:38%">企劃的決定</th><th>工具照這個決定做完的</th></tr></thead>
+      <tbody>
+        <tr><td>附上編劇定稿，機制一律不動</td><td>技能名、文字效果名、機制名 <b>612 處</b>改名，台詞 17 句換成定稿，機制與 ID 一律未動；另外找出編劇版內部 4 處自相矛盾的舊名</td></tr>
+        <tr><td>技能與台詞 ID 重構，接續上一關的號段</td><td>全量重編，<b>403 處</b>過期 ID 清零，同時修掉模擬器三處保真度問題</td></tr>
+        <tr><td>缺解防角色的隊伍，換成同 CD、帶解防技能的角色</td><td>掃過 <b>138 名</b>可玩角色找出 9 名帶解防，換角後重跑，五隊全部正確化解、懲罰技零發動</td></tr>
+        <tr><td>附上實機 8 場原始紀錄，血量改以整數% 回推</td><td>8 檔戰鬥紀錄全部解碼，依實機校準血量，只動一欄、其餘由公式輸出</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">以下是實際往返的節錄，只列改變方向的節點；引用內容經文字整理，語意未變。</p>
 
   <div class="log">
     <div class="turn">
@@ -1474,87 +1795,94 @@ body{
       <div class="ver"><b>修訂</b></div>
       <div>
         <div class="said">L2 的隊伍強度標準有誤——特殊挑戰 02 應為 SSR 3星4潛5寢／SR 4星9潛5寢。</div>
-        <div class="did">查證近期真實樣本後確認使用者是對的，修正數值表，<b>並把同款錯誤一路回流</b>——修正記憶檔、提交高優先度條目建議修正框架主表。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂 ×2</b></div>
-      <div>
-        <div class="said">機制數量偏多。機制一是貫穿全場的，改寫成主機制；其餘精簡到四個以內。<br><br>（隔一輪）可以再拿回一個機制，整體週期也拉長一些。</div>
-        <div class="did">追問確認為「非合併，是刪減」後機制數 6→3、週期 8→4；下一輪再把內容整段拿回、<b>合併成單一機制</b>（數量只 +1，精確對應「一個」的字面要求），週期回 8。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b></div>
-      <div>
-        <div class="said">造傷加減這組數值是照母本來的嗎？看起來不太合理。請先估算 3CD／4CD 角色平均能打出多少次普攻與必殺，再回頭檢視最大疊層與數值。</div>
-        <div class="did">核算 14 回合約可打出 31 次普攻／18 次必殺，對應 50／20 層上限；同時查出母本機制限定特定站位餵層、本關無對應敘事支點 ⇒ <b>整個機制移除</b>。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂 ×9</b>07-30</div>
-      <div>
-        <div class="said sys">撞期查證：本關沿用的母本骨架，其本尊將在四週後復刻重新上架，雷同度約 90%，暴雷風險過高。</div>
-        <div class="did">使用者指示走全新方向。經多輪對話收斂出<b>原創 6 回合週期</b>——換測驗核心、反轉抓地力方向（改為開場滿層、通過後遞減）、簡化機制三結構、標準化敗北條件。<b>已定案的骨架整套重做</b>。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b>08-04</div>
-      <div>
-        <div class="said">請重新檢查 AI 與技能架構、以及回填規則是否正確；ID 一併重構，確認上一關最後使用的技能與台詞號段，接續編排。</div>
-        <div class="did">技能與台詞 ID 全量重編並接續上一關的號段，<b>403 處過期 ID 清零</b>，同步修復模擬器三處保真度問題。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b></div>
-      <div>
-        <div class="said">普攻特效我印象中是 0 0 0 150 0 之類的，請查過去的變動紀錄確認正確值並記錄下來，避免之後再編錯。</div>
-        <div class="did">查證後確認官方值為 <span class="m">0/0/150/0/0</span>，並查出<b>使用者的印象並非記錯</b>——那是欄號修正前從另一欄起算的舊讀法。連帶訂正 10 份框架檔與 5 條記憶。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b>08-05</div>
-      <div>
-        <div class="said">（附上編劇定稿）請同步所有文件的文字內容，機制一律不動。</div>
-        <div class="did">技能名／文字效果名／機制名 <b>612 處改名</b>、台詞 17 句換成定稿，<b>機制與 ID 一律未動</b>；另主動修掉編劇版內部 4 處自相矛盾的舊名殘留。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b></div>
-      <div>
-        <div class="said">先制技的實作與定稿差距過大，機制改以這份定稿為準。<br><br>〈緊抓地面〉的作用對象由我方全體改為自身，兩隻 BOSS 各自對自己施放。</div>
-        <div class="did">改以企劃／編劇定稿表為準，<b>一次撤回四條已定案的決策</b>並逐條記錄代價與新做法。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂 ×2</b></div>
-      <div>
-        <div class="said">重跑一次完整模擬，確認各機制與策略符合預期；在不調整技能傷害% 的前提下反推 BOSS 攻擊與血量，使通關回合落在 14~20。<br><br>（隔一輪）ATK 特殊加成不希望調整，差這 3% 應該影響不大。</div>
-        <div class="did">跑模擬反推血量，<b>技能傷害% 一律未動</b>；下一輪依指示把 ATK 回退，並實測確認回合數與前版<b>逐字相同</b>、壓力剖面反而更好。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b></div>
-      <div>
-        <div class="said">缺解防角色的隊伍，改用 CD 相同且具備解防技能的角色替換即可。</div>
-        <div class="did">掃出全庫 138 名可玩角色僅 9 名帶解防、且分必殺型／普攻型兩種觸發方式，換角後重跑 ⇒ <b>五隊全部機制正確化解、懲罰技零發動</b>。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂 ×3</b>08-06</div>
-      <div>
-        <div class="said">玩家感受到壓力的次數偏少，有辦法提高嗎？<br><br>盡量不要用真實傷害，生存壓力仍以攻擊力% 為主要手段。</div>
-        <div class="did">兩個方案先在模擬器裡算出後果、<b>都在動到正式檔之前退回</b>（拉高倍率→多數隊伍團滅；危機回合全員防禦→危機感反而消失）；改以參數掃描定案普攻改「敵方全體 50%」。</div>
-      </div>
-    </div>
-    <div class="turn">
-      <div class="ver"><b>修訂</b></div>
-      <div>
-        <div class="said">（附上實機 8 場原始紀錄）若要改成 107,200，仍須以整數% 加成回推。</div>
-        <div class="did">8 檔戰鬥紀錄全部 byte-exact 解碼，依實機數據校準血量，<b>只動一欄</b>、其餘由公式輸出。<b>模擬器先前給的預測帶命中實機結果</b>（見分頁 02）。</div>
+        <div class="did">查證近期真實樣本後確認企劃是對的，修正數值表，<b>並把同款錯誤一路回流</b>——修正記憶檔、提交高優先度條目建議修正框架主表。</div>
       </div>
     </div>
   </div>
+  <details class="more">
+    <summary><span>展開其餘 11 則往返</span><span class="hint">撞期後整套重做・編劇定稿同步・依實機紀錄校準血量</span></summary>
+    <div class="more-bd">
+    <div class="log">
+        <div class="turn">
+          <div class="ver"><b>修訂 ×2</b></div>
+          <div>
+            <div class="said">機制數量偏多。機制一是貫穿全場的，改寫成主機制；其餘精簡到四個以內。<br><br>（隔一輪）可以再拿回一個機制，整體週期也拉長一些。</div>
+            <div class="did">追問確認為「非合併，是刪減」後機制數 6→3、週期 8→4；下一輪再把內容整段拿回、<b>合併成單一機制</b>（數量只 +1，精確對應「一個」的字面要求），週期回 8。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b></div>
+          <div>
+            <div class="said">造傷加減這組數值是照母本來的嗎？看起來不太合理。請先估算 3CD／4CD 角色平均能打出多少次普攻與必殺，再回頭檢視最大疊層與數值。</div>
+            <div class="did">核算 14 回合約可打出 31 次普攻／18 次必殺，對應 50／20 層上限；同時查出母本機制限定特定站位餵層、本關無對應敘事支點 ⇒ <b>整個機制移除</b>。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂 ×9</b>07-30</div>
+          <div>
+            <div class="said sys">撞期查證：本關沿用的母本骨架，其本尊將在四週後復刻重新上架，雷同度約 90%，暴雷風險過高。</div>
+            <div class="did">企劃指示走全新方向。經多輪對話收斂出<b>原創 6 回合週期</b>——換測驗核心、反轉抓地力方向（改為開場滿層、通過後遞減）、簡化機制三結構、標準化敗北條件。<b>已定案的骨架整套重做</b>。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b>08-04</div>
+          <div>
+            <div class="said">請重新檢查 AI 與技能架構、以及回填規則是否正確；ID 一併重構，確認上一關最後使用的技能與台詞號段，接續編排。</div>
+            <div class="did">技能與台詞 ID 全量重編並接續上一關的號段，<b>403 處過期 ID 清零</b>，同步修復模擬器三處保真度問題。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b></div>
+          <div>
+            <div class="said">普攻特效我印象中是 0 0 0 150 0 之類的，請查過去的變動紀錄確認正確值並記錄下來，避免之後再編錯。</div>
+            <div class="did">查證後確認官方值為 <span class="m">0/0/150/0/0</span>，並查出<b>企劃的印象並非記錯</b>——那是欄號修正前從另一欄起算的舊讀法。連帶訂正 10 份框架檔與 5 條記憶。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b>08-05</div>
+          <div>
+            <div class="said">（附上編劇定稿）請同步所有文件的文字內容，機制一律不動。</div>
+            <div class="did">技能名／文字效果名／機制名 <b>612 處改名</b>、台詞 17 句換成定稿，<b>機制與 ID 一律未動</b>；另主動修掉編劇版內部 4 處自相矛盾的舊名殘留。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b></div>
+          <div>
+            <div class="said">先制技的實作與定稿差距過大，機制改以這份定稿為準。<br><br>〈緊抓地面〉的作用對象由我方全體改為自身，兩隻 BOSS 各自對自己施放。</div>
+            <div class="did">改以企劃／編劇定稿表為準，<b>一次撤回四條已定案的決策</b>並逐條記錄代價與新做法。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂 ×2</b></div>
+          <div>
+            <div class="said">重跑一次完整模擬，確認各機制與策略符合預期；在不調整技能傷害% 的前提下反推 BOSS 攻擊與血量，使通關回合落在 14~20。<br><br>（隔一輪）ATK 特殊加成不希望調整，差這 3% 應該影響不大。</div>
+            <div class="did">跑模擬反推血量，<b>技能傷害% 一律未動</b>；下一輪依指示把 ATK 回退，並實測確認回合數與前版<b>逐字相同</b>、壓力剖面反而更好。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b></div>
+          <div>
+            <div class="said">缺解防角色的隊伍，改用 CD 相同且具備解防技能的角色替換即可。</div>
+            <div class="did">掃出全庫 138 名可玩角色僅 9 名帶解防、且分必殺型／普攻型兩種觸發方式，換角後重跑 ⇒ <b>五隊全部機制正確化解、懲罰技零發動</b>。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂 ×3</b>08-06</div>
+          <div>
+            <div class="said">玩家感受到壓力的次數偏少，有辦法提高嗎？<br><br>盡量不要用真實傷害，生存壓力仍以攻擊力% 為主要手段。</div>
+            <div class="did">兩個方案先在模擬器裡算出後果、<b>都在動到正式檔之前退回</b>（拉高倍率→多數隊伍團滅；危機回合全員防禦→危機感反而消失）；改以參數掃描定案普攻改「敵方全體 50%」。</div>
+          </div>
+        </div>
+        <div class="turn">
+          <div class="ver"><b>修訂</b></div>
+          <div>
+            <div class="said">（附上實機 8 場原始紀錄）若要改成 107,200，仍須以整數% 加成回推。</div>
+            <div class="did">8 檔戰鬥紀錄全部 byte-exact 解碼，依實機數據校準血量，<b>只動一欄</b>、其餘由公式輸出。<b>模擬器先前給的預測帶命中實機結果</b>（見分頁 02）。</div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </details>
 </section>
 
 </div>
@@ -1563,22 +1891,36 @@ body{
 <div class="panel" id="p2" role="tabpanel" aria-labelledby="tab2" hidden>
 
 <section>
+  <div class="ba" aria-label="一次設計驗證的前後對照">
+    <div><p class="lb">以前</p>改完表 → 貼進 Unity → 開遊戲 → 手打一場，才知道這一版對不對</div>
+    <div class="to" aria-hidden="true">→</div>
+    <div class="now"><p class="lb">現在</p>改完回填表 → 一行指令跑遍各隊伍 → 看報告判斷；收斂之後才進 Unity 一次定案</div>
+  </div>
+  <p class="note">方案也能在動到正式檔之前先被否決。例如要提高玩家感受到的壓力，兩個方案先在模擬器裡算出後果：拉高倍率會讓多數隊伍團滅，危機回合要求全員防禦反而讓危機感消失。兩個都在動到正式檔之前退回，改用參數掃描定案。</p>
+</section>
+
+<section>
   <div class="sh"><span class="n">01</span><h2>它不是近似模型，它就是遊戲的戰鬥引擎</h2></div>
   <p class="note">大多數關卡模擬器是另寫一套近似公式，誤差從第一行程式碼就開始累積。本模擬器走另一條路：把來源專案的<b>戰鬥 C# 原碼引用式鏈入</b>，編成獨立 console app。觸發技鏈與子觸發技的計算沒有鏡像失真，因為根本沒有鏡像——跑的就是遊戲本身那份程式。</p>
 
-  <div class="tw">
-    <table>
-      <thead><tr><th style="width:150px">組成</th><th style="width:100px">性質</th><th>內容</th></tr></thead>
-      <tbody>
-        <tr><td><b>戰鬥引擎</b></td><td><b>真引擎</b></td><td>戰鬥核心模組（回合狀態機、傷害計算、AI、資料結構、階段控制），<b>14,668 行</b>——引用原檔、唯讀、不複製，<b>來源改版自動跟上</b></td></tr>
-        <tr><td><b>Vendor 快照</b></td><td>快照</td><td>從業務混雜大檔抽出的戰鬥閉包（33 型別＋28 成員）。原檔含 2,356 個 UI／帳號編譯錯誤無法直鏈，故抽出；來源改版後重跑抽取腳本即可</td></tr>
-        <tr><td><b>Shims</b></td><td>替身</td><td>反作弊型別透傳、UnityEngine 最小替身——只是讓引擎能離開 Unity 跑，不參與任何計算</td></tr>
-        <tr><td><b>亂數</b></td><td>可控</td><td>原引擎用時間種；本模擬器改為可控 seed（固定種子環境變數，預設固定 <span class="m">12345</span>）以保回歸確定性</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <p class="note">因為跑的是遊戲本身的程式，<b>改完回填表就能模擬，不必先貼表進 Unity</b>；本頁開頭的前後對照就是靠這一點。</p>
+  <details class="more">
+    <summary><span>模擬器由哪些部分組成</span><span class="hint">真引擎・快照・替身・可控亂數</span></summary>
+    <div class="more-bd">
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:150px">組成</th><th style="width:100px">性質</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td><b>戰鬥引擎</b></td><td><b>真引擎</b></td><td>戰鬥核心模組（回合狀態機、傷害計算、AI、資料結構、階段控制），<b>14,668 行</b>——引用原檔、唯讀、不複製，<b>來源改版自動跟上</b></td></tr>
+            <tr><td><b>Vendor 快照</b></td><td>快照</td><td>從業務混雜大檔抽出的戰鬥閉包（33 型別＋28 成員）。原檔含 2,356 個 UI／帳號編譯錯誤無法直鏈，故抽出；來源改版後重跑抽取腳本即可</td></tr>
+            <tr><td><b>Shims</b></td><td>替身</td><td>反作弊型別透傳、UnityEngine 最小替身——只是讓引擎能離開 Unity 跑，不參與任何計算</td></tr>
+            <tr><td><b>亂數</b></td><td>可控</td><td>原引擎用時間種；本模擬器改為可控 seed（固定種子環境變數，預設固定 <span class="m">12345</span>）以保回歸確定性</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
-  <p class="note">設計目標是<b>改完回填 TSV 就能模擬，不經 Unity 貼表</b>——收斂之後才進 Unity 一次定案。這讓一次設計驗證的成本從「貼表＋開遊戲＋手打一場」降到一行指令。</p>
 </section>
 
 <section>
@@ -1587,55 +1929,63 @@ body{
 
   <div class="res">
     <div><p class="l">實機重播場次</p><p class="v" style="color:var(--d)">10 / 10</p><p class="c">回合數與勝負<b>全數命中</b><br>兩個關卡各五場</p></div>
-    <div><p class="l">逐次命中對帳</p><p class="v" style="color:var(--d)">零差</p><p class="c">十場逐筆欄位全同<br>唯一殘留為兩筆微量觸發</p></div>
-    <div><p class="l">難度預測帶</p><p class="v" style="color:var(--d)">2 / 2</p><p class="c">兩關預測區間<br>都<b>命中實機實際回合</b></p></div>
+    <div><p class="l">逐欄位比對</p><p class="v" style="color:var(--d)">≥ 98.8%</p><p class="c">1,407 筆命中逐欄比對<br>核心公式欄位 <b>100%</b>，最終傷害值 98.8%</p></div>
+    <div><p class="l">難度預測帶</p><p class="v" style="color:var(--d)">8 / 9</p><p class="c">實機回合落在<b>事前算出的區間內</b><br>高難02 四場全中・關卡A 五場中四場</p></div>
   </div>
 
-  <h3 style="margin-top:32px">逐欄位對帳（1,407 筆命中）</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>欄位</th><th class="num">比對數</th><th class="num">不符</th><th class="num">正確率</th></tr></thead>
-      <tbody>
-        <tr><td>技能倍率 <span class="m">effValue</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td>效果參數 <span class="m">skillEffectValue</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td>施放者 <span class="m">baseAtk</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td>目標防禦中 ／ 破防中</td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td>目標受傷加成 ／ 被攻擊加成 ／ 防禦效果</td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td><b>治療值</b><span style="color:var(--ink3)">（單獨統計）</span></td><td class="num">688</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
-        <tr><td>技能基礎值 <span class="m">baseValue</span></td><td class="num">1,407</td><td class="num">5</td><td class="num">99.6%</td></tr>
-        <tr><td>傷害／治療值</td><td class="num">1,407</td><td class="num">17</td><td class="num">98.8%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="note"><b>核心公式欄位全部 100%。</b>下方兩列的差異追查後確認為實機戰報取自改版前的資料版本，與引擎計算無關；用對應版本重播後<b>十場逐筆零差</b>。</p>
+  <details class="more">
+    <summary><span>逐欄位對帳（1,407 筆命中）</span><span class="hint">哪些欄位 100%、差異從哪來</span></summary>
+    <div class="more-bd">
+      <div class="tw">
+        <table>
+          <thead><tr><th>欄位</th><th class="num">比對數</th><th class="num">不符</th><th class="num">正確率</th></tr></thead>
+          <tbody>
+            <tr><td>技能倍率 <span class="m">effValue</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td>效果參數 <span class="m">skillEffectValue</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td>施放者 <span class="m">baseAtk</span></td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td>目標防禦中 ／ 破防中</td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td>目標受傷加成 ／ 被攻擊加成 ／ 防禦效果</td><td class="num">1,407</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td><b>治療值</b><span style="color:var(--ink3)">（單獨統計）</span></td><td class="num">688</td><td class="num">0</td><td class="num" style="color:var(--d);font-weight:700">100%</td></tr>
+            <tr><td>技能基礎值 <span class="m">baseValue</span></td><td class="num">1,407</td><td class="num">5</td><td class="num">99.6%</td></tr>
+            <tr><td>傷害／治療值</td><td class="num">1,407</td><td class="num">17</td><td class="num">98.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note"><b>核心公式欄位全部 100%。</b>下方兩列的差異追查後確認為實機戰報取自改版前的資料版本，與引擎計算無關；用對應版本重播後<b>十場逐筆零差</b>。</p>
+    </div>
+  </details>
 
-  <h3 style="margin-top:30px">十場重播終局</h3>
-  <div class="tw">
-    <table>
-      <thead><tr><th>場次</th><th>資料版本</th><th>重播結果</th><th class="num">逐筆對帳</th></tr></thead>
-      <tbody>
-        <tr><td>關卡A · 五場</td><td class="m">—</td><td><b style="color:var(--d)">5/5 命中</b>　12／13／13／14／15 回</td><td class="num" style="color:var(--d)">600 / 600 零差</td></tr>
-        <tr><td>關卡B · 3CD 爆發</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 15 ✅</b></td><td class="num" style="color:var(--d)">57 / 57 零差</td></tr>
-        <tr><td>關卡B · 4CD 妨礙</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 15 ✅</b></td><td class="num">90 / 90 零值差</td></tr>
-        <tr><td>關卡B · DOT 隊</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 16 ✅</b></td><td class="num" style="color:var(--d)">70 / 70 零差</td></tr>
-        <tr><td>關卡B · 觸發隊</td><td class="m">Lv83</td><td><b style="color:var(--d)">勝 16 ✅</b></td><td class="num" style="color:var(--d)">110 / 110 零差</td></tr>
-        <tr><td>關卡B · 普攻隊</td><td class="m">Lv83</td><td><b style="color:var(--d)">勝 19 ✅</b></td><td class="num" style="color:var(--d)">113 / 113 零差</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="note">五場帳目<b>一位不差閉環</b>：鎖血地板 851,515／510,909／17,030，自療 85,151（Lv82 組）；894,089／536,453／17,881，自療 89,408（Lv83 組）。</p>
+  <details class="more">
+    <summary><span>十場重播的逐場結果</span><span class="hint">回合數・逐筆對帳零差</span></summary>
+    <div class="more-bd">
+      <div class="tw">
+        <table>
+          <thead><tr><th>場次</th><th>資料版本</th><th>重播結果</th><th class="num">逐筆對帳</th></tr></thead>
+          <tbody>
+            <tr><td>關卡A · 五場</td><td class="m">—</td><td><b style="color:var(--d)">5/5 命中</b>　12／13／13／14／15 回</td><td class="num" style="color:var(--d)">600 / 600 零差</td></tr>
+            <tr><td>關卡B · 3CD 爆發</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 15 ✅</b></td><td class="num" style="color:var(--d)">57 / 57 零差</td></tr>
+            <tr><td>關卡B · 4CD 妨礙</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 15 ✅</b></td><td class="num" style="color:var(--d)">90 / 90 零差</td></tr>
+            <tr><td>關卡B · DOT 隊</td><td class="m">Lv82</td><td><b style="color:var(--d)">勝 16 ✅</b></td><td class="num" style="color:var(--d)">70 / 70 零差</td></tr>
+            <tr><td>關卡B · 觸發隊</td><td class="m">Lv83</td><td><b style="color:var(--d)">勝 16 ✅</b></td><td class="num" style="color:var(--d)">110 / 110 零差</td></tr>
+            <tr><td>關卡B · 普攻隊</td><td class="m">Lv83</td><td><b style="color:var(--d)">勝 19 ✅</b></td><td class="num" style="color:var(--d)">113 / 113 零差</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">五場帳目<b>一位不差閉環</b>：鎖血地板 851,515／510,909／17,030，自療 85,151（Lv82 組）；894,089／536,453／17,881，自療 89,408（Lv83 組）。</p>
+    </div>
+  </details>
 
   <h3 style="margin-top:30px">難度預測帶 vs 實機</h3>
   <div class="tw">
     <table>
-      <thead><tr><th>關卡</th><th>模擬器預測區間</th><th>實機實際回合</th><th class="num">命中</th></tr></thead>
+      <thead><tr><th>關卡</th><th>模擬器預測區間</th><th>實機實際回合</th><th class="num">落在區間內</th></tr></thead>
       <tbody>
-        <tr><td>本案例（高難02）</td><td class="m">13.1 – 19.2（中位 14.0）</td><td class="m">13 / 14 / 14 / 14</td><td class="num" style="color:var(--d);font-weight:700">✅</td></tr>
-        <tr><td>關卡A</td><td class="m">11.9 – 14.8（中位 12.9）</td><td class="m">12 / 13 / 13 / 14 / 15</td><td class="num" style="color:var(--d);font-weight:700">✅</td></tr>
+        <tr><td>本案例（高難02）</td><td class="m">13.1 – 19.2（中位 14.0）</td><td class="m">13 / 14 / 14 / 14</td><td class="num" style="color:var(--d);font-weight:700">4 / 4</td></tr>
+        <tr><td>關卡A</td><td class="m">11.9 – 14.8（中位 12.9）</td><td class="m">12 / 13 / 13 / 14 / <b style="color:var(--flag)">15</b></td><td class="num" style="font-weight:700">4 / 5</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">預測帶不是事後對答案——它在實機跑之前就算出來了，而且<b>中位數 14.0 精確落在實機四場的 13／14／14／14 上</b>。</p>
+  <p class="note">預測帶不是事後對答案——它在實機跑之前就算出來了。高難02 實機四場全落在區間內，<b>中位數 14.0 精確落在 13／14／14／14 上</b>；關卡A 五場中四場落在區間內，15 回合那一場超出上限 0.2 回合。</p>
 </section>
 
 
@@ -1683,6 +2033,9 @@ body{
       document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
     });
   }
+  document.addEventListener('subview',function(e){
+    if(e.detail.id==='pf2') go(e.detail.sub==='sim'?'tab2':'tab1');
+  });
   tabs.forEach(function(t){
     t.addEventListener('click',function(){go(t.id);});
     t.addEventListener('keydown',function(e){
@@ -2375,27 +2728,32 @@ renderAll();renderDetail();renderSweeps();
 <div class="shell">
 
 <header class="top">
-  <p class="eyebrow">個人作品 · AI 工作流（自行設計）</p>
+  <p class="eyebrow">個人作品 · AI 工作流 × AI 驗證工具（自行設計）</p>
   <h1>角色產線與 QA 修正流</h1>
-  <p class="sub">這是我為一款回合制 RPG 設計的<b>AI 工作流</b>：五支自己定義的 slash command skill 各管一段，把「設計到上線」與「QA 回報到交回」兩條路徑固化成 AI 每次都照著走的規格。目標不是跑得快，是<b>每次跑出同樣的結果</b>。</p>
+  <dl class="why3">
+    <dt>問題</dt><dd>一次改動要動好幾張表、多國語系要同步、改了卻常常沒生效，線上的共用表又怕被蓋掉；步驟一多，<span class="k">就靠人記得</span>。</dd>
+    <dt>做法</dt><dd>我寫了五支 skill 各管一段，段與段之間傳固定格式的交棒檔；改資料和驗證分給兩個代理，驗證的那一個<span class="k">透過橋接在 Unity 裡實際跑戰鬥</span>。</dd>
+    <dt>改變</dt><dd>步驟不再靠人記得；每一次寫入線上前都先演練、<span class="k">由企劃看過再放行</span>，寫完逐格比對。</dd>
+  </dl>
+  <p class="sub">這是我為一款回合制 RPG 設計的 AI 工作流。每一段該做什麼、交棒什麼、什麼時候停，都寫進 skill，AI 每次照著走；企劃把心力放在判斷，<span class="k">每個會影響線上的決定，都由企劃看過結果再放行</span>。</p>
 </header>
 
 <div class="stats">
   <div><p class="v">5</p><p class="k">支 skill，各管一段</p></div>
-  <div><p class="v">23</p><p class="k">張 QA 卡結案 · 7 個工作天</p></div>
-  <div><p class="v">26</p><p class="k">次資料異動上線</p></div>
-  <div><p class="v">40</p><p class="k">次沙箱演練</p></div>
-  <div><p class="v">21</p><p class="k">次寫回後逐格比對</p></div>
+  <div><p class="v">100%</p><p class="k">QA 卡走同一條八階段流程</p></div>
+  <div><p class="v">3 / 3</p><p class="k">會動到資料的 skill 預設只試跑</p></div>
+  <div><p class="v">8 / 8</p><p class="k">階段都定義了中止條件</p></div>
+  <div><p class="v">3.6</p><p class="k">張 QA 卡／工作天 · 單日最多 9 張</p></div>
 </div>
 
 <section>
-  <div class="sh"><span class="n">01</span><h2>架構：五支 skill 與固定交棒檔案</h2></div>
-  <p class="note">段與段之間傳的是固定格式的交棒檔案，不是對話內容；所有會影響線上的寫入，全部收斂到同一道人工確認。</p>
+  <div class="sh"><span class="n">01</span><h2>AI 工作流：五支 skill 怎麼分工</h2></div>
+  <p class="note">每一段工作交給一支 skill：寫好步驟、檢查與停止條件的固定流程。</p>
 
   <figure>
-    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
+    <div class="lgd"><span class="s"><i>SKILL</i>一支 skill</span><span class="u">👤 企劃的判斷</span><span class="g">🔒 企劃放行</span></div>
     <div class="dg">
-    <svg viewBox="0 -38 900 338" role="img" aria-label="五支 skill 的交棒架構圖，標出使用者介入點">
+    <svg class="defs" aria-hidden="true" focusable="false">
       <defs>
         <marker id="ah" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7" orient="auto">
           <path d="M0,0 L10,4 L0,8 z" fill="var(--rule2)"></path>
@@ -2404,227 +2762,168 @@ renderAll();renderDetail();renderSweeps();
           <path d="M0,0 L10,4 L0,8 z" fill="var(--gate)"></path>
         </marker>
       </defs>
+    </svg>
+    <svg class="arch-d" viewBox="0 0 900 284" role="group" aria-label="五支 skill 的分工與交棒，標出企劃叫用與放行；每支 skill 都可以點進去看詳細流程">
 
-      <rect class="bx" x="40" y="40" width="140" height="62" rx="3"></rect>
-      <text class="t1 mono" x="110" y="66" text-anchor="middle">skill-design</text>
-      <text class="t2" x="110" y="84" text-anchor="middle">角色設計</text>
+      <rect class="bx-u" x="40" y="4" width="590" height="24" rx="12"></rect>
+      <text class="lb-u" x="335" y="20" text-anchor="middle">👤 企劃下指令叫用 · AI 一次帶一步，需要判斷時停下來問企劃</text>
+      <path class="ln-u" d="M115,28 V50"></path>
+      <path class="ln-u" d="M335,28 V50"></path>
+      <path class="ln-u" d="M555,28 V50"></path>
 
-      <rect class="bx" x="260" y="40" width="140" height="62" rx="3"></rect>
-      <text class="t1 mono" x="330" y="66" text-anchor="middle">char-maker</text>
-      <text class="t2" x="330" y="84" text-anchor="middle">建角資料</text>
+      <path class="ln" d="M190,88 H254" marker-end="url(#ah)"></path>
+      <text class="lb" x="222" y="80" text-anchor="middle">技能定稿</text>
+      <path class="ln" d="M410,88 H474" marker-end="url(#ah)"></path>
+      <text class="lb" x="442" y="80" text-anchor="middle">各表列值</text>
+      <path class="ln-g" d="M630,88 H694" marker-end="url(#ahg)"></path>
+      <text class="lb-g" x="662" y="80" text-anchor="middle">回寫</text>
+      <path class="ln" d="M335,126 V190" marker-end="url(#ah)"></path>
+      <text class="lb" x="343" y="162">文字編號</text>
+      <path class="ln" d="M530,126 V190" marker-end="url(#ah)"></path>
+      <text class="lb" x="522" y="162" text-anchor="end">要實測</text>
+      <path class="ln" d="M580,196 V132" marker-end="url(#ah)"></path>
+      <text class="lb" x="588" y="162">逐回合報告</text>
 
-      <rect class="bx" x="480" y="40" width="140" height="62" rx="3"></rect>
-      <text class="t1 mono" x="550" y="66" text-anchor="middle">data-update</text>
-      <text class="t2" x="550" y="84" text-anchor="middle">配表修改</text>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /skill-design（角色設計）：看流程一的詳細內容">
+        <rect class="bx-s" x="40" y="50" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="52" y="60" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="73" y="71.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="180" y="72" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="52" y="98">/skill-design</text>
+        <text class="t2" x="52" y="116">角色設計</text>
+      </g>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /char-maker（建角資料）：看流程一的詳細內容">
+        <rect class="bx-s" x="260" y="50" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="272" y="60" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="293" y="71.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="400" y="72" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="272" y="98">/char-maker</text>
+        <text class="t2" x="272" y="116">建角資料</text>
+      </g>
+      <g class="skl" data-view="flow2" role="button" tabindex="0" aria-label="skill /data-update（配表修改）：看流程二的詳細內容">
+        <rect class="bx-s" x="480" y="50" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="492" y="60" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="513" y="71.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="620" y="72" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="492" y="98">/data-update</text>
+        <text class="t2" x="492" y="116">配表修改</text>
+      </g>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /i2-update（多國語系文字）：看流程一的詳細內容">
+        <rect class="bx-s" x="260" y="196" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="272" y="206" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="293" y="217.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="400" y="218" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="272" y="244">/i2-update</text>
+        <text class="t2" x="272" y="262">多國語系文字</text>
+      </g>
+      <g class="skl" data-view="verify" role="button" tabindex="0" aria-label="skill /battle-test（實機驗證・另一個代理）：看驗證流程的詳細內容">
+        <rect class="bx-s hot" x="480" y="196" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="492" y="206" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="513" y="217.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="620" y="218" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="492" y="244">/battle-test</text>
+        <text class="t2" x="492" y="262">實機驗證・另一個代理</text>
+      </g>
 
-      <rect class="bx" x="260" y="190" width="140" height="62" rx="3"></rect>
-      <text class="t1 mono" x="330" y="216" text-anchor="middle">i2-update</text>
-      <text class="t2" x="330" y="234" text-anchor="middle">多國語系文字</text>
+      <rect class="bx-g" x="700" y="50" width="160" height="76" rx="3"></rect>
+      <text class="t1" x="780" y="78" text-anchor="middle" fill="var(--gate)">🔒 企劃放行</text>
+      <text class="t2" x="780" y="97" text-anchor="middle">所有寫入線上的動作都經過這裡</text>
+      <text class="t2" x="780" y="113" text-anchor="middle">正式檔・版控・卡片</text>
+      <text class="lb-u" x="780" y="146" text-anchor="middle">👤 看過演練結果才點頭</text>
 
-      <rect class="bx-a" x="480" y="190" width="140" height="62" rx="3"></rect>
-      <text class="t1 mono" x="550" y="216" text-anchor="middle">battle-test</text>
-      <text class="t2" x="550" y="234" text-anchor="middle">實機驗證</text>
+      <text class="sk-hint" x="40" y="228">▸ 點 skill 卡片</text>
+      <text class="sk-hint" x="40" y="246">看那一段的詳細流程</text>
+    </svg>
+    <svg class="arch-m" viewBox="0 0 360 452" role="group" aria-label="五支 skill 的分工與交棒（直式）；每支 skill 都可以點進去看詳細流程">
+      <rect class="bx-u" x="10" y="4" width="340" height="24" rx="12"></rect>
+      <text class="lb-u" x="180" y="20" text-anchor="middle">👤 企劃下指令叫用 · 需要判斷時 AI 停下來問</text>
+      <path class="ln-u" d="M85,28 V40"></path>
 
-      <rect class="bx-g" x="700" y="40" width="160" height="62" rx="3"></rect>
-      <text class="t1" x="780" y="66" text-anchor="middle" fill="var(--gate)">🔒 人工放行</text>
-      <text class="t2" x="780" y="84" text-anchor="middle">線上正式檔 · 版控 · 卡片</text>
+      <path class="ln" d="M85,116 V150" marker-end="url(#ah)"></path>
+      <text class="lb" x="93" y="137">技能定稿</text>
+      <path class="ln" d="M160,194 H194" marker-end="url(#ah)"></path>
+      <text class="lb" x="178" y="187" text-anchor="middle">編號</text>
+      <path class="ln" d="M85,232 V266" marker-end="url(#ah)"></path>
+      <text class="lb" x="93" y="253">各表列值</text>
+      <path class="ln" d="M160,296 H194" marker-end="url(#ah)"></path>
+      <text class="lb" x="178" y="289" text-anchor="middle">實測</text>
+      <path class="ln" d="M200,326 H166" marker-end="url(#ah)"></path>
+      <text class="lb" x="182" y="342" text-anchor="middle">報告</text>
+      <path class="ln-g" d="M85,348 V382" marker-end="url(#ahg)"></path>
+      <text class="lb-g" x="93" y="369">回寫</text>
 
-      <path class="ln" d="M180,71 H254" marker-end="url(#ah)"></path>
-      <text class="lb" x="217" y="63" text-anchor="middle">技能描述定稿</text>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /skill-design（角色設計）：看流程一的詳細內容">
+        <rect class="bx-s" x="10" y="40" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="22" y="50" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="43" y="61.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="150" y="62" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="22" y="88">/skill-design</text>
+        <text class="t2" x="22" y="106">角色設計</text>
+      </g>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /char-maker（建角資料）：看流程一的詳細內容">
+        <rect class="bx-s" x="10" y="156" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="22" y="166" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="43" y="177.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="150" y="178" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="22" y="204">/char-maker</text>
+        <text class="t2" x="22" y="222">建角資料</text>
+      </g>
+      <g class="skl" data-view="flow1" role="button" tabindex="0" aria-label="skill /i2-update（多國語系文字）：看流程一的詳細內容">
+        <rect class="bx-s" x="200" y="156" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="212" y="166" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="233" y="177.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="340" y="178" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="212" y="204">/i2-update</text>
+        <text class="t2" x="212" y="222">多國語系文字</text>
+      </g>
+      <g class="skl" data-view="flow2" role="button" tabindex="0" aria-label="skill /data-update（配表修改）：看流程二的詳細內容">
+        <rect class="bx-s" x="10" y="272" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="22" y="282" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="43" y="293.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="150" y="294" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="22" y="320">/data-update</text>
+        <text class="t2" x="22" y="338">配表修改</text>
+      </g>
+      <g class="skl" data-view="verify" role="button" tabindex="0" aria-label="skill /battle-test（實機驗證・另一個代理）：看驗證流程的詳細內容">
+        <rect class="bx-s hot" x="200" y="272" width="150" height="76" rx="8"></rect>
+        <rect class="sk-pill" x="212" y="282" width="42" height="16" rx="8"></rect>
+        <text class="sk-tag" x="233" y="293.5" text-anchor="middle">SKILL</text>
+        <text class="sk-go" x="340" y="294" text-anchor="end">詳細 ›</text>
+        <text class="t1 mono" x="212" y="320">/battle-test</text>
+        <text class="t2" x="212" y="338">實機驗證・另一個代理</text>
+      </g>
 
-      <path class="ln" d="M400,71 H474" marker-end="url(#ah)"></path>
-      <text class="lb" x="437" y="63" text-anchor="middle">各表列值</text>
+      <rect class="bx-g" x="10" y="388" width="150" height="58" rx="3"></rect>
+      <text class="t1" x="85" y="410" text-anchor="middle" fill="var(--gate)">🔒 企劃放行</text>
+      <text class="t2" x="85" y="430" text-anchor="middle">所有線上寫入都經過這裡</text>
+      <text class="lb-u" x="200" y="412">👤 看過演練結果</text>
+      <text class="lb-u" x="200" y="428">才點頭</text>
 
-      <path class="ln-g" d="M620,71 H694" marker-end="url(#ahg)"></path>
-      <text class="lb-g" x="657" y="63" text-anchor="middle">回寫</text>
-
-      <path class="ln" d="M330,102 V184" marker-end="url(#ah)"></path>
-      <text class="lb" x="338" y="148">文字編號</text>
-
-      <path class="ln" d="M528,102 V184" marker-end="url(#ah)"></path>
-      <text class="lb" x="520" y="148" text-anchor="end">要實測</text>
-
-      <path class="ln" d="M574,190 V108" marker-end="url(#ah)"></path>
-      <text class="lb" x="582" y="148">逐回合報告</text>
-
-      <path class="ln" d="M400,221 H474" marker-end="url(#ah)"></path>
-      <text class="lb" x="437" y="213" text-anchor="middle">文字編號檢查</text>
-
-      <rect class="bx-u" x="40" y="-30" width="360" height="24" rx="12"></rect>
-      <text class="lb-u" x="220" y="-14" text-anchor="middle">👤 下指令叫用 · AI 一次帶一步，使用者逐步回答</text>
-      <path class="ln-u" d="M110,-6 V38"></path>
-      <path class="ln-u" d="M330,-6 V38"></path>
-
-      <text class="lb-u" x="780" y="124" text-anchor="middle">👤 看過結果才點頭</text>
-      <text class="lb" x="780" y="140" text-anchor="middle">上次同意不算，每次重問</text>
-
-      <text class="lb-u" x="582" y="164">👤 人看過才放行</text>
-
-      <text class="lb-u" x="640" y="214">👤 改表／多語／實測</text>
-      <text class="lb" x="640" y="230">預設只試跑，使用者另下</text>
-      <text class="lb" x="640" y="245">寫入指令才真的寫</text>
-
-      <text class="band" x="40" y="285">交棒檔案固定格式 · 變更清單用「改之前的值」核對現況 · 會動到資料的 skill 一律預設只試跑不寫入</text>
+      <text class="sk-hint" x="200" y="70">▸ 點 skill 卡片</text>
+      <text class="sk-hint" x="200" y="88">看詳細流程</text>
     </svg>
     </div>
-    <figcaption>三支會動到資料的 skill（改表／多國語系／實測）預設只列出「將要做什麼」，真的要寫入必須另外下指令。</figcaption>
   </figure>
-</section>
 
-<section>
-  <div class="sh"><span class="n">02</span><h2>穩定度機制</h2></div>
-  <div class="tw">
-    <table>
-      <thead><tr><th style="width:180px">機制</th><th>怎麼運作</th><th style="width:150px">實際紀錄</th></tr></thead>
-      <tbody>
-        <tr><td><b>交棒檔案固定格式</b></td><td>變更清單每筆帶 id／欄位／舊值／新值，<b>「改之前的值」同時用來核對現況</b>——對不上就代表資料已被別人動過，直接中止</td><td class="ev">6 種交棒檔案</td></tr>
-        <tr><td><b>預設只試跑、不寫入</b></td><td>要真的寫入必須另外下指令，讓「不小心寫下去」在結構上不可能發生</td><td class="ev">3 支會動資料的 skill</td></tr>
-        <tr><td><b>每階定義中止條件</b></td><td>差異項目與預期不符、副本演練結果不對、回頭比對有真差異、設計意圖不明 → 停</td><td class="ev">8 階段皆定義</td></tr>
-        <tr><td><b>會影響線上的動作要過四道</b></td><td>先拿副本演練 → 覆述一次要做什麼 → 確認帳號正確 → 人工點頭。<b>上次同意不算數，每次都要再問</b></td><td class="ev">40 次沙箱演練</td></tr>
-        <tr><td><b>寫回去之後逐格再比一次</b></td><td>直接讀線上正式檔、自動抓表頭位置、不看任何合成欄位，逐格對得上才提交</td><td class="ev">21 次逐格比對</td></tr>
-        <tr><td><b>skill 自己也要先通過測試</b></td><td>寫完先拿歷史案例全跑一遍、再做盲測回歸，等於替流程本身寫單元測試</td><td class="ev">全案例 ＋ 盲測回歸</td></tr>
-      </tbody>
-    </table>
+  <div class="xbtns" aria-label="詳細流程">
+    <p class="xbtns-l">詳細流程</p>
+    <button type="button" data-view="flow1"><b>流程一</b>角色生產</button>
+    <button type="button" data-view="flow2"><b>流程二</b>QA 修正</button>
+    <button type="button" data-view="verify"><b>驗證</b>另一個代理實跑</button>
+    <button type="button" data-view="stable"><b>穩定度機制</b>七項</button>
   </div>
-  <p class="note">兩個已知的不穩定來源：<b>同一份設定存在兩個地方、內容會對不起來</b>（判讀規則寫死為「以實際生效的那一份為準」）、<b>skill 要靠人記得呼叫</b>（忘記就出事的規則改寫成自動檢查與前置條件，不靠人記得）。</p>
+
+  <ul class="pts">
+    <li><b>交棒檔固定格式</b><span>段與段之間傳檔案，不靠對話記憶；每筆變更帶「改之前的值」，寫入前先核對現況</span></li>
+    <li><b>預設只試跑</b><span>會動到資料的三支 skill 先列出將要做什麼，企劃另外下指令才寫入</span></li>
+    <li><b>改的人不驗自己的東西</b><span>另一個代理在 Unity 實際跑戰鬥，逐回合 log 當證據</span></li>
+    <li><b>錯誤吸收</b><span>企劃的裁示回流成 skill 的規則，下一次照做；skill 改完先拿歷史案例全跑一遍</span></li>
+  </ul>
+
 </section>
 
 <section>
-  <div class="sh"><span class="n">03</span><h2>流程一：角色資料生產流程 — 一個白話概念 → 可上線的角色</h2></div>
-
-  <figure>
-    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
-    <div class="dg">
-    <svg viewBox="0 -38 900 388" role="img" aria-label="角色生產流程圖：設計段、資料段、驗證與上傳前確認，標出使用者介入點">
-      <rect class="bx-u" x="70" y="-30" width="510" height="24" rx="12"></rect>
-      <text class="lb-u" x="325" y="-14" text-anchor="middle">👤 使用者給一個白話概念＋屬性隊缺口與參照設計表 · AI 一次帶一步，使用者逐步確認</text>
-      <path class="ln-u" d="M145,-6 V12"></path>
-      <path class="ln-u" d="M325,-6 V12"></path>
-      <path class="ln-u" d="M505,-6 V12"></path>
-      <text class="band" x="40" y="28">設計段 · 只產文字，不碰任何資料表</text>
-      <rect class="bx" x="70" y="40" width="150" height="50" rx="3"></rect>
-      <text class="t1" x="145" y="70" text-anchor="middle">① 決定打法風格</text>
-      <rect class="bx" x="250" y="40" width="150" height="50" rx="3"></rect>
-      <text class="t1" x="325" y="70" text-anchor="middle">② 寫出角色構想</text>
-      <rect class="bx" x="430" y="40" width="150" height="50" rx="3"></rect>
-      <text class="t1" x="505" y="70" text-anchor="middle">③ 技能描述</text>
-      <path class="ln" d="M220,65 H244" marker-end="url(#ah)"></path>
-      <path class="ln" d="M400,65 H424" marker-end="url(#ah)"></path>
-      <text class="lb" x="600" y="62">描述用詞自動檢查零錯誤</text>
-      <text class="lb" x="600" y="78">才算定稿</text>
-
-      <path class="ln" d="M460,90 V132" marker-end="url(#ah)"></path>
-
-      <text class="band" x="40" y="128">資料段 · 後面的資料都依賴前面，順序跳過就會失敗</text>
-      <rect class="bx" x="40" y="140" width="140" height="50" rx="3"></rect>
-      <text class="t1" x="110" y="163" text-anchor="middle">決定角色 ID</text>
-      <text class="t2" x="110" y="179" text-anchor="middle">同時配發文字編號</text>
-      <rect class="bx" x="200" y="140" width="140" height="50" rx="3"></rect>
-      <text class="t1" x="270" y="170" text-anchor="middle">角色資料</text>
-      <rect class="bx" x="360" y="140" width="140" height="50" rx="3"></rect>
-      <text class="t1" x="430" y="170" text-anchor="middle">技能資料</text>
-      <rect class="bx" x="520" y="140" width="140" height="50" rx="3"></rect>
-      <text class="t1" x="590" y="170" text-anchor="middle">相關道具資料</text>
-      <rect class="bx" x="680" y="140" width="140" height="50" rx="3"></rect>
-      <text class="t1" x="750" y="163" text-anchor="middle">美術與演出</text>
-      <text class="t2" x="750" y="179" text-anchor="middle">營運視需求</text>
-      <path class="ln" d="M180,165 H194" marker-end="url(#ah)"></path>
-      <path class="ln" d="M340,165 H354" marker-end="url(#ah)"></path>
-      <path class="ln" d="M500,165 H514" marker-end="url(#ah)"></path>
-      <path class="ln" d="M660,165 H674" marker-end="url(#ah)"></path>
-
-      <text class="lb-g" x="270" y="208" text-anchor="middle">少了這步，技能填好但遊戲裡查不到這個角色</text>
-      <text class="lb-g" x="590" y="208" text-anchor="middle">少了這步，進化與抽卡都接不上</text>
-
-      <path class="ln" d="M460,190 V244" marker-end="url(#ah)"></path>
-
-      <text class="band" x="40" y="240">驗證段</text>
-      <rect class="bx-a" x="180" y="252" width="240" height="52" rx="3"></rect>
-      <text class="t1" x="300" y="274" text-anchor="middle">上線前六項實測</text>
-      <text class="t2" x="300" y="292" text-anchor="middle">第二次觸發 · 效果到期 · 沒有前例的新寫法</text>
-
-      <rect class="bx-g" x="490" y="252" width="200" height="52" rx="3"></rect>
-      <text class="t1" x="590" y="274" text-anchor="middle" fill="var(--gate)">🔒 上傳前確認</text>
-      <text class="lb-u" x="590" y="293" text-anchor="middle">👤 六項全過，使用者再點頭一次</text>
-      <path class="ln-g" d="M420,278 H484" marker-end="url(#ahg)"></path>
-
-      <text class="lb" x="710" y="274">持續傷害與計時重置</text>
-      <text class="lb" x="710" y="290">只認遊戲裡跑出來的結果</text>
-
-      <text class="band" x="40" y="336">多國語系：改翻譯主檔 → 以線上版本為基底重跑匯入 → 檢查文字編號都讀得到 → 單檔提交；匯入結果只增不減，有減就停</text>
-    </svg>
-    </div>
-  </figure>
-</section>
-
-<section>
-  <div class="sh"><span class="n">04</span><h2>流程二：QA 卡從進來到交回</h2></div>
-
-  <figure>
-    <div class="lgd"><span class="u">👤 使用者操作</span><span class="g">🔒 人工放行</span><span>其餘由 AI 依 skill 執行</span></div>
-    <div class="dg">
-    <svg viewBox="0 0 900 250" role="img" aria-label="QA 卡八階段流程圖，含上傳前確認與退回迴路，標出使用者介入點">
-      <text class="lb-u" x="31" y="34">👤 丟 QA 卡、叫用 skill</text>
-      <path class="ln-u" d="M74,40 V56"></path>
-      <text class="lb-u" x="826" y="34" text-anchor="middle">👤 關卡權限留在使用者手上</text>
-      <path class="ln-u" d="M826,40 V56"></path>
-      <text class="lb-u" x="544" y="142" text-anchor="middle">👤 看過副本演練</text>
-      <text class="lb-u" x="544" y="156" text-anchor="middle">結果才同意寫入</text>
-      <rect class="bx" x="31" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="74" y="80" text-anchor="middle">0</text>
-      <text class="t1" x="74" y="100" text-anchor="middle">快照</text>
-      <rect class="bx" x="125" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="168" y="80" text-anchor="middle">1</text>
-      <text class="t1" x="168" y="100" text-anchor="middle">分析</text>
-      <rect class="bx" x="219" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="262" y="80" text-anchor="middle">2</text>
-      <text class="t1" x="262" y="100" text-anchor="middle">本機修補</text>
-      <rect class="bx" x="313" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="356" y="80" text-anchor="middle">3</text>
-      <text class="t1" x="356" y="100" text-anchor="middle">驗證</text>
-      <rect class="bx" x="407" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="450" y="80" text-anchor="middle">4</text>
-      <text class="t1" x="450" y="100" text-anchor="middle">判定</text>
-
-      <rect class="bx-g" x="501" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="544" y="80" text-anchor="middle" fill="var(--gate)">🔒</text>
-      <text class="t1" x="544" y="100" text-anchor="middle" fill="var(--gate)">上傳前確認</text>
-
-      <rect class="bx" x="595" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="638" y="80" text-anchor="middle">5</text>
-      <text class="t1" x="638" y="100" text-anchor="middle">寫回正式檔</text>
-      <rect class="bx" x="689" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="732" y="80" text-anchor="middle">6</text>
-      <text class="t1" x="732" y="100" text-anchor="middle">逐格再比對</text>
-      <rect class="bx" x="783" y="60" width="86" height="64" rx="3"></rect>
-      <text class="t2 mono" x="826" y="80" text-anchor="middle">7</text>
-      <text class="t1" x="826" y="100" text-anchor="middle">卡片交回</text>
-
-      <path class="ln" d="M117,92 H121"></path>
-      <path class="ln" d="M211,92 H215"></path>
-      <path class="ln" d="M305,92 H309"></path>
-      <path class="ln" d="M399,92 H403"></path>
-      <path class="ln" d="M493,92 H497"></path>
-      <path class="ln" d="M587,92 H591"></path>
-      <path class="ln" d="M681,92 H685"></path>
-      <path class="ln" d="M775,92 H779"></path>
-
-      <path class="ln-g" d="M450,124 V162 H168 V130" marker-end="url(#ahg)"></path>
-      <text class="lb-g" x="309" y="176" text-anchor="middle">不通過就退回重做，線上一個字都沒動</text>
-
-      <path class="ln" d="M31,208 V196 H493 V208"></path>
-      <text class="lb" x="262" y="226" text-anchor="middle">階段 0～4 全部在自己電腦上跑，線上正式檔一格未動</text>
-
-      <text class="lb" x="640" y="196">先拿副本演練 → 覆述一次</text>
-      <text class="lb" x="640" y="212">逐格對得上才提交</text>
-    </svg>
-    </div>
-    <figcaption>分析分兩段：先逐欄比對規格找出可疑處，關鍵結論才進遊戲實測定案。驗證前伺服器與客戶端兩邊的快取都要清掉，否則會得到「改了沒效」的假結論。使用者在過程中下的裁示不只用在當張卡：7 個工作天裡有 18 條回流成規則。</figcaption>
-  </figure>
-</section>
-
-<section>
-  <div class="sh"><span class="n">05</span><h2>跑起來的樣子</h2></div>
+  <div class="sh"><span class="n">02</span><h2>跑起來的樣子：一張 QA 卡</h2></div>
   <div class="case">
     <div class="hd">
       <span class="id">QA 卡 · 角色 A</span>
@@ -2634,15 +2933,305 @@ renderAll();renderDetail();renderSweeps();
       <div><p class="cl">資料修正</p><p class="cv">觸發時機改成<b>每次放奧義</b>（10 格）；描述裡的技能名改回既有的官方譯名（5 格）</p></div>
       <div><p class="cl">多國語系同步</p><p class="cv">翻譯主檔五種語言退回原文，語系檔<b>以線上版本為基底重跑匯入</b>、單檔提交</p></div>
       <div><p class="cl">文件同步</p><p class="cv">設計表與描述規格三處一併改，避免下一輪又被改回去</p></div>
-      <div><p class="cl">進遊戲實測</p><p class="cv">第 4、8 回合放奧義後三項效果都如預期；<b>另外三名角色沒有被波及</b></p></div>
+      <div><p class="cl">進遊戲實測<button type="button" class="xlink" data-view="verify">詳細 ›</button></p><p class="cv">第 4、8 回合放奧義後三項效果都如預期；<b>另外三名角色沒有被波及</b></p></div>
       <div><p class="cl">逐格再比對</p><p class="cv">主檔兩個區段共 15 格<b>完全相同</b>；語系檔的差異只增不減</p></div>
       <div><p class="cl">交回 QA</p><p class="cv">留言說明＋改成待驗狀態，<b>卡片維持開啟</b>，不由我自己關掉</p></div>
     </div>
-    <div class="ft">同一批另一張卡發現程式端的修正曾經上線又被退掉、卡片留言與實際狀態對不上——流程因此改為<b>先實機驗證再回報</b>。7 個工作天內 23 張卡全部走同一條八階段流程（單日最高一批 16 張），期間 18 條裁示回流成規則。</div>
+    <div class="ft">同一批另一張卡發現程式端的修正曾經上線又被退掉、卡片留言與實際狀態對不上——流程因此改為<b>先實機驗證再回報</b>。每一張卡都走同一條八階段流程，平均每個工作天結案 3.6 張、單日最多 9 張；企劃的裁示不只用在當張卡，會回流成規則，下一次 AI 就照這個判斷做。</div>
   </div>
 </section>
 
+<dialog class="xd" id="xd" aria-label="詳細流程">
+  <div class="xd-hd">
+    <button type="button" class="xd-back" hidden>← <span></span></button>
+    <p class="xd-crumb"><span class="xd-root">角色產線</span><span class="xd-path"></span></p>
+    <button type="button" class="xd-x" aria-label="關閉詳細流程">✕</button>
+  </div>
+  <div class="xd-bd" tabindex="-1" autofocus>
+    <div class="xd-pg" data-pg="verify" data-name="驗證" hidden>
+      <div class="xd-ti"><h3>驗證：另一個代理在 Unity 實際跑過才算數</h3><code class="sk">/battle-test</code></div>
+      <p class="xd-lead">改資料和驗證分給兩個代理：製作代理規定不跑測試；驗證代理執行 <code class="sk">/battle-test</code>，透過橋接在 Unity 實際跑戰鬥、逐回合記錄，回報固定三行：判定、證據位置（log 檔與行號）、下一步。</p>
 
+      <figure>
+        <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="g">🔒 企劃放行</span><span class="v">✅ 自動驗證</span><span class="a">⚙️ 自動處理</span></div>
+        <div class="dg">
+        <svg viewBox="0 0 900 300" role="img" aria-label="驗證流程：製作代理改本機資料後交接給另一個驗證代理，驗證代理透過橋接在 Unity 重新登入、跑戰鬥、逐回合記錄，讀 log 判定，不通過退回製作代理">
+          <text class="lb" x="16" y="76">製作代理</text>
+          <text class="lb" x="16" y="150">驗證代理</text>
+          <text class="lb" x="16" y="164">（另一個代理）</text>
+          <text class="lb" x="16" y="237">Unity</text>
+          <text class="lb" x="16" y="251">（透過橋接）</text>
+
+          <rect class="bx" x="140" y="45" width="200" height="54" rx="3"></rect>
+          <text class="t1" x="240" y="68" text-anchor="middle">① 本機改資料</text>
+          <text class="t2" x="240" y="86" text-anchor="middle">列變更清單；規定不跑測試</text>
+
+          <rect class="bx" x="380" y="125" width="190" height="54" rx="3"></rect>
+          <text class="t1" x="475" y="148" text-anchor="middle">② 驗格式・重啟伺服器</text>
+          <text class="t2" x="475" y="166" text-anchor="middle">收到交接才開始</text>
+
+          <rect class="bx-a" x="380" y="212" width="120" height="54" rx="3"></rect>
+          <text class="t1" x="440" y="235" text-anchor="middle">③ 重新登入</text>
+          <text class="t2" x="440" y="253" text-anchor="middle">清掉客戶端快取</text>
+          <rect class="bx-a" x="515" y="212" width="120" height="54" rx="3"></rect>
+          <text class="t1" x="575" y="235" text-anchor="middle">④ 跑戰鬥</text>
+          <text class="t2" x="575" y="253" text-anchor="middle">指定關卡與隊伍</text>
+          <rect class="bx-a" x="650" y="212" width="120" height="54" rx="3"></rect>
+          <text class="t1" x="710" y="235" text-anchor="middle">⑤ 逐回合記錄</text>
+          <text class="t2" x="710" y="253" text-anchor="middle">效果狀態・血量</text>
+
+          <rect class="bx" x="660" y="125" width="220" height="54" rx="3"></rect>
+          <text class="t1" x="770" y="148" text-anchor="middle">⑥ 讀 log 判定</text>
+          <text class="t2" x="770" y="166" text-anchor="middle">通過／不通過／判不定＋證據位置</text>
+
+          <path class="ln" d="M340,72 H475 V119" marker-end="url(#ah)"></path>
+          <text class="lb" x="408" y="66" text-anchor="middle">交接變更清單</text>
+          <path class="ln" d="M440,179 V206" marker-end="url(#ah)"></path>
+          <path class="ln" d="M500,239 H509" marker-end="url(#ah)"></path>
+          <path class="ln" d="M635,239 H644" marker-end="url(#ah)"></path>
+          <path class="ln" d="M710,212 V185" marker-end="url(#ah)"></path>
+
+          <path class="ln-g" d="M880,152 H892 V24 H240 V39" marker-end="url(#ahg)"></path>
+          <text class="lb-g" x="566" y="18" text-anchor="middle">不通過：寫清楚哪裡不對，退回製作代理重做</text>
+          <text class="lb-u" x="770" y="116" text-anchor="middle">通過 → 🔒 企劃看過副本演練再放行</text>
+
+          <text class="lb-v" x="520" y="198" text-anchor="middle">✅ 格式不對就停</text>
+          <text class="lb-v" x="440" y="284" text-anchor="middle">✅ 兩層快取都清掉</text>
+          <text class="lb-v" x="575" y="284" text-anchor="middle">✅ 測不出差異就換場景</text>
+          <text class="lb-v" x="710" y="284" text-anchor="middle">✅ 逐回合留證據</text>
+        </svg>
+        </div>
+        <figcaption>改的人不驗自己的東西。一個場景測不出目標差異就換場景（多敵人、不同血量量級）再測，不能用「部分驗證」交差；判不定就明說卡在哪，由企劃決定要不要換更強的模型重驗。</figcaption>
+      </figure>
+
+      <h3 style="margin-top:30px">怎麼確定 log 記對了</h3>
+      <p class="note">log 本身也會騙人。下面是實測踩過、已經寫進驗證規則的盲點。</p>
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:46%">容易看錯的地方</th><th>驗證時的處理</th></tr></thead>
+          <tbody>
+            <tr><td>主控台會把相同的訊息摺疊，數治療次數會少算</td><td>改讀角色血量的時序，看往上跳了幾次</td></tr>
+            <tr><td>報告每回合只存主控台的尾段，回合之間會斷</td><td>搜不到關鍵字，不當作「沒發生」；要找到正面證據</td></tr>
+            <tr><td>取樣落在回合開頭，只維持一回合的護盾永遠看不到「啟用中」</td><td>改看效果實例數有沒有逐輪遞增</td></tr>
+            <tr><td>戰鬥 log 的回合數和逐回合記錄差一</td><td>兩邊累加時機不同，比對前先對齊</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:30px">實機測試改變過的決定</h3>
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:26%">情況</th><th>實機一跑看到的</th><th style="width:26%">結果</th></tr></thead>
+          <tbody>
+            <tr><td>一張 QA 卡回報「已修好」</td><td>程式端的修正曾經上線又被退掉，卡片留言與實際狀態對不上</td><td>流程改成<b>先實機驗證再回報</b></td></tr>
+            <tr><td>要不要為「升階預告」開程式卡</td><td>實測介面後確認，現成畫面已經顯示得出每一階的升級內容</td><td><b>不開程式卡</b>，只新增文字樣板</td></tr>
+            <tr><td>角色 A 的技能觸發時機修正</td><td>第 4、8 回合放奧義後三項效果都如預期，另外三名角色沒有被波及</td><td>通過，交回 QA</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="xd-pg" data-pg="flow1" data-name="流程一：角色生產" hidden>
+      <div class="xd-ti"><h3>流程一：一個白話概念 → 可上線的角色</h3><code class="sk">/skill-design</code><code class="sk">/char-maker</code><code class="sk">/i2-update</code></div>
+      <p class="xd-lead">企劃給一個白話概念，AI 一次帶一步：設計段只產文字，資料段照依賴順序產表，上線前六項實測全過、企劃再點頭才上傳。</p>
+
+
+      <figure>
+        <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="g">🔒 企劃放行</span><span class="v">✅ 自動驗證</span><span class="a">⚙️ 自動處理（其餘由 AI 依 skill 執行）</span><span class="r">🔁 錯誤吸收</span></div>
+        <div class="dg">
+        <svg viewBox="0 -38 900 420" role="img" aria-label="角色生產流程圖：設計段、資料段、驗證與上傳前確認，標出企劃判斷、自動驗證與錯誤吸收">
+          <rect class="bx-u" x="70" y="-30" width="510" height="24" rx="12"></rect>
+          <text class="lb-u" x="325" y="-14" text-anchor="middle">👤 企劃給一個白話概念＋屬性隊缺口與參照設計表 · AI 一次帶一步，企劃逐步確認</text>
+          <path class="ln-u" d="M145,-6 V12"></path>
+          <path class="ln-u" d="M325,-6 V12"></path>
+          <path class="ln-u" d="M505,-6 V12"></path>
+          <text class="band" x="40" y="28">設計段 <tspan class="skn">/skill-design</tspan> · 只產文字，不碰任何資料表</text>
+          <rect class="bx" x="70" y="40" width="150" height="50" rx="3"></rect>
+          <text class="t1" x="145" y="70" text-anchor="middle">① 決定打法風格</text>
+          <rect class="bx" x="250" y="40" width="150" height="50" rx="3"></rect>
+          <text class="t1" x="325" y="70" text-anchor="middle">② 寫出角色構想</text>
+          <rect class="bx" x="430" y="40" width="150" height="50" rx="3"></rect>
+          <text class="t1" x="505" y="70" text-anchor="middle">③ 技能描述</text>
+          <path class="ln" d="M220,65 H244" marker-end="url(#ah)"></path>
+          <path class="ln" d="M400,65 H424" marker-end="url(#ah)"></path>
+          <text class="lb-v" x="600" y="62">✅ 描述用詞自動檢查零錯誤</text>
+          <text class="lb-v" x="600" y="78">才算定稿</text>
+
+          <path class="ln" d="M460,90 V132" marker-end="url(#ah)"></path>
+
+          <text class="band" x="40" y="128">資料段 <tspan class="skn">/char-maker</tspan> · 後面的資料都依賴前面，順序跳過就會失敗</text>
+          <rect class="bx" x="40" y="140" width="140" height="50" rx="3"></rect>
+          <text class="t1" x="110" y="163" text-anchor="middle">決定角色 ID</text>
+          <text class="t2" x="110" y="179" text-anchor="middle">同時配發文字編號</text>
+          <rect class="bx" x="200" y="140" width="140" height="50" rx="3"></rect>
+          <text class="t1" x="270" y="170" text-anchor="middle">角色資料</text>
+          <rect class="bx" x="360" y="140" width="140" height="50" rx="3"></rect>
+          <text class="t1" x="430" y="170" text-anchor="middle">技能資料</text>
+          <rect class="bx" x="520" y="140" width="140" height="50" rx="3"></rect>
+          <text class="t1" x="590" y="170" text-anchor="middle">相關道具資料</text>
+          <rect class="bx" x="680" y="140" width="140" height="50" rx="3"></rect>
+          <text class="t1" x="750" y="163" text-anchor="middle">美術與演出</text>
+          <text class="t2" x="750" y="179" text-anchor="middle">營運視需求</text>
+          <path class="ln" d="M180,165 H194" marker-end="url(#ah)"></path>
+          <path class="ln" d="M340,165 H354" marker-end="url(#ah)"></path>
+          <path class="ln" d="M500,165 H514" marker-end="url(#ah)"></path>
+          <path class="ln" d="M660,165 H674" marker-end="url(#ah)"></path>
+
+          <text class="lb-g" x="270" y="208" text-anchor="middle">少了這步，技能填好但遊戲裡查不到這個角色</text>
+          <text class="lb-g" x="590" y="208" text-anchor="middle">少了這步，進化與抽卡都接不上</text>
+
+          <path class="ln" d="M460,190 V244" marker-end="url(#ah)"></path>
+
+          <text class="band" x="40" y="240">驗證段 <tspan class="skn">/battle-test</tspan></text>
+          <rect class="bx-a" x="180" y="252" width="240" height="52" rx="3"></rect>
+          <text class="t1" x="300" y="274" text-anchor="middle">✅ 上線前六項實測</text>
+          <text class="t2" x="300" y="292" text-anchor="middle">第二次觸發 · 效果到期 · 沒有前例的新寫法</text>
+
+          <rect class="bx-g" x="490" y="252" width="200" height="52" rx="3"></rect>
+          <text class="t1" x="590" y="274" text-anchor="middle" fill="var(--gate)">🔒 上傳前確認</text>
+          <text class="lb-u" x="590" y="293" text-anchor="middle">👤 六項全過，企劃再點頭一次</text>
+          <path class="ln-g" d="M420,278 H484" marker-end="url(#ahg)"></path>
+
+          <text class="lb" x="710" y="274">持續傷害與計時重置</text>
+          <text class="lb" x="710" y="290">只認遊戲裡跑出來的結果</text>
+
+          <text class="band" x="40" y="336">多國語系 <tspan class="skn">/i2-update</tspan> · 改翻譯主檔 → 以線上版本為基底重跑匯入 → ✅ 文字編號都讀得到 → 單檔提交；✅ 只增不減，有減就停</text>
+
+          <path class="ln-r" d="M40,352 H860"></path>
+          <text class="lb-r" x="40" y="372">🔁 企劃的裁示回流成 skill 規則；忘記就出事的規則改寫成自動檢查與前置條件，不靠人記得</text>
+        </svg>
+        </div>
+      </figure>
+
+      <div class="flow4w">
+        <p class="cap">一張表看懂：每個階段誰做什麼</p>
+        <table class="flow4">
+          <thead><tr><th>階段</th><th class="u">👤 企劃的判斷</th><th class="v">✅ 自動驗證</th><th class="a">⚙️ 自動處理</th><th class="r">🔁 錯誤吸收</th></tr></thead>
+          <tbody>
+            <tr><td class="st">設計段</td><td class="u" data-k="👤 企劃的判斷">給白話概念、屬性隊的缺口與參照設計表；AI 一次帶一步，企劃逐步確認打法、構想與技能描述</td><td class="v" data-k="✅ 自動驗證">技能描述的用詞自動檢查，零錯誤才算定稿</td><td class="a" data-k="⚙️ 自動處理">寫出打法風格、角色構想與技能描述（只產文字，不碰資料表）</td><td class="none">—</td></tr>
+            <tr><td class="st">資料段</td><td class="none">—</td><td class="none">—</td><td class="a" data-k="⚙️ 自動處理">照依賴順序產出角色、技能、道具資料，同時配發角色 ID 與文字編號</td><td class="none">—</td></tr>
+            <tr><td class="st">驗證段</td><td class="u" data-k="👤 企劃的判斷">六項實測全過之後，企劃再看一次、點頭才上傳</td><td class="v" data-k="✅ 自動驗證">上線前六項實測（第二次觸發、效果到期、沒有前例的新寫法等），只認遊戲裡跑出來的結果</td><td class="a" data-k="⚙️ 自動處理">跑實測、產出逐回合報告</td><td class="none">—</td></tr>
+            <tr><td class="st">多國語系</td><td class="none">—</td><td class="v" data-k="✅ 自動驗證">匯入後檢查文字編號都讀得到；匯入結果只增不減，有減就停</td><td class="a" data-k="⚙️ 自動處理">改翻譯主檔，以線上版本為基底重跑匯入，單檔提交</td><td class="none">—</td></tr>
+            <tr><td class="st">整條流程</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="r" data-k="🔁 錯誤吸收">企劃的裁示回流成 skill 規則；忘記就出事的規則改寫成自動檢查與前置條件，不靠人記得</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="xd-pg" data-pg="flow2" data-name="流程二：QA 修正" hidden>
+      <div class="xd-ti"><h3>流程二：QA 卡從進來到交回</h3><code class="sk">/data-update</code></div>
+      <p class="xd-lead">每張 QA 卡走同一條八階段流程：階段 0～4 都在本機跑，寫回線上前由企劃看過副本演練結果再放行。圖裡第 3 步「驗證」可以點進去看。</p>
+
+
+      <figure>
+        <div class="lgd"><span class="u">👤 企劃的判斷</span><span class="g">🔒 企劃放行</span><span class="v">✅ 自動驗證</span><span class="a">⚙️ 自動處理（其餘由 AI 依 skill 執行）</span><span class="r">🔁 錯誤吸收</span></div>
+        <div class="dg">
+        <svg viewBox="0 0 900 290" role="img" aria-label="QA 卡八階段流程圖，含上傳前確認與退回迴路，標出企劃判斷、自動驗證與錯誤吸收">
+          <defs><marker id="ahr" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="7" orient="auto"><path d="M0,0 L10,4 L0,8 z" style="fill:var(--r)"></path></marker></defs>
+          <text class="lb-u" x="31" y="34">👤 丟 QA 卡、叫用 skill</text>
+          <path class="ln-u" d="M74,40 V56"></path>
+          <text class="lb-u" x="826" y="34" text-anchor="middle">👤 關閉卡片由企劃決定</text>
+          <path class="ln-u" d="M826,40 V56"></path>
+          <text class="lb-u" x="544" y="142" text-anchor="middle">👤 看過副本演練</text>
+          <text class="lb-u" x="544" y="156" text-anchor="middle">結果才同意寫入</text>
+          <rect class="bx" x="31" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="74" y="80" text-anchor="middle">0</text>
+          <text class="t1" x="74" y="100" text-anchor="middle">快照</text>
+          <rect class="bx" x="125" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="168" y="80" text-anchor="middle">1</text>
+          <text class="t1" x="168" y="100" text-anchor="middle">分析</text>
+          <rect class="bx" x="219" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="262" y="80" text-anchor="middle">2</text>
+          <text class="t1" x="262" y="100" text-anchor="middle">本機修補</text>
+          <g class="stp" data-view="verify" role="button" tabindex="0" aria-label="第 3 步驗證：看另一個代理在 Unity 實跑的詳細流程">
+            <rect class="bx-s" x="313" y="60" width="86" height="64" rx="3"></rect>
+            <text class="t2 mono" x="356" y="78" text-anchor="middle">3</text>
+            <text class="t1" x="356" y="96" text-anchor="middle">驗證</text>
+            <text class="sk-go" x="356" y="115" text-anchor="middle">詳細 ›</text>
+          </g>
+          <rect class="bx" x="407" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="450" y="80" text-anchor="middle">4</text>
+          <text class="t1" x="450" y="100" text-anchor="middle">判定</text>
+
+          <rect class="bx-g" x="501" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="544" y="80" text-anchor="middle" fill="var(--gate)">🔒</text>
+          <text class="t1" x="544" y="100" text-anchor="middle" fill="var(--gate)">上傳前確認</text>
+
+          <rect class="bx" x="595" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="638" y="80" text-anchor="middle">5</text>
+          <text class="t1" x="638" y="100" text-anchor="middle">寫回正式檔</text>
+          <rect class="bx" x="689" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="732" y="80" text-anchor="middle">6</text>
+          <text class="t1" x="732" y="100" text-anchor="middle">逐格再比對</text>
+          <rect class="bx" x="783" y="60" width="86" height="64" rx="3"></rect>
+          <text class="t2 mono" x="826" y="80" text-anchor="middle">7</text>
+          <text class="t1" x="826" y="100" text-anchor="middle">卡片交回</text>
+
+          <path class="ln" d="M117,92 H121"></path>
+          <path class="ln" d="M211,92 H215"></path>
+          <path class="ln" d="M305,92 H309"></path>
+          <path class="ln" d="M399,92 H403"></path>
+          <path class="ln" d="M493,92 H497"></path>
+          <path class="ln" d="M587,92 H591"></path>
+          <path class="ln" d="M681,92 H685"></path>
+          <path class="ln" d="M775,92 H779"></path>
+
+          <path class="ln-g" d="M450,124 V162 H168 V130" marker-end="url(#ahg)"></path>
+          <text class="lb-g" x="309" y="176" text-anchor="middle">不通過就退回重做，線上一個字都沒動</text>
+
+          <path class="ln" d="M31,208 V196 H493 V208"></path>
+          <text class="lb" x="262" y="226" text-anchor="middle">階段 0～4 全部在自己電腦上跑，線上正式檔一格未動</text>
+
+          <text class="lb" x="640" y="196">先拿副本演練 → 覆述一次</text>
+          <text class="lb" x="640" y="212">逐格對得上才提交</text>
+
+          <text class="lb-v" x="262" y="140" text-anchor="middle">✅ 差異＝預期才寫</text>
+          <text class="lb-v" x="356" y="140" text-anchor="middle">✅ 另一個代理實跑</text>
+          <text class="lb-v" x="638" y="140" text-anchor="middle">✅ 寫前比對舊值</text>
+          <text class="lb-v" x="732" y="140" text-anchor="middle">✅ 逐格一致才提交</text>
+
+          <path class="ln-r" d="M826,124 V252 H16 V92 H27" marker-end="url(#ahr)"></path>
+          <text class="lb-r" x="440" y="272" text-anchor="middle">🔁 企劃的裁示回流成規則，下一張卡開始照做；零例外的規則改成自動檢查</text>
+        </svg>
+        </div>
+        <figcaption>分析分兩段：先逐欄比對規格找出可疑處，關鍵結論才進遊戲實測定案。驗證前伺服器與客戶端兩邊的快取都要清掉，否則會得到「改了沒效」的假結論。企劃在過程中下的裁示不只用在當張卡，會回流成規則，下一次 AI 就照這個判斷做。</figcaption>
+      </figure>
+
+      <div class="flow4w">
+        <p class="cap">一張表看懂：每個階段誰做什麼</p>
+        <table class="flow4">
+          <thead><tr><th>階段</th><th class="u">👤 企劃的判斷</th><th class="v">✅ 自動驗證</th><th class="a">⚙️ 自動處理</th><th class="r">🔁 錯誤吸收</th></tr></thead>
+          <tbody>
+            <tr><td class="st">收卡</td><td class="u" data-k="👤 企劃的判斷">判斷這張卡要不要處理，叫用 skill</td><td class="none">—</td><td class="a" data-k="⚙️ 自動處理">抓線上資料快照當基準</td><td class="none">—</td></tr>
+            <tr><td class="st">分析與本機修改</td><td class="u" data-k="👤 企劃的判斷">設計意圖不明時由企劃裁示（AI 會停下來問）</td><td class="v" data-k="✅ 自動驗證">修改前後的差異要剛好等於預期，多一格、少一格都中止</td><td class="a" data-k="⚙️ 自動處理">逐欄對照規格找問題、列出變更清單、在本機套用</td><td class="none">—</td></tr>
+            <tr><td class="st">驗證</td><td class="u" data-k="👤 企劃的判斷">看實測報告與 log 證據，判斷改得對不對</td><td class="v" data-k="✅ 自動驗證">由另一個驗證代理執行，改的人不驗自己的東西；先清伺服器與客戶端兩邊的快取再測，避免「改了沒效」的假結論</td><td class="a" data-k="⚙️ 自動處理">透過橋接操作 Unity：重啟伺服器、重新登入、跑戰鬥、逐回合記錄 log</td><td class="none">—</td></tr>
+            <tr><td class="st">寫回線上</td><td class="u" data-k="👤 企劃的判斷">看副本演練結果與差異清單，決定放行；上次同意不延用</td><td class="v" data-k="✅ 自動驗證">先在副本跑一次同樣的操作；寫之前比對「改之前的值」，對不上代表別人動過，直接中止；同時偵測有沒有人在寫同一份表</td><td class="a" data-k="⚙️ 自動處理">正式寫入</td><td class="none">—</td></tr>
+            <tr><td class="st">寫完之後</td><td class="u" data-k="👤 企劃的判斷">決定卡片要不要關（AI 不自己關卡）</td><td class="v" data-k="✅ 自動驗證">讀回線上檔逐格比對，一致才提交；提交時自動擋測試檔、憑證與不該有的訊息</td><td class="a" data-k="⚙️ 自動處理">提交、在卡片留言並換狀態</td><td class="none">—</td></tr>
+            <tr><td class="st">整條流程</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="r" data-k="🔁 錯誤吸收">企劃的裁示附日期與理由記下來，變成 skill 的規則，下一次 AI 就照這個判斷做；零例外的規則改寫成自動檢查，不再靠 AI 記得</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="xd-pg" data-pg="stable" data-name="穩定度機制" hidden>
+      <div class="xd-ti"><h3>穩定度機制：為什麼可以放心交給它</h3></div>
+      <p class="xd-lead">讓整套流程可以交給 AI 執行、又不失控的七項機制。</p>
+
+      <div class="tw">
+        <table>
+          <thead><tr><th style="width:180px">機制</th><th>怎麼運作</th><th style="width:150px">實際紀錄</th></tr></thead>
+          <tbody>
+            <tr><td><b>交棒檔案固定格式</b></td><td>變更清單每筆帶 id／欄位／舊值／新值，<b>「改之前的值」同時用來核對現況</b>——對不上就代表資料已被別人動過，直接中止</td><td class="ev">6 種交棒檔案</td></tr>
+            <tr><td><b>預設只試跑、不寫入</b></td><td>要真的寫入必須另外下指令，讓「不小心寫下去」在結構上不可能發生</td><td class="ev">3 支會動資料的 skill</td></tr>
+            <tr><td><b>每階定義中止條件</b></td><td>差異項目與預期不符、副本演練結果不對、回頭比對有真差異、設計意圖不明 → 停</td><td class="ev">8 階段皆定義</td></tr>
+            <tr><td><b>改的人不驗自己的東西</b></td><td>改資料和驗證分給兩個代理：製作代理規定不跑測試，驗證代理透過橋接在 Unity 實際跑戰鬥，附上 log 位置當證據</td><td class="ev">每次資料修改</td></tr>
+            <tr><td><b>會影響線上的動作要過四道</b></td><td>先拿副本演練 → 覆述一次要做什麼 → 確認帳號正確 → 人工點頭。<b>上次同意不算數，每次都要再問</b></td><td class="ev">每次寫入線上前</td></tr>
+            <tr><td><b>寫回去之後逐格再比一次</b></td><td>直接讀線上正式檔、自動抓表頭位置、不看任何合成欄位，逐格對得上才提交</td><td class="ev">每次寫回後</td></tr>
+            <tr><td><b>skill 自己也要先通過測試</b></td><td>寫完先拿歷史案例全跑一遍、再做盲測回歸，等於替流程本身寫單元測試</td><td class="ev">全案例 ＋ 盲測回歸</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">兩個已知的不穩定來源：<b>同一份設定存在兩個地方、內容會對不起來</b>（判讀規則寫死為「以實際生效的那一份為準」）、<b>skill 要靠人記得呼叫</b>（忘記就出事的規則改寫成自動檢查與前置條件，不靠人記得）。</p>
+    </div>
+  </div>
+</dialog>
 
 </div>
 </div>
@@ -2650,16 +3239,20 @@ renderAll();renderDetail();renderSweeps();
 <script>
 (function(){
   var WORKS=[
-    {hash:'difficulty', id:'pf1', c:'Project S', t:'主線難度收斂分析'},
     {hash:'tooling',    id:'pf2', c:'Project B', t:'從一句話到可上線關卡'},
-    {hash:'pipeline',   id:'pf3', c:'Project I', t:'角色產線與 QA 修正流'}
+    {hash:'pipeline',   id:'pf3', c:'Project I', t:'角色產線與 QA 修正流'},
+    {hash:'difficulty', id:'pf1', c:'Project S', t:'主線難度收斂分析'}
   ];
   var bar=document.getElementById('navbar'),
       ttl=document.getElementById('navt'),
       nxt=document.getElementById('navn');
 
   function show(){
-    var h=(location.hash||'').replace(/^#/,''),
+    /* 換頁時先關掉開著的「詳細」視窗，不然隱藏的頁面會留下擋住操作的視窗 */
+    var od=document.querySelector('dialog[open]');
+    if(od) od.close();
+    var parts=(location.hash||'').replace(/^#/,'').split('/'),
+        h=parts[0],sub=parts[1]||'',
         w=null,i;
     for(i=0;i<WORKS.length;i++) if(WORKS[i].hash===h) w=WORKS[i];
     document.getElementById('hub').hidden=!!w;
@@ -2671,14 +3264,71 @@ renderAll();renderDetail();renderSweeps();
       var n=WORKS[(WORKS.indexOf(w)+1)%WORKS.length];
       nxt.href='#'+n.hash;
       nxt.innerHTML='下一件<span>　'+n.c+'　'+n.t+'　&rarr;</span>';
-      document.title=w.t+'｜工作成果';
+      document.title=w.t+'｜實作案例';
     }else{
-      document.title='工作成果｜數值／系統企劃';
+      document.title='實作案例｜數值／系統企劃';
     }
     window.scrollTo(0,0);
+    /* 子畫面交給各頁自己的腳本：B 切分頁、I 開「詳細」視窗 */
+    if(w) setTimeout(function(){
+      document.dispatchEvent(new CustomEvent('subview',{detail:{id:w.id,sub:sub}}));
+    },0);
   }
   window.addEventListener('hashchange',show);
   show();
+})();
+
+/* Project I：「詳細」視窗。總覽圖留在原處，細節在視窗裡看，可以一層一層點進去 */
+(function(){
+  var dlg=document.getElementById('xd');
+  if(!dlg) return;
+  var pf=document.getElementById('pf3'),
+      bd=dlg.querySelector('.xd-bd'),
+      back=dlg.querySelector('.xd-back'),
+      path=dlg.querySelector('.xd-path'),
+      stack=[];
+  function page(v){return dlg.querySelector('.xd-pg[data-pg="'+v+'"]');}
+  function name(v){return page(v).getAttribute('data-name');}
+  function render(){
+    var cur=stack[stack.length-1],pgs=dlg.querySelectorAll('.xd-pg');
+    for(var i=0;i<pgs.length;i++) pgs[i].hidden=pgs[i].getAttribute('data-pg')!==cur;
+    path.innerHTML=stack.map(function(v,k){
+      return '<span class="sep">›</span>'+(k===stack.length-1?'<b>'+name(v)+'</b>':'<span>'+name(v)+'</span>');
+    }).join('');
+    back.hidden=stack.length<2;
+    if(stack.length>1) back.querySelector('span').textContent=name(stack[stack.length-2]);
+    dlg.setAttribute('aria-label','詳細流程：'+name(cur));
+    bd.scrollTop=0;
+    history.replaceState(null,'','#pipeline/'+cur);
+  }
+  function go(v,nested){
+    if(!page(v)) return;
+    if(!dlg.open){stack=[v];dlg.showModal();}
+    else if(nested){if(stack[stack.length-1]!==v) stack.push(v);}
+    else stack=[v];
+    render();
+  }
+  dlg.addEventListener('close',function(){
+    stack=[];
+    if(location.hash.indexOf('#pipeline/')===0) history.replaceState(null,'','#pipeline');
+  });
+  /* 點視窗外的遮罩也能關 */
+  dlg.addEventListener('click',function(e){if(e.target===dlg) dlg.close();});
+  dlg.querySelector('.xd-x').addEventListener('click',function(){dlg.close();});
+  back.addEventListener('click',function(){stack.pop();render();});
+  pf.addEventListener('click',function(e){
+    var t=e.target.closest&&e.target.closest('[data-view]');
+    if(t) go(t.getAttribute('data-view'),dlg.contains(t));
+  });
+  /* 圖上的卡片不是 button，Enter／空白鍵要自己接 */
+  pf.addEventListener('keydown',function(e){
+    if(e.key!=='Enter'&&e.key!==' ') return;
+    var t=e.target.closest&&e.target.closest('g[data-view]');
+    if(t){e.preventDefault();go(t.getAttribute('data-view'),dlg.contains(t));}
+  });
+  document.addEventListener('subview',function(e){
+    if(e.detail.id==='pf3'&&e.detail.sub) go(e.detail.sub);
+  });
 })();
 </script>
 
