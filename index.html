@@ -68,7 +68,7 @@ body{
   color:var(--u-ink2);font-size:13px;padding:6px 12px 6px 9px;border-radius:2px;
   border:1px solid var(--u-rule2);background:transparent;cursor:pointer;
 }
-.back:hover{color:var(--u-acc);border-color:var(--u-acc)}
+@media (hover:hover) and (pointer:fine){.back:hover{color:var(--u-acc);border-color:var(--u-acc)}}
 .navtitle{
   font-size:13px;color:var(--u-ink3);letter-spacing:.06em;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;
@@ -82,7 +82,7 @@ body{
   margin-left:auto;text-decoration:none;color:var(--u-ink3);font-size:12.5px;
   white-space:nowrap;
 }
-.navnext:hover{color:var(--u-acc)}
+@media (hover:hover) and (pointer:fine){.navnext:hover{color:var(--u-acc)}}
 .navnext span{color:var(--u-ink2)}
 
 /* ── 入口總覽 ─────────────────────────────────────── */
@@ -116,7 +116,7 @@ body{
   gap:0 8px;padding:30px 0 28px;text-decoration:none;color:inherit;
   transition:background .14s ease;
 }
-.entry:hover,.entry:focus-visible{background:var(--u-surface);outline:none}
+.entry:focus-visible{background:var(--u-surface);outline:none}@media (hover:hover) and (pointer:fine){.entry:hover{background:var(--u-surface);outline:none}}
 .entry:focus-visible{box-shadow:inset 3px 0 0 var(--u-acc)}
 .enum{
   font-family:'IBM Plex Mono',"Noto Sans TC",ui-monospace,monospace;font-size:11.5px;
@@ -141,7 +141,7 @@ body{
   font-size:17px;color:var(--u-ink3);padding-top:4px;text-align:right;
   transition:transform .16s ease,color .16s ease;
 }
-.entry:hover .earrow{color:var(--u-acc);transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.entry:hover .earrow{color:var(--u-acc);transform:translateX(4px)}}
 
 
 @media (max-width:640px){
@@ -332,7 +332,7 @@ body{
   cursor:pointer;font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-size:11.5px;
   letter-spacing:.08em;color:var(--ink-3);
 }
-#pf1 details.tbl summary:hover{color:var(--ink)}
+@media (hover:hover) and (pointer:fine){#pf1 details.tbl summary:hover{color:var(--ink)}}
 #pf1 details.tbl summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 #pf1 .tscroll{overflow-x:auto;margin-top:12px}
 #pf1 table{border-collapse:collapse;font-size:12.5px;font-family:"IBM Plex Mono","Noto Sans TC",monospace;font-variant-numeric:tabular-nums;width:100%}
@@ -457,7 +457,7 @@ body{
   color:var(--ink3);padding:13px 22px;position:relative;top:2px;
   border:2px solid transparent;border-bottom:0;letter-spacing:.02em;
 }
-#pf2 .tabs button:hover{color:var(--ink)}
+@media (hover:hover) and (pointer:fine){#pf2 .tabs button:hover{color:var(--ink)}}
 #pf2 .tabs button:focus-visible{outline:2px solid var(--rust);outline-offset:-4px}
 #pf2 .tabs button[aria-selected="true"]{
   color:var(--ink);background:var(--paper);
@@ -781,10 +781,11 @@ body{
   transition:transform .16s ease;
 }
 #pf1 details.tbl[open]>summary::before{transform:rotate(90deg)}
-#pf1 details.tbl>summary:hover,
 #pf1 details.tbl>summary:focus-visible{
   background:var(--surface);border-color:var(--accent);color:var(--accent);
-}
+}@media (hover:hover) and (pointer:fine){#pf1 details.tbl>summary:hover{
+  background:var(--surface);border-color:var(--accent);color:var(--accent);
+}}
 #pf1 details.tbl>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #pf1 details.tbl[open]>summary{
   background:var(--surface);border-color:var(--accent);
@@ -902,7 +903,7 @@ body{
   transition:transform .16s ease;
 }
 #pf2 details.more[open]>summary::before,#pf3 details.more[open]>summary::before{transform:rotate(90deg)}
-#pf2 details.more>summary:hover,#pf3 details.more>summary:hover{border-color:var(--r);background:var(--surface)}
+@media (hover:hover) and (pointer:fine){#pf2 details.more>summary:hover,#pf3 details.more>summary:hover{border-color:var(--r);background:var(--surface)}}
 #pf2 details.more>summary:focus-visible,#pf3 details.more>summary:focus-visible{outline:2px solid var(--r);outline-offset:2px}
 #pf2 details.more>summary .hint,#pf3 details.more>summary .hint{font-size:12px;font-weight:400;color:var(--ink3)}
 #pf2 details.more[open]>summary,#pf3 details.more[open]>summary{
@@ -934,7 +935,7 @@ body{
 #pf3 svg .skn{font-family:"IBM Plex Mono","Noto Sans TC",monospace;fill:var(--acc);font-weight:700;letter-spacing:0}
 #pf3 svg .skl{cursor:pointer}
 #pf3 svg .skl:focus{outline:none}
-#pf3 svg .skl:hover .bx-s{stroke-width:2.6}
+@media (hover:hover) and (pointer:fine){#pf3 svg .skl:hover .bx-s{stroke-width:2.6}}
 #pf3 svg .skl:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
 
 #pf3 svg.defs{position:absolute;width:0;height:0;min-width:0;overflow:hidden}
@@ -959,18 +960,18 @@ body{
 }
 #pf3 .xbtns button b{color:var(--acc);font-weight:700}
 #pf3 .xbtns button::after{content:"›";color:var(--ink3)}
-#pf3 .xbtns button:hover{border-color:var(--acc);color:var(--ink)}
+@media (hover:hover) and (pointer:fine){#pf3 .xbtns button:hover{border-color:var(--acc);color:var(--ink)}}
 #pf3 .xbtns button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 #pf3 .xlink{
   appearance:none;font:inherit;cursor:pointer;background:none;border:0;padding:0;margin-left:10px;
   font-family:"Noto Sans TC",sans-serif;font-size:11.5px;letter-spacing:0;font-weight:700;color:var(--acc);text-transform:none;
 }
-#pf3 .xlink:hover{text-decoration:underline}
+@media (hover:hover) and (pointer:fine){#pf3 .xlink:hover{text-decoration:underline}}
 #pf3 .xlink:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 /* 流程圖裡可以點進去的步驟 */
 #pf3 svg .stp{cursor:pointer}
 #pf3 svg .stp:focus{outline:none}
-#pf3 svg .stp:hover .bx-s{stroke-width:2.6}
+@media (hover:hover) and (pointer:fine){#pf3 svg .stp:hover .bx-s{stroke-width:2.6}}
 #pf3 svg .stp:focus-visible .bx-s{stroke:var(--user);stroke-width:2.8}
 
 /* ── 工作卡：你給它／它交回／以前要人手／成效 ── */
@@ -988,7 +989,7 @@ body{
   appearance:none;align-self:flex-end;margin-top:14px;background:none;border:0;padding:2px 0;cursor:pointer;
   font:inherit;font-size:13.5px;font-weight:700;color:var(--jc);
 }
-#pf2 .jlink:hover,#pf3 .jlink:hover{text-decoration:underline}
+@media (hover:hover) and (pointer:fine){#pf2 .jlink:hover,#pf3 .jlink:hover{text-decoration:underline}}
 #pf3 .job,#pf3 .xbtns button{transition:box-shadow .3s ease}
 #pf3 .job.hl,#pf3 .xbtns button.hl{box-shadow:0 0 0 3px var(--acc)}
 #pf2 .jlink:focus-visible,#pf3 .jlink:focus-visible{outline:2px solid var(--jc);outline-offset:2px}
@@ -1033,7 +1034,7 @@ html:has(dialog.xd[open]){overflow:hidden}
   font-size:13px;color:var(--ink2);background:none;border:1px solid var(--rule2);border-radius:4px;padding:5px 11px;
 }
 #pf3 .xd-back{color:var(--acc);border-color:var(--acc)}
-#pf3 .xd-back:hover,#pf3 .xd-x:hover{border-color:var(--acc);color:var(--acc)}
+@media (hover:hover) and (pointer:fine){#pf3 .xd-back:hover,#pf3 .xd-x:hover{border-color:var(--acc);color:var(--acc)}}
 #pf3 .xd-back:focus-visible,#pf3 .xd-x:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 #pf3 .xd-bd{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:22px 26px 32px}
 #pf3 .xd-bd:focus{outline:none}
@@ -1075,8 +1076,8 @@ html:has(dialog.xd[open]){overflow:hidden}
   content:"→";position:absolute;right:2px;top:50%;transform:translateY(-50%);
   color:var(--u-ink3);transition:transform .16s ease,color .16s ease;
 }
-#hub .cap-ev a:hover{color:var(--u-acc)}
-#hub .cap-ev a:hover::after{color:var(--u-acc);transform:translate(3px,-50%)}
+@media (hover:hover) and (pointer:fine){#hub .cap-ev a:hover{color:var(--u-acc)}}
+@media (hover:hover) and (pointer:fine){#hub .cap-ev a:hover::after{color:var(--u-acc);transform:translate(3px,-50%)}}
 #hub .cap-ev a:focus-visible{outline:2px solid var(--u-acc);outline-offset:2px}
 #hub .capchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 9px}
 #hub .capchip{font-size:11.5px;font-weight:700;color:var(--u-acc);background:var(--u-acc-soft);border-radius:3px;padding:2px 9px;letter-spacing:.02em}
@@ -2224,17 +2225,17 @@ html:has(dialog.xd[open]){overflow:hidden}
 #simreport code{background:#262624;color:#eceadf;padding:.05em .4em;border-radius:4px}
 #simreport{color-scheme:dark}#simreport{font-family:'Segoe UI','Microsoft JhengHei',system-ui,sans-serif;margin:1.4em auto;max-width:76em;
      padding:0 1.2em;background:#161615;color:#eceadf;line-height:1.5}#simreport h1{font-size:1.3em;margin:.2em 0;font-weight:650}#simreport h2{font-size:1.02em;margin:1.9em 0 .55em;color:#c3c2b7;font-weight:600;
-   display:flex;align-items:center;gap:.6em}#simreport h2::after{content:"";flex:1;height:1px;background:#2c2c2a}#simreport h3{font-size:.96em;margin:.9em 0 .35em;color:#c3c2b7}#simreport table{border-collapse:separate;border-spacing:0;background:#1f1f1e;margin:.4em 0;border-radius:8px;overflow:hidden}#simreport th, #simreport td{border-bottom:1px solid #29292656;padding:.32em .8em;font-size:.87em;white-space:nowrap;text-align:left;font-weight:500}#simreport th{background:#26262375;color:#a5a49a;font-weight:600;font-size:.8em;letter-spacing:.02em}#simreport td.num, #simreport th.num{text-align:right;font-variant-numeric:tabular-nums}#simreport td.ctr{text-align:center}#simreport tr:hover td{background:#26262450}#simreport tr:last-child td{border-bottom:none}#simreport .selrow td{background:#28323f80!important}#simreport tr.selmulti td{background:#2d2d3a80!important;box-shadow:inset 3px 0 0 #3987e5}#simreport tr.selmulti.selrow td{background:#28323f!important}#simreport .win{color:#5ec98a;font-weight:650}#simreport .lose{color:#e66767;font-weight:650}#simreport .lose2{color:#e66767}#simreport .warn{color:#e0a83c;font-weight:600}#simreport .card{display:flex;gap:1.6em;flex-wrap:wrap;align-items:center;background:#1f1f1e;border-radius:12px;
+   display:flex;align-items:center;gap:.6em}#simreport h2::after{content:"";flex:1;height:1px;background:#2c2c2a}#simreport h3{font-size:.96em;margin:.9em 0 .35em;color:#c3c2b7}#simreport table{border-collapse:separate;border-spacing:0;background:#1f1f1e;margin:.4em 0;border-radius:8px;overflow:hidden}#simreport th, #simreport td{border-bottom:1px solid #29292656;padding:.32em .8em;font-size:.87em;white-space:nowrap;text-align:left;font-weight:500}#simreport th{background:#26262375;color:#a5a49a;font-weight:600;font-size:.8em;letter-spacing:.02em}#simreport td.num, #simreport th.num{text-align:right;font-variant-numeric:tabular-nums}#simreport td.ctr{text-align:center}@media (hover:hover) and (pointer:fine){#simreport tr:hover td{background:#26262450}}#simreport tr:last-child td{border-bottom:none}#simreport .selrow td{background:#28323f80!important}#simreport tr.selmulti td{background:#2d2d3a80!important;box-shadow:inset 3px 0 0 #3987e5}#simreport tr.selmulti.selrow td{background:#28323f!important}#simreport .win{color:#5ec98a;font-weight:650}#simreport .lose{color:#e66767;font-weight:650}#simreport .lose2{color:#e66767}#simreport .warn{color:#e0a83c;font-weight:600}#simreport .card{display:flex;gap:1.6em;flex-wrap:wrap;align-items:center;background:#1f1f1e;border-radius:12px;
       padding:1em 1.3em;margin:.5em 0;box-shadow:0 1px 4px rgba(0,0,0,.35)}#simreport .card2{background:#1f1f1e;border-radius:12px;padding:.7em 1.1em;box-shadow:0 1px 4px rgba(0,0,0,.35)}#simreport .card .k{font-size:.72em;color:#8a897f;letter-spacing:.03em}#simreport .card .v{font-size:1em;font-weight:600}#simreport .hero{display:flex;align-items:center;gap:.7em;padding-right:1.2em;border-right:1px solid #2c2c2a}#simreport .heronum{font-size:2.6em;font-weight:750;line-height:1;font-variant-numeric:tabular-nums}#simreport .herosub{font-size:.82em;color:#a5a49a}#simreport .round{background:#1f1f1e;border-radius:8px;padding:.32em .9em;margin:.35em 0}#simreport .round summary{cursor:pointer;padding:.12em 0}#simreport .round[open]{padding-bottom:.55em}#simreport .round.dim{opacity:.38}#simreport .round.flash{outline:2px solid #3987e5;outline-offset:1px}#simreport .quote{color:#b9a3e3;font-style:italic}#simreport .small{color:#8a897f;font-size:.85em;font-weight:400}#simreport details>summary{cursor:pointer;color:#7aa5d8}#simreport svg{max-width:100%;background:#1f1f1e;border-radius:10px}#simreport svg text{font-family:inherit}#simreport .dot{display:inline-block;width:.62em;height:.62em;border-radius:50%;margin:0 .4em 0 .3em;vertical-align:baseline}#simreport .btn{background:#262624;color:#c3c2b7;border:none;border-radius:6px;padding:.28em .85em;
-     cursor:pointer;font-size:.84em;margin-left:.5em;box-shadow:0 1px 2px rgba(0,0,0,.3)}#simreport .btn:hover{background:#2e2e2b}#simreport .scroll{overflow-x:auto}#simreport .sweepblock{margin:1em 0}#simreport input[type=checkbox]{accent-color:#3987e5}#simreport input[type=search]{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .7em;font-size:.85em;min-width:14em}#simreport .topbar{position:sticky;top:0;z-index:20;display:flex;gap:.7em;align-items:center;flex-wrap:wrap;
+     cursor:pointer;font-size:.84em;margin-left:.5em;box-shadow:0 1px 2px rgba(0,0,0,.3)}@media (hover:hover) and (pointer:fine){#simreport .btn:hover{background:#2e2e2b}}#simreport .scroll{overflow-x:auto}#simreport .sweepblock{margin:1em 0}#simreport input[type=checkbox]{accent-color:#3987e5}#simreport input[type=search]{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .7em;font-size:.85em;min-width:14em}#simreport .topbar{position:sticky;top:0;z-index:20;display:flex;gap:.7em;align-items:center;flex-wrap:wrap;
         background:#161615ee;backdrop-filter:blur(4px);padding:.55em .2em;margin:-.6em 0 .4em;
-        border-bottom:1px solid #2c2c2a;font-size:.95em}#simreport table.matrix th, #simreport table.matrix td{white-space:nowrap}#simreport .mxcell{cursor:pointer}#simreport .mxcell:hover{background:#2a2a27!important}#simreport .mxsel{outline:2px solid #3987e5;outline-offset:-2px}#simreport .mxon .mxbadge{box-shadow:0 0 0 1px currentColor}#simreport .mxbadge{display:inline-block;border-radius:5px;padding:.1em .5em;font-weight:700;font-variant-numeric:tabular-nums}#simreport .mxbad{color:#6a695f;cursor:pointer}#simreport .histn{color:#6a695f;font-size:.72em;margin-left:.2em}#simreport .dimtable{opacity:.62}#simreport .badge{display:inline-block;border-radius:5px;padding:.08em .55em;font-size:.8em;font-weight:600}#simreport .bok{background:#1d3a2a;color:#5ec98a}#simreport .bfail{background:#3d2020;color:#e66767}#simreport .bsoft{background:#3a301a;color:#e0a83c}#simreport .bcond{background:#2a2a27;color:#8a897f}#simreport .chip{display:inline-flex;align-items:center;background:#262624;border-radius:99px;
-      padding:.06em .6em .06em .3em;margin:.08em .18em;font-size:.84em;white-space:nowrap}#simreport .chiprole{color:#8a897f;font-size:.85em;margin-left:.25em}#simreport .teamcell{white-space:normal!important;min-width:16em}#simreport .rcell{position:relative;min-width:10em;overflow:hidden}#simreport .rcell>span{position:relative;z-index:1}#simreport .rbar{position:absolute;left:0;top:0;bottom:0;z-index:0}#simreport .anchorbtn{cursor:pointer;opacity:.28;margin-left:.35em;font-size:.9em}#simreport .anchorbtn:hover{opacity:.8}#simreport .anchorbtn.on{opacity:1;color:#3987e5}#simreport #legend{display:flex;flex-wrap:wrap;gap:.35em;margin:.4em 0}#simreport .lchip{display:inline-flex;align-items:center;gap:.35em;background:#1f1f1e;border-radius:99px;
-       padding:.18em .75em;font-size:.8em;cursor:pointer;user-select:none;box-shadow:0 1px 2px rgba(0,0,0,.3)}#simreport .lchip:hover{background:#262624}#simreport .lchip.off{opacity:.35}#simreport .tlsk{font-size:.72em;border:1px solid;border-radius:4px;padding:0 .3em;line-height:1.35}#simreport .fltbar{display:flex;gap:1.1em;align-items:center;background:#1f1f1e;border-radius:8px;
-        padding:.4em .9em;margin:.4em 0;font-size:.87em;flex-wrap:wrap}#simreport .fltbar label{display:flex;align-items:center;gap:.3em;cursor:pointer;color:#a5a49a}#simreport .avatars{display:inline-flex;gap:4px;margin-left:.8em;vertical-align:middle}#simreport .avatar{width:48px;height:48px;border-radius:8px;background:#161615;object-fit:cover}#simreport .labrow{display:flex;align-items:center;gap:.5em;flex-wrap:wrap;margin:.35em 0;font-size:.9em}#simreport .labrow select{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .5em;max-width:26em}#simreport .labrow input[type=number]{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .5em;width:6.5em}#simreport .labgo{background:#2a4a72;color:#dce8f7}#simreport .labgo:hover{background:#33578a}#simreport .labslider input[type=range]{flex:1;accent-color:#3987e5;height:1.4em}#simreport .labval{min-width:11em;font-weight:650;font-variant-numeric:tabular-nums}#simreport .labhero{display:flex;align-items:center;gap:.8em;margin:.5em 0}#simreport .labhero .heronum{font-size:2.4em}#simreport .checksd{margin:.9em 0 .35em}#simreport .checksd>summary{cursor:pointer;color:#c3c2b7;font-size:.96em}#simreport .checksd>summary b{font-weight:600}#simreport .checksd[open]>summary{margin-bottom:.3em}#simreport .round summary{display:flex;align-items:center;gap:.7em;flex-wrap:wrap}#simreport .rn{min-width:2.6em;color:#c3c2b7}#simreport .bhp{position:relative;display:inline-block;width:110px;height:12px;background:#161615;border-radius:6px;overflow:hidden;vertical-align:middle}#simreport .bhp i{position:absolute;left:0;top:0;bottom:0;border-radius:6px}#simreport .bhp b{position:absolute;right:4px;top:-2px;font-size:.72em;color:#eceadf;text-shadow:0 0 3px #161615,0 0 3px #161615}#simreport .dtk{color:#e66767;font-size:.82em}#simreport .msurv{display:inline-flex;gap:2px;margin-right:.3em;align-items:flex-end}#simreport .msq{position:relative;width:9px;height:16px;background:#161615;border-radius:2px;display:inline-flex;align-items:flex-end;justify-content:center;overflow:hidden}#simreport .msq i{display:block;width:100%;border-radius:2px 2px 0 0}#simreport .msq b{color:#e66767;font-size:.7em;line-height:1}#simreport .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:.3em 1.4em;margin:.4em 0}
+        border-bottom:1px solid #2c2c2a;font-size:.95em}#simreport table.matrix th, #simreport table.matrix td{white-space:nowrap}#simreport .mxcell{cursor:pointer}@media (hover:hover) and (pointer:fine){#simreport .mxcell:hover{background:#2a2a27!important}}#simreport .mxsel{outline:2px solid #3987e5;outline-offset:-2px}#simreport .mxon .mxbadge{box-shadow:0 0 0 1px currentColor}#simreport .mxbadge{display:inline-block;border-radius:5px;padding:.1em .5em;font-weight:700;font-variant-numeric:tabular-nums}#simreport .mxbad{color:#6a695f;cursor:pointer}#simreport .histn{color:#6a695f;font-size:.72em;margin-left:.2em}#simreport .dimtable{opacity:.62}#simreport .badge{display:inline-block;border-radius:5px;padding:.08em .55em;font-size:.8em;font-weight:600}#simreport .bok{background:#1d3a2a;color:#5ec98a}#simreport .bfail{background:#3d2020;color:#e66767}#simreport .bsoft{background:#3a301a;color:#e0a83c}#simreport .bcond{background:#2a2a27;color:#8a897f}#simreport .chip{display:inline-flex;align-items:center;background:#262624;border-radius:99px;
+      padding:.06em .6em .06em .3em;margin:.08em .18em;font-size:.84em;white-space:nowrap}#simreport .chiprole{color:#8a897f;font-size:.85em;margin-left:.25em}#simreport .teamcell{white-space:normal!important;min-width:16em}#simreport .rcell{position:relative;min-width:10em;overflow:hidden}#simreport .rcell>span{position:relative;z-index:1}#simreport .rbar{position:absolute;left:0;top:0;bottom:0;z-index:0}#simreport .anchorbtn{cursor:pointer;opacity:.28;margin-left:.35em;font-size:.9em}@media (hover:hover) and (pointer:fine){#simreport .anchorbtn:hover{opacity:.8}}#simreport .anchorbtn.on{opacity:1;color:#3987e5}#simreport #legend{display:flex;flex-wrap:wrap;gap:.35em;margin:.4em 0}#simreport .lchip{display:inline-flex;align-items:center;gap:.35em;background:#1f1f1e;border-radius:99px;
+       padding:.18em .75em;font-size:.8em;cursor:pointer;user-select:none;box-shadow:0 1px 2px rgba(0,0,0,.3)}@media (hover:hover) and (pointer:fine){#simreport .lchip:hover{background:#262624}}#simreport .lchip.off{opacity:.35}#simreport .tlsk{font-size:.72em;border:1px solid;border-radius:4px;padding:0 .3em;line-height:1.35}#simreport .fltbar{display:flex;gap:1.1em;align-items:center;background:#1f1f1e;border-radius:8px;
+        padding:.4em .9em;margin:.4em 0;font-size:.87em;flex-wrap:wrap}#simreport .fltbar label{display:flex;align-items:center;gap:.3em;cursor:pointer;color:#a5a49a}#simreport .avatars{display:inline-flex;gap:4px;margin-left:.8em;vertical-align:middle}#simreport .avatar{width:48px;height:48px;border-radius:8px;background:#161615;object-fit:cover}#simreport .labrow{display:flex;align-items:center;gap:.5em;flex-wrap:wrap;margin:.35em 0;font-size:.9em}#simreport .labrow select{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .5em;max-width:26em}#simreport .labrow input[type=number]{background:#262624;border:none;border-radius:6px;color:#eceadf;padding:.3em .5em;width:6.5em}#simreport .labgo{background:#2a4a72;color:#dce8f7}@media (hover:hover) and (pointer:fine){#simreport .labgo:hover{background:#33578a}}#simreport .labslider input[type=range]{flex:1;accent-color:#3987e5;height:1.4em}#simreport .labval{min-width:11em;font-weight:650;font-variant-numeric:tabular-nums}#simreport .labhero{display:flex;align-items:center;gap:.8em;margin:.5em 0}#simreport .labhero .heronum{font-size:2.4em}#simreport .checksd{margin:.9em 0 .35em}#simreport .checksd>summary{cursor:pointer;color:#c3c2b7;font-size:.96em}#simreport .checksd>summary b{font-weight:600}#simreport .checksd[open]>summary{margin-bottom:.3em}#simreport .round summary{display:flex;align-items:center;gap:.7em;flex-wrap:wrap}#simreport .rn{min-width:2.6em;color:#c3c2b7}#simreport .bhp{position:relative;display:inline-block;width:110px;height:12px;background:#161615;border-radius:6px;overflow:hidden;vertical-align:middle}#simreport .bhp i{position:absolute;left:0;top:0;bottom:0;border-radius:6px}#simreport .bhp b{position:absolute;right:4px;top:-2px;font-size:.72em;color:#eceadf;text-shadow:0 0 3px #161615,0 0 3px #161615}#simreport .dtk{color:#e66767;font-size:.82em}#simreport .msurv{display:inline-flex;gap:2px;margin-right:.3em;align-items:flex-end}#simreport .msq{position:relative;width:9px;height:16px;background:#161615;border-radius:2px;display:inline-flex;align-items:flex-end;justify-content:center;overflow:hidden}#simreport .msq i{display:block;width:100%;border-radius:2px 2px 0 0}#simreport .msq b{color:#e66767;font-size:.7em;line-height:1}#simreport .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:.3em 1.4em;margin:.4em 0}
 @media(max-width:52em){#simreport .rgrid{grid-template-columns:1fr}}#simreport .rhead{font-size:.75em;color:#8a897f;letter-spacing:.05em;border-bottom:1px solid #2c2c2a;margin-bottom:.25em;padding-bottom:.15em}#simreport .rcol-en .rhead{color:#c98500}#simreport .aline{padding:.1em 0;font-size:.9em;line-height:1.65}#simreport .who{color:#c3c2b7;font-weight:600}#simreport .ab{display:inline-block;border-radius:4px;padding:0 .4em;font-size:.75em;font-weight:600;margin:0 .25em;vertical-align:baseline}#simreport .ab-atk{background:#2a2a27;color:#a5a49a}#simreport .ab-skill{background:#26313f;color:#7aa5d8}#simreport .ab-def{background:#1d3330;color:#5ec9a5}#simreport .skname{border:1px solid;border-radius:4px;padding:0 .35em;font-size:.85em}#simreport .arrow{color:#6a695f;margin:0 .3em}#simreport .tgt{margin-right:.7em;white-space:nowrap}#simreport .vd{color:#e66767;font-weight:650}#simreport .vh{color:#5ec98a;font-weight:650}#simreport .vs{color:#7aa5d8;font-weight:650}#simreport .xn{color:#e0a83c;font-weight:700;margin-left:.3em}#simreport .trigd{margin-top:.3em}#simreport .bsurv{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:.35em 0 .1em}#simreport .bcell{position:relative;background:#161615;border-radius:6px;padding:.25em .5em;overflow:hidden;font-size:.85em;
        display:flex;align-items:center;gap:.4em;white-space:nowrap}
-@media(max-width:52em){#simreport .bsurv{grid-template-columns:repeat(2,1fr)}}#simreport .bcell>span{position:relative;z-index:1}#simreport .hpbar{position:absolute;left:0;top:0;bottom:0;z-index:0}#simreport .shbar{position:absolute;left:0;bottom:0;height:3px;background:#3987e5;z-index:1}#simreport .hppct{margin-left:auto;color:#8a897f;font-size:.8em;position:relative;z-index:1}#simreport table.heat td.heatcell{text-align:center;min-width:3.4em;font-weight:600;cursor:default}#simreport tr:hover td.heatcell{filter:brightness(1.25)}#simreport table.checktable th, #simreport table.checktable td{text-align:left;white-space:normal}#simreport .chartwrap{position:relative}#simreport .tip{position:absolute;pointer-events:none;background:#111110f5;border-radius:8px;
+@media(max-width:52em){#simreport .bsurv{grid-template-columns:repeat(2,1fr)}}#simreport .bcell>span{position:relative;z-index:1}#simreport .hpbar{position:absolute;left:0;top:0;bottom:0;z-index:0}#simreport .shbar{position:absolute;left:0;bottom:0;height:3px;background:#3987e5;z-index:1}#simreport .hppct{margin-left:auto;color:#8a897f;font-size:.8em;position:relative;z-index:1}#simreport table.heat td.heatcell{text-align:center;min-width:3.4em;font-weight:600;cursor:default}@media (hover:hover) and (pointer:fine){#simreport tr:hover td.heatcell{filter:brightness(1.25)}}#simreport table.checktable th, #simreport table.checktable td{text-align:left;white-space:normal}#simreport .chartwrap{position:relative}#simreport .tip{position:absolute;pointer-events:none;background:#111110f5;border-radius:8px;
      padding:.45em .75em;font-size:.82em;white-space:nowrap;z-index:10;box-shadow:0 3px 10px rgba(0,0,0,.55)}
 
 </style>
