@@ -1,0 +1,125 @@
+/* New case evidence layouts; homepage retains the original list navigation. */
+/* Case first screens: one real artifact, one clear quality decision. */
+#pf1 .case-stage,#pf2 .case-stage,#pf3 .case-stage{padding-block:28px 36px;border-bottom:1px solid var(--rule,#d7ddd7)}
+#pf1 .case-stage .stage-label,#pf2 .case-stage .stage-label,#pf3 .case-stage .stage-label{font:700 11px/1.2 'IBM Plex Mono','Noto Sans TC',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--accent,var(--rust,var(--acc)))}
+#pf1 .case-stage h2,#pf2 .case-stage h2,#pf3 .case-stage h2{font:700 clamp(23px,2.8vw,34px)/1.35 'Noto Serif TC',serif;margin:9px 0 7px}
+#pf1 .case-stage>p,#pf2 .case-stage>p,#pf3 .case-stage>p{max-width:65ch;font-size:14px;color:var(--ink2,var(--ink-2));line-height:1.75}
+#pf2 .case-proof-grid{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:10px;margin-top:25px}
+#pf2 .proof-card{min-height:245px;border:1px solid var(--rule2);background:var(--card);padding:18px;display:flex;flex-direction:column;gap:13px}
+#pf2 .proof-card .card-label{font:700 11px/1.2 'IBM Plex Mono','Noto Sans TC',monospace;color:var(--rust);letter-spacing:.12em}
+#pf2 .proof-card h3{font-size:17px;line-height:1.4}
+#pf2 .proof-card p{font-size:13px;line-height:1.65;color:var(--ink2)}
+#pf2 .proof-card .card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink3)}
+#pf2 .proof-card .card-foot strong{color:var(--ink)}
+#pf2 .proof-card .table-fragment{border:1px solid var(--rule2);background:var(--paper);font-size:11px}
+#pf2 .proof-card .table-fragment div{display:grid;grid-template-columns:72px 1fr;border-bottom:1px solid var(--rule)}
+#pf2 .proof-card .table-fragment div:last-child{border-bottom:0}
+#pf2 .proof-card .table-fragment span{padding:5px 7px}
+#pf2 .proof-card .table-fragment span:first-child{border-right:1px solid var(--rule);font-weight:700}
+#pf2 .proof-card .run-pill{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--rule);font-size:12px}
+#pf2 .proof-card .run-pill:last-of-type{border:0}
+#pf2 .proof-card .run-pill b{font-family:'IBM Plex Mono',monospace}
+#pf2 .proof-card .run-pill.warn b{color:var(--flag)}
+#pf2 .case-guard{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:12px;padding:14px 18px;background:var(--d-bg);border-left:3px solid var(--d)}
+#pf2 .case-guard p{font-size:13px;line-height:1.6;color:var(--ink);margin:0}
+#pf2 .case-guard button{flex:none;border:0;background:transparent;color:var(--d);font-weight:700;cursor:pointer}
+#pf3 .case-i-guard{display:grid;grid-template-columns:repeat(4,1fr);margin-top:12px;border:1px solid var(--rule2);background:var(--surface)}
+#pf3 .case-i-guard span{font-size:12px;padding:12px;line-height:1.55;border-right:1px solid var(--rule)}
+#pf3 .case-i-guard span:last-child{border-right:0}
+#pf3 .case-i-guard b{display:block;color:var(--acc);margin-bottom:4px}
+#pf2 .jobsec{padding-block:30px 28px}
+#pf2 .job-kind,#pf3 .job-kind{display:block;margin-bottom:10px;font:700 11px/1.2 'IBM Plex Mono','Noto Sans TC',monospace;letter-spacing:.1em;color:var(--jc);text-transform:uppercase}
+#pf2 .job-flow,#pf3 .job-flow{margin:10px 0 0;color:var(--ink2);font-size:13px;line-height:1.6}
+#pf2 .job-result,#pf3 .job-result{margin:12px 0 0;color:var(--jc);font-size:13px;font-weight:700;line-height:1.55}
+#pf2 .job .jlink,#pf3 .job .jlink{margin-top:auto;padding-top:16px;align-self:flex-start}
+#pf3 .case-i-jobs{margin-top:20px}
+#pf3 .case-i-jobs .job{min-height:146px}
+#pf3 .case-i-jobs .job-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+#pf3 .case-i-jobs .job-top .job-kind{margin:0}
+#pf3 .case-i-jobs .job-top .jlink{flex:none;margin:0;padding:0;align-self:auto}
+#pf3 .workflow-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:12px}
+#pf3 .workflow-step{position:relative;display:flex;min-height:118px;flex-direction:column;justify-content:center;gap:6px;padding:15px 17px;border:1px solid var(--rule2);background:var(--surface)}
+#pf3 .workflow-step:not(:last-child)::after{content:'→';position:absolute;z-index:1;right:-20px;top:calc(50% - 12px);width:18px;text-align:center;background:var(--paper);color:var(--ink3);font-size:17px}
+#pf3 .workflow-step small{font-size:12px;font-weight:700;color:var(--user)}
+#pf3 .workflow-step b{font-size:17px;line-height:1.35;color:var(--ink)}
+#pf3 .workflow-step span{font-size:12px;line-height:1.5;color:var(--ink2)}
+#pf3 .workflow-step.skill{border-color:var(--acc)}
+#pf3 .workflow-step.skill small{color:var(--acc)}
+#pf3 .workflow-step.verify{border-color:var(--ok)}
+#pf3 .workflow-step.verify small{color:var(--ok)}
+#pf3 .workflow-step.release{border-color:var(--gate)}
+#pf3 .workflow-step.release small{color:var(--gate)}
+#pf3 .workflow-return{margin:10px 0 0;font-size:13px;color:var(--ink3)}
+#pf1 .s-proof{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+#pf1 .s-proof-card{background:var(--surface);border:1px solid var(--rule-strong);padding:18px}
+#pf1 .s-proof-card small{font:700 11px/1.2 'IBM Plex Mono','Noto Sans TC',monospace;color:var(--accent)}
+#pf1 .s-proof-card b{display:block;font:700 clamp(23px,3vw,36px)/1.2 'Noto Serif TC',serif;margin:12px 0 8px}
+#pf1 .s-proof-card .bar{height:17px;background:var(--sunken);margin-top:17px}
+#pf1 .s-proof-card .bar i{display:block;height:100%;background:var(--accent)}
+#pf1 .rate-plot{margin-top:15px}
+#pf1 .rate-plot>div{display:grid;grid-template-columns:27px 1fr;gap:9px;align-items:center;margin-top:6px}
+#pf1 .rate-plot span{font:600 11px/1 'IBM Plex Mono',monospace;color:var(--ink-2)}
+#pf1 .rate-plot i{display:block;height:9px;background:var(--sunken)}
+#pf1 .rate-plot em{display:block;height:100%;background:var(--accent)}
+#pf1 .rate-plot>div:first-child em{background:var(--ref)}
+#pf1 .rate-plot small{display:block;text-align:right;margin-top:6px;color:var(--ink-3);font-size:10px}
+#pf1 .s-proof-card p{font-size:12px;color:var(--ink-2);line-height:1.7}
+
+@media(max-width:980px){
+  #pf2 .case-proof-grid{grid-template-columns:1fr 1fr}
+  #pf2 .proof-card:last-child{grid-column:span 2;min-height:unset}
+}
+@media(max-width:680px){
+  #pf2 .case-proof-grid,#pf1 .s-proof{grid-template-columns:1fr}
+  #pf2 .jobs,#pf3 .jobs{grid-template-columns:1fr}
+  #pf2 .job,#pf3 .job{padding:12px 14px 10px}
+  #pf2 .job-kind,#pf3 .job-kind{margin-bottom:5px}
+  #pf2 .job-flow,#pf3 .job-flow{margin-top:6px}
+  #pf2 .job-result,#pf3 .job-result{margin-top:6px}
+  #pf2 .job .jlink,#pf3 .job .jlink{padding-top:9px}
+  #pf3 .workflow-overview{grid-template-columns:1fr;gap:10px}
+  #pf3 .case-i-jobs{gap:9px}
+  #pf3 .case-i-jobs .job{min-height:unset;padding:9px 14px 7px}
+  #pf3 .case-i-jobs .job-flow{margin-top:7px}
+  #pf3 .workflow-step{min-height:unset;display:grid;grid-template-columns:8em 1fr;gap:3px 12px;padding:13px 15px}
+  #pf3 .workflow-step small{grid-row:span 2;align-self:center}
+  #pf3 .workflow-step b,#pf3 .workflow-step span{grid-column:2}
+  #pf3 .workflow-step:not(:last-child)::after{content:'↓';right:auto;left:calc(50% - 9px);top:auto;bottom:-15px;background:var(--paper);font-size:14px}
+  #pf3 .workflow-return{margin-top:12px}
+  #pf2 .proof-card,#pf2 .proof-card:last-child{grid-column:auto;min-height:unset}
+  #pf2 .case-guard{align-items:start;flex-direction:column;gap:5px}
+  #pf3 .case-i-card{min-height:190px}
+  #pf3 .case-i-guard{grid-template-columns:1fr 1fr}
+  #pf3 .case-i-guard span:nth-child(2){border-right:0}
+  #pf3 .case-i-guard span:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  #pf1 .meta-row{display:none}
+  #pf2 #simreport .card>div{min-width:0!important;max-width:100%}
+  #pf2 #simreport .teamcell{min-width:0;max-width:100%}
+}
+
+/* Detailed modals open with a short, scannable path; full evidence stays one level deeper. */
+#pf3 .flow-summary{counter-reset:flow-step;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;list-style:none;margin:16px 0 10px;padding:0}
+#pf3 .flow-summary li{counter-increment:flow-step;position:relative;display:flex;min-height:66px;flex-direction:column;justify-content:center;gap:3px;padding:11px 10px 11px 42px;border:1px solid var(--rule2);border-left:2px solid var(--acc);background:var(--surface)}
+#pf3 .flow-summary li::before{content:counter(flow-step,decimal-leading-zero);position:absolute;left:11px;top:12px;color:var(--acc);font:700 11px/1.2 'IBM Plex Mono',monospace}
+#pf3 .flow-summary li:not(:last-child)::after{content:'→';position:absolute;right:-16px;top:calc(50% - 10px);z-index:1;width:13px;background:var(--paper);color:var(--ink3);text-align:center}
+#pf3 .flow-summary b{font-size:13px;line-height:1.35;color:var(--ink)}
+#pf3 .flow-summary small{font-size:11px;line-height:1.4;color:var(--ink2)}
+#pf3 .flow-result{margin:0;padding:10px 13px;border-left:3px solid var(--ok);background:var(--surface);color:var(--ink2);font-size:13px;line-height:1.6}
+#pf3 .flow-result b{margin-right:6px;color:var(--ok)}
+#pf3 .flow-more{margin-top:17px;border-top:1px solid var(--rule2);padding-top:11px}
+#pf3 .flow-more>summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;color:var(--acc);font-size:13px;font-weight:700}
+#pf3 .flow-more>summary::-webkit-details-marker{display:none}
+#pf3 .flow-more>summary::after{content:'＋';margin-left:auto;font-size:16px;line-height:1}
+#pf3 .flow-more[open]>summary::after{content:'－'}
+#pf3 .flow-more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+#pf3 .flow-more[open]>figure,#pf3 .flow-more[open]>.tw{margin-top:14px}
+@media(max-width:640px){
+  #pf3 .flow-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:13px}
+  #pf3 .flow-summary li{min-height:62px;padding:9px 7px 9px 35px}
+  #pf3 .flow-summary li::before{left:9px;top:10px}
+  #pf3 .flow-summary li::after{display:none}
+  #pf3 .flow-summary b{font-size:12px}
+  #pf3 .flow-summary small{font-size:10.5px}
+  #pf3 .flow-result{font-size:12px;padding:9px 11px}
+  #pf3 .flow-more{margin-top:14px}
+}

@@ -10,5 +10,7 @@
 
 可以直接連到子畫面，例如 `#tooling/sim`（模擬器）、`#pipeline/verify`（驗證流程）。
 
-單一 HTML 檔，無相依套件。專案名、關卡名、角色名、資料表 ID、卡號與同仁姓名皆已去識別化。
+靜態 HTML／CSS／JavaScript，無建置相依套件。`index.html` 保留各案例與雜湊路由；`assets/site.css` 是原有樣式，`assets/portfolio-redesign.css` 是案例開場樣式。模擬報告的資料、樣式與互動程式只在打開 Project B 模擬器分頁時載入。參數實驗室預設離線；只有在本機網址點選「連接本機引擎」才會嘗試連線。
+
+專案名、關卡名、角色名、資料表 ID、卡號與同仁姓名皆已去識別化；重製示意在頁面上標示。
 本站設有 `noindex`，不進搜尋引擎索引。
